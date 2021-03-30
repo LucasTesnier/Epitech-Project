@@ -1,0 +1,146 @@
+#!/usr/bin/python3
+import sys
+import math
+
+def display_matrice(matrice, size):
+    for i in range(size):
+        for j in range(size):
+            print("%.2f" % (matrice[i][j]), end="")
+            if (j != size - 1):
+                print("\t", end="")
+            else:
+                print("\n", end="")
+
+def identity_matrice(size):
+    tmp = []
+    for i in range(size):
+        tmp.append([])
+        for j in range(size):
+            if (j == i):
+                tmp[i].append(1)
+            else:
+                tmp[i].append(0)
+    return tmp
+
+def factorial_number(nbr):
+    res = 1
+    for i in range(1, nbr + 1):
+        res = res * i
+    return res
+
+def multiplication_matrice(size, matrix_one, matrix_two):
+    tmp = []
+    for i in range(size):
+        tmp.append([])
+        for j in range(size):
+            mul = 0
+            for k in range(size):
+                mul += matrix_one[i][k] * matrix_two[k][j]
+            tmp[i].append(mul)
+    return tmp
+
+def power_matrice(size, pow, matrice_one):
+    temp = matrice_one
+    for i in range(pow - 1):
+        temp = multiplication_matrice(size, temp, matrice_one)
+    return temp
+
+def division_matrice(size, diviseur, matrice_one):
+    temp = matrice_one
+    for i in range(size):
+        for j in range(size):
+            temp[i][j] = matrice_one[i][j] / diviseur
+    return temp
+
+def addition_matrice(size, matrice_one, matrice_two):
+    temp = []
+    for i in range(size):
+        temp.append([])
+        for j in range(size):
+            temp[i].append(matrice_one[i][j] + matrice_two[i][j])
+    return temp
+
+def substraction_matrice(size, matrice_one, matrice_two):
+    temp = []
+    for i in range(size):
+        temp.append([])
+        for j in range(size):
+            temp[i].append(matrice_one[i][j] - matrice_two[i][j])
+    return temp
+
+def expo_function(matrice_one, size):
+    temp = identity_matrice(size)
+    for i in range(1, 50):
+        temp = addition_matrice(size, temp, division_matrice(size, factorial_number(i), power_matrice(size, i, matrice_one)))
+    return (temp)
+
+
+def cos_function(matrice_one, size):
+    temp = identity_matrice(size)
+    for i in range(1, 40):
+        if (i % 2 == 0):
+            temp = addition_matrice(size, division_matrice(size,factorial_number(2 *i), power_matrice(size, 2 * i, matrice_one)), temp)
+        else:
+            temp = substraction_matrice(size, temp, division_matrice(size,factorial_number(2 *i), power_matrice(size, 2 * i, matrice_one)))
+    return temp
+
+def sin_function(matrice_one, size):
+    temp = matrice_one
+    for i in range(1, 40):
+        if (i % 2 == 0):
+            temp = addition_matrice(size, division_matrice(size,factorial_number(2 *i + 1), power_matrice(size, 2 * i + 1, matrice_one)), temp)
+        else:
+            temp = substraction_matrice(size, temp, division_matrice(size,factorial_number(2 *i + 1), power_matrice(size, 2 * i + 1, matrice_one)))
+    return temp
+
+def cosh_function(matrice_one, size):
+    temp = identity_matrice(size)
+    for i in range(1, 40):
+        temp = addition_matrice(size, temp, division_matrice(size, factorial_number(i * 2), power_matrice(size, 2 * i, matrice_one)))
+    return (temp)
+
+def sinh_function(matrice_one, size):
+    temp = matrice_one
+    for i in range(1, 40):
+        temp = addition_matrice(size, temp, division_matrice(size, factorial_number(i * 2 + 1), power_matrice(size, 2 * i + 1, matrice_one)))
+    return (temp)
+
+def verification_args(matrice_size, lentgh):
+    if (lentgh == 0 and sys.argv[1] == "-h"):
+        exit(0)
+    if (len(sys.argv) < 3):
+        exit(84)
+    matrice_size = int(math.trunc(math.sqrt(lentgh)))
+    if (matrice_size * matrice_size != lentgh):
+        exit(84)
+    try:
+        for i in range(2, lentgh + 2):
+            sys.argv[i] = float(sys.argv[i])
+    except:
+        exit(84)
+    if (sys.argv[1] not in ["EXP", "COS", "SIN", "COSH", "SINH"]):
+        exit(84)
+
+def main():
+    matrice_one = []
+    lentgh = len(sys.argv) - 2
+    matrice_size = 0
+    verification_args(matrice_size, lentgh)
+    matrice_size = int(math.trunc(math.sqrt(lentgh)))
+    for i in range(matrice_size):
+        matrice_one.append([])
+        for j in range(matrice_size):
+            matrice_one[i].append(float(sys.argv[2 + j + i * matrice_size]))
+    if (sys.argv[1] == "EXP"):
+       display_matrice(expo_function(matrice_one, matrice_size), matrice_size)
+    if (sys.argv[1] == "COS"):
+       display_matrice(cos_function(matrice_one, matrice_size), matrice_size)
+    if (sys.argv[1] == "SIN"):
+       display_matrice(sin_function(matrice_one, matrice_size), matrice_size)
+    if (sys.argv[1] == "COSH"):
+       display_matrice(cosh_function(matrice_one, matrice_size), matrice_size)
+    if (sys.argv[1] == "SINH"):
+       display_matrice(sinh_function(matrice_one, matrice_size), matrice_size)
+
+
+main()

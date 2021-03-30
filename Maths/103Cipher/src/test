@@ -1,0 +1,74 @@
+Debut
+    N : tableau de taille longueur(M), longueur(M)
+    P : tableau de taille longueur(M), longueur(M)
+    Pour i allant de 0 `a longueur(M) − 1 faire
+        Pour j allant de 0 `a longueur(M) − 1 faire
+            Nij ← Mij
+            Si i = j alors
+                Pij = 1
+            sinon
+                Pij = 0
+            FinSi
+        FinPour
+    FinPour
+    Pour j allant de 0 `a longueur(N) − 1 faire
+        r ← choix pivot(N, j, j)
+        Si r 6= j alors
+            echange lignes(N, j, r)
+            echange lignes(P, j, r)
+        FinSi
+        Si Njj 6= 1 alors
+            p ← 1
+            Njj
+            multiplication ligne(N, j, p)
+            multiplication ligne(P, j, p)
+        FinSi
+        Pour i allant de 0 `a longueur(N) − 1 faire
+            Si i 6= j et Nij 6= 0 alors
+                l ← −Nij
+                ajout ligne(N, i, j, l)
+                ajout ligne(P, i, j, l)
+            FinSi
+            FinPour
+    FinPour
+    Renvoyer P
+Fin
+
+Debut
+    N : tableau de taille longueur(M), longueur(M0)
+    Pour i allant de 0 `a longueur(M) − 1 faire
+        Pour j allant de 0 `a longueur(Mi) − 1 faire
+            Nij ← Mij
+        FinPour
+    FinPour
+    i ← 0
+    j ← 0
+    r ← 0
+    TantQue i < longueur(N) et j < longueur(N0) et r 6= −1 faire
+        r ← choix pivot(N, i, j)
+        Si r = −1 alors
+            j ← j + 1
+        sinon
+            Si r 6= i alors
+                echange lignes(N, i, r)
+            FinSi
+        Si Nij 6= 1 alors
+            multiplication ligne(N, i, 1
+            Nij
+    )
+    FinSi
+    Pour k allant de i + 1 `a longueur(N) − 1 faire
+    Si Nkj 6= 0 alors
+    ajout ligne(N, k, i, −Nkj )
+    FinSi
+    FinPour
+    i ← i + 1
+    j ← j + 1
+    FinSi
+    FinTantQue
+    Si r = −1 alors
+        Renvoyer Faux
+    sinon
+        Renvoyer Vrai
+    FinSi
+Fin
