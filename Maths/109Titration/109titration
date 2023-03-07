@@ -1,0 +1,190 @@
+#!/usr/bin/python3
+import sys
+import math
+import csv
+
+def equivalence_point(data, derives):
+    equiva = []
+    equiva.append(1)
+    equiva.append(0)
+    bigger = 0
+    for i in range(1, len(data) - 1):
+        if bigger < derives[i]:
+            bigger = derives[i]
+            equiva[0] = data[i][0]
+            equiva[1] = i
+    print("\nEquivalence point at %.1f ml" % data[equiva[1]][0])
+    return equiva
+
+def equivalence_pointe(data, derives):
+    equiva = []
+    equiva.append(1)
+    equiva.append(0)
+    bigger = 0
+    for i in range(1, len(data) - 1):
+        if bigger < derives[i]:
+            bigger = derives[i]
+            equiva[0] = data[i][0]
+            equiva[1] = i
+    #print("\nEquivalence point at %.1f ml" % data[equiva[1]][0])
+    return equiva
+
+def equivalence_points(data, derives):
+    equiva = []
+    equiva.append(1)
+    equiva.append(0)
+    bigger = 0
+    for i in range(1, len(data) - 1):
+        if bigger < derives[i]:
+            bigger = derives[i]
+            equiva[0] = data[i + 1][0]
+            equiva[1] = i + 1
+    #print("\nEquivalence point at %.1f ml" % data[equiva[1]][0])
+    return equiva
+
+
+def derivative_value(data):
+    derives = []
+    derives.append(0)
+    print("Derivative:")
+    for i in range (1, len(data) - 1):
+        poid1 = data[i][0] - data[i - 1][0]
+        poid2 = data[i + 1][0] - data[i][0]
+        r1 = (data[i][1] - data[i - 1][1]) / poid1
+        r2 = (data[i + 1][1] - data[i][1]) / poid2
+        temp = (poid2 * r1 + poid1 * r2) / (poid1 + poid2)
+        derives.append(temp)
+        print("%.1f ml -> %.2f" % (data[i][0], temp))
+    equivalence_point(data, derives)
+    derives.append(0)
+    return derives
+
+def second_derivative(data, derives):
+    print("\nSecond derivative:")
+    for i in range(1, len(derives) - 3):
+        poid1 = data[i + 1][0] - data[i][0]
+        poid2 = data[i + 2][0] - data[i + 1][0]
+        r1 = (derives[i + 1] - derives[i]) / poid1
+        r2 = (derives[i + 2] - derives[i + 1]) / poid2
+        temp = (poid2 * r1 + poid1 * r2) / (poid1 + poid2)
+        print("%.1f ml -> %.2f" % (data[i + 1][0], temp))
+
+def second_derivative_estimate(data, derives):
+    print("\nSecond derivative estimated:")
+    equiva = equivalence_pointe(data, derives)
+    little = []
+    little.append(0)
+    little.append(1000000)
+    recursive = equiva[0]
+    start = equiva[1]
+    it = data[start - 1][0]
+    temp = 0
+    result = []
+    result.append(it)
+    if start - 2 >= 0:
+        start -= 2
+        poid1 = data[start + 1][0] - data[start][0]
+        poid2 = data[start + 2][0] - data[start + 1][0]
+        r1 = (derives[start + 1] - derives[start]) / poid1
+        r2 = (derives[start + 2] - derives[start + 1]) / poid2
+        temp = (poid2 * r1 + poid1 * r2) / (poid1 + poid2)
+        start += 2
+    result.append(temp)
+    result.append(temp)
+    start -= 1
+    poid1 = data[start + 1][0] - data[start][0]
+    poid2 = data[start + 2][0] - data[start + 1][0]
+    r1 = (derives[start + 1] - derives[start]) / poid1
+    r2 = (derives[start + 2] - derives[start + 1]) / poid2
+    temp = (poid2 * r1 + poid1 * r2) / (poid1 + poid2)
+    start += 1
+    result.append(temp)
+    res = (temp - result[1])
+    res /= (10 * (data[start][0] - data[start - 1][0]))
+    result.append(recursive)
+    while result[0] + 0.05 < data[start][0]:
+        print("%.1f ml -> %.2f" % (result[0], result[2]))
+        if (math.fabs(little[1]) >= math.fabs(result[2])):
+            little[1] = result[2]
+            little[0] = result[0]
+        if math.fabs(result[1]) > math.fabs(result[2]) and start + 3 < len(data):
+            result[1] = result[2]
+            result[4] = result[0]
+        result[2] += res
+        result[0] += 0.1
+    equiva = equivalence_points(data, derives)
+    recursive = equiva[0]
+    start = equiva[1]
+    it = data[start - 1][0]
+    temp = 0
+    result = []
+    result.append(it)
+    if start - 2 >= 0:
+        start -= 2
+        poid1 = data[start + 1][0] - data[start][0]
+        poid2 = data[start + 2][0] - data[start + 1][0]
+        r1 = (derives[start + 1] - derives[start]) / poid1
+        r2 = (derives[start + 2] - derives[start + 1]) / poid2
+        temp = (poid2 * r1 + poid1 * r2) / (poid1 + poid2)
+        start += 2
+    result.append(temp)
+    result.append(temp)
+    start -= 1
+    poid1 = data[start + 1][0] - data[start][0]
+    poid2 = data[start + 2][0] - data[start + 1][0]
+    r1 = (derives[start + 1] - derives[start]) / poid1
+    r2 = (derives[start + 2] - derives[start + 1]) / poid2
+    temp = (poid2 * r1 + poid1 * r2) / (poid1 + poid2)
+    start += 1
+    result.append(temp)
+    res = (temp - result[1])
+    res /= (10 * (data[start][0] - data[start - 1][0]))
+    result.append(recursive)
+    while result[0] - 0.05 < data[start][0]:
+        print("%.1f ml -> %.2f" % (result[0], result[2]))
+        if (math.fabs(little[1]) >= math.fabs(result[2])):
+            little[1] = result[2]
+            little[0] = result[0]
+        if math.fabs(result[1]) > math.fabs(result[2]) and start + 3 < len(data):
+            result[1] = result[2]
+            result[4] = result[0]
+        result[2] += res
+        result[0] += 0.1
+    print("\nEquivalence point at %.1f ml" % little[0])
+
+def verif():
+    if len(sys.argv) > 2 :
+        exit(84)
+    if len(sys.argv) == 2 and sys.argv[1] == "-h" :
+        exit(0)
+    if (len(sys.argv) == 1) :
+        exit(84)
+    try :
+        open(sys.argv[1])
+    except:
+        exit(84)
+
+def main():
+    data = []
+    verif()
+    with open(sys.argv[1]) as csv_file:
+        csv_data = list(csv.reader(csv_file, delimiter=';'))
+        if len(csv_data) == 0 :
+            exit(84)
+        for i in range(len(csv_data)):
+            data.append(csv_data[i])
+            try :
+                data[i][0] = float(csv_data[i][0])
+                data[i][1] = float(csv_data[i][1])
+            except :
+                exit(84)
+            if (data[i][1] < 0 or data[i][1] > 14):
+                exit(84)
+            if (data[i][0] < 0):
+                exit(84)
+    derives = derivative_value(data)
+    second_derivative(data, derives)
+    second_derivative_estimate(data, derives)
+
+
+main()

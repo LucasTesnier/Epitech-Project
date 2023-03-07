@@ -1,0 +1,81 @@
+#!/usr/bin/python3
+import sys
+import math
+import csv
+
+def return_borwein(x, n):
+    res = 1
+    if x == 0:
+        return 1
+    for k in range(0, n + 1):
+        res *= (math.sin(x / (2 * k + 1))) / (x / (2 * k + 1))
+    return res
+
+
+def return_pi_sur_deux_ecart(value, end):
+    pi = math.pi / 2
+    diff = value - pi
+    diff = math.fabs(diff)
+    print("diff = %.10f" % (diff))
+    if (end == 0):
+        print()
+    return diff
+
+def midpoint(n):
+    x = 0.0
+    surface = 0
+    while 5000 - 0.5 >= x:
+        surface += 0.5 * return_borwein(x + 0.25, n)
+        x += 0.5
+    print("I%i = %.10f" % (n, surface))
+    return surface
+
+def trapèzes(n):
+    s = 0
+    x = 0
+    while 5000 - 0.5 >= x:
+        s += (return_borwein(x, n) + return_borwein(x + 0.5, n)) / 2 * 0.5
+        x += 0.5
+    print("I%i = %.10f" % (n, s))
+    return (s)
+
+def simpson_two(n):
+    res = 0
+    for i in range(1, 10000):
+        res += return_borwein(0 + i * 0.5, n)
+    return res
+
+def simpson_three(n):
+    res = 0
+    for i in range(0, 10000):
+        res += return_borwein(0 + i * 0.5 + 0.25, n)
+    return (res)
+
+def simpson(n):
+    res = 0
+    res = return_borwein(0, n) + return_borwein(5000, n)
+    res += 2 * simpson_two(n)
+    res += 4 * simpson_three(n)
+    res *= 1 / 12
+    print("I%i = %.10f" % (n, res))
+    return res
+
+def main():
+    if (len(sys.argv) != 2):
+        exit (84)
+    if (sys.argv[1] == "-h"):
+        exit (0)
+    try:
+        n = int(sys.argv[1])
+    except:
+        exit (84)
+    if n < 0:
+        exit (84)
+    print("Midpoint:")
+    return_pi_sur_deux_ecart(midpoint(n), 0)
+    print("Trapezoidal:")
+    return_pi_sur_deux_ecart(trapèzes(n), 0)
+    print("Simpson:")
+    return_pi_sur_deux_ecart(simpson(n), 1)
+
+main()
