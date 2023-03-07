@@ -1,0 +1,17 @@
+*.o
+*.a
+*.gc*
+*.txt
+*.pdf
+.gdb_history
+.idea/
+.vscode/
+asm/asm
+corewar/corewar
+corewar/champions/*
+corewar_binaries/*
+tests/corewar_binaries/
+
+bonus/corewar_dissas/cmake-build-debug/
+
+bonus/corewar_dissas/corewar_dissas
