@@ -1,0 +1,360 @@
+\hypertarget{classarcade_1_1game_1_1_menu}{}\doxysection{arcade\+::game\+::Menu Class Reference}
+\label{classarcade_1_1game_1_1_menu}\index{arcade::game::Menu@{arcade::game::Menu}}
+Inheritance diagram for arcade\+::game\+::Menu\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classarcade_1_1game_1_1_menu}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classarcade_1_1game_1_1_menu_a91f390463bd1ede77f6318b920bf6685}{Menu}} (std\+::vector$<$ std\+::string $>$ \&, std\+::vector$<$ std\+::string $>$ \&, std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1score__object__s}{arcade\+::score\+\_\+object\+\_\+t}} $>$ \&, std\+::string \&)
+\begin{DoxyCompactList}\small\item\em It initializes the menu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classarcade_1_1game_1_1_menu_a59535f9e5175d7b210abfea6751c1f61}\label{classarcade_1_1game_1_1_menu_a59535f9e5175d7b210abfea6751c1f61}} 
+{\bfseries $\sim$\+Menu} ()
+\begin{DoxyCompactList}\small\item\em It\textquotesingle{}s the destructor of the \mbox{\hyperlink{classarcade_1_1game_1_1_menu}{Menu}} class. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} $>$ \mbox{\hyperlink{classarcade_1_1game_1_1_menu_a6e6f55f3d6093fc2279ecec421953a79}{get\+Pending\+Items}} () const
+\begin{DoxyCompactList}\small\item\em It returns a vector of game\+\_\+object\+\_\+t, which are the boxes that will be drawn on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1game_1_1_menu_af5ba627dadbe90637f23ed23eaa92c37}{simulate}} ()
+\begin{DoxyCompactList}\small\item\em It does nothing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1game_1_1_menu_aeca7ed36bbc161a479b6b8a33dcd59ea}{do\+Pending\+Event}} (std\+::vector$<$ arcade\+::event\+\_\+t $>$ \&)
+\begin{DoxyCompactList}\small\item\em It\textquotesingle{}s a function that does the pending event. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} \mbox{\hyperlink{classarcade_1_1game_1_1_menu_aeeef7ca288ad89bfa5ac9f69164bf98c}{get\+Background}} () const
+\begin{DoxyCompactList}\small\item\em It returns a game object that represents the background of the menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1game_1_1_menu_a30fd9abf4d0a1e19692f803062421048}{reset}} ()
+\begin{DoxyCompactList}\small\item\em This function resets the game. \end{DoxyCompactList}\item 
+arcade\+::game\+\_\+status\+\_\+t \mbox{\hyperlink{classarcade_1_1game_1_1_menu_a3ff3f85edb2e87219cc724391db6b868}{get\+Game\+Status}} () const
+\begin{DoxyCompactList}\small\item\em Return the game status. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1text__object__s}{arcade\+::text\+\_\+object\+\_\+t}} $>$ \mbox{\hyperlink{classarcade_1_1game_1_1_menu_ae201fe52b375efd3b7a77dd91ded1344}{get\+Pending\+Texts}} () const
+\begin{DoxyCompactList}\small\item\em It returns a vector of text\+\_\+object\+\_\+t, which is a struct containing the text to display, the font, the size, the position, the color and the background color. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} \mbox{\hyperlink{classarcade_1_1game_1_1_menu_adab42d130bcc7b705df67f63df946ad9}{draw\+ABox}} (\mbox{\hyperlink{structarcade_1_1vector2i__s}{arcade\+::vector2i\+\_\+t}} pos) const
+\begin{DoxyCompactList}\small\item\em It draws a box. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structarcade_1_1text__object__s}{arcade\+::text\+\_\+object\+\_\+t}} \mbox{\hyperlink{classarcade_1_1game_1_1_menu_ab8bed61c26ffdb4aa6565da6db3ceda8}{draw\+AText}} (const std\+::string \&message, std\+::size\+\_\+t size, const std\+::string \&back, \mbox{\hyperlink{structarcade_1_1vector2i__s}{arcade\+::vector2i\+\_\+t}} pos) const
+\begin{DoxyCompactList}\small\item\em It draws a text. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1game_1_1_menu_ab926fa3bf03bf288525d2e6a7e5ecbc7}{draw\+Available\+Game}} (std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1text__object__s}{arcade\+::text\+\_\+object\+\_\+t}} $>$ \&text\+\_\+object) const
+\begin{DoxyCompactList}\small\item\em It draws the available games in the menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1game_1_1_menu_a0e820343049227dd608beb5b252a1a1a}{draw\+Available\+Graphic}} (std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1text__object__s}{arcade\+::text\+\_\+object\+\_\+t}} $>$ \&text\+\_\+object) const
+\begin{DoxyCompactList}\small\item\em It draws the available graphic libraries. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1game_1_1_menu_a5df9a62d456582fc97601df7e87e0f9d}{draw\+Saved\+Score}} (std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1text__object__s}{arcade\+::text\+\_\+object\+\_\+t}} $>$ \&text\+\_\+object) const
+\begin{DoxyCompactList}\small\item\em It draws the saved scores on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1game_1_1_menu_a4c54ee080357beb58d7f343b2d06aef7}{draw\+Pseudo}} (std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1text__object__s}{arcade\+::text\+\_\+object\+\_\+t}} $>$ \&text\+\_\+object) const
+\begin{DoxyCompactList}\small\item\em It draws the pseudo that the user is currently typing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classarcade_1_1game_1_1_menu_a8d70c4c705e18a276793d2ee2e247d1f}\label{classarcade_1_1game_1_1_menu_a8d70c4c705e18a276793d2ee2e247d1f}} 
+void {\bfseries do\+Cursor\+Action} ()
+\begin{DoxyCompactList}\small\item\em It handles the cursor\textquotesingle{}s action. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classarcade_1_1game_1_1_menu_a5c3d878aaf6406e31ab8269f45512e65}{init\+Game}} ()
+\begin{DoxyCompactList}\small\item\em It initializes the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1game_1_1_menu_a217c76fa1def9e6298752c1865142970}{destroy\+Game}} ()
+\begin{DoxyCompactList}\small\item\em It destroys the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classarcade_1_1game_1_1_menu_a2cc087f1d64b2d887007cd63a4a88542}\label{classarcade_1_1game_1_1_menu_a2cc087f1d64b2d887007cd63a4a88542}} 
+std\+::vector$<$ std\+::string $>$ \& {\bfseries \+\_\+v\+\_\+game\+Lib}
+\item 
+\mbox{\Hypertarget{classarcade_1_1game_1_1_menu_a5eb5f34efbefc1077dc956a742ae14fa}\label{classarcade_1_1game_1_1_menu_a5eb5f34efbefc1077dc956a742ae14fa}} 
+std\+::size\+\_\+t {\bfseries \+\_\+s\+\_\+game\+Lib}
+\item 
+\mbox{\Hypertarget{classarcade_1_1game_1_1_menu_a07fdcb5bc82a0aad8760ab9dbb9dfe74}\label{classarcade_1_1game_1_1_menu_a07fdcb5bc82a0aad8760ab9dbb9dfe74}} 
+std\+::vector$<$ std\+::string $>$ \& {\bfseries \+\_\+v\+\_\+graphic\+Lib}
+\item 
+\mbox{\Hypertarget{classarcade_1_1game_1_1_menu_acc3e9030d6cd621b4636e6e060a87170}\label{classarcade_1_1game_1_1_menu_acc3e9030d6cd621b4636e6e060a87170}} 
+std\+::size\+\_\+t {\bfseries \+\_\+s\+\_\+graphic\+Lib}
+\item 
+\mbox{\Hypertarget{classarcade_1_1game_1_1_menu_a3002ccddbf83626cf8642ac7b223891b}\label{classarcade_1_1game_1_1_menu_a3002ccddbf83626cf8642ac7b223891b}} 
+std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1score__object__s}{arcade\+::score\+\_\+object\+\_\+t}} $>$ \& {\bfseries \+\_\+saved\+Score}
+\item 
+\mbox{\Hypertarget{classarcade_1_1game_1_1_menu_a66fd71ab0c1fd64fdd844d1bdb3a44ca}\label{classarcade_1_1game_1_1_menu_a66fd71ab0c1fd64fdd844d1bdb3a44ca}} 
+std\+::size\+\_\+t {\bfseries cursor}
+\item 
+\mbox{\Hypertarget{classarcade_1_1game_1_1_menu_a406b01ce1e2bad21ecc4a63810d7c8fe}\label{classarcade_1_1game_1_1_menu_a406b01ce1e2bad21ecc4a63810d7c8fe}} 
+std\+::vector$<$ char $>$ {\bfseries \+\_\+v\+\_\+pseudo}
+\item 
+\mbox{\Hypertarget{classarcade_1_1game_1_1_menu_aa072253b0f9107f9d7a8919ab1484dd9}\label{classarcade_1_1game_1_1_menu_aa072253b0f9107f9d7a8919ab1484dd9}} 
+std\+::string {\bfseries \+\_\+pending\+Game}
+\item 
+\mbox{\Hypertarget{classarcade_1_1game_1_1_menu_a6711ab12f1d9c231f7c867d74b3b6656}\label{classarcade_1_1game_1_1_menu_a6711ab12f1d9c231f7c867d74b3b6656}} 
+std\+::string {\bfseries \+\_\+pending\+Graphic}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classarcade_1_1game_1_1_menu_a91f390463bd1ede77f6318b920bf6685}\label{classarcade_1_1game_1_1_menu_a91f390463bd1ede77f6318b920bf6685}} 
+\index{arcade::game::Menu@{arcade::game::Menu}!Menu@{Menu}}
+\index{Menu@{Menu}!arcade::game::Menu@{arcade::game::Menu}}
+\doxysubsubsection{\texorpdfstring{Menu()}{Menu()}}
+{\footnotesize\ttfamily arcade\+::game\+::\+Menu\+::\+Menu (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$ \&}]{v\+\_\+game\+Lib,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{v\+\_\+graphic\+Lib,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1score__object__s}{arcade\+::score\+\_\+object\+\_\+t}} $>$ \&}]{saved\+Score,  }\item[{std\+::string \&}]{pseudo }\end{DoxyParamCaption})}
+
+
+
+It initializes the menu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v\+\_\+game\+Lib} & a vector of strings containing the names of the games available \\
+\hline
+{\em v\+\_\+graphic\+Lib} & a vector of strings containing the names of the graphic libraries \\
+\hline
+{\em saved\+Score} & a vector of score\+\_\+object\+\_\+t, which is a struct containing a pseudo and a score. \\
+\hline
+{\em pseudo} & The player\textquotesingle{}s pseudo \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classarcade_1_1game_1_1_menu_a217c76fa1def9e6298752c1865142970}\label{classarcade_1_1game_1_1_menu_a217c76fa1def9e6298752c1865142970}} 
+\index{arcade::game::Menu@{arcade::game::Menu}!destroyGame@{destroyGame}}
+\index{destroyGame@{destroyGame}!arcade::game::Menu@{arcade::game::Menu}}
+\doxysubsubsection{\texorpdfstring{destroyGame()}{destroyGame()}}
+{\footnotesize\ttfamily void arcade\+::game\+::\+Menu\+::destroy\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+It destroys the game. 
+
+
+
+Implements \mbox{\hyperlink{classarcade_1_1game_1_1_i_game}{arcade\+::game\+::\+IGame}}.
+
+\mbox{\Hypertarget{classarcade_1_1game_1_1_menu_aeca7ed36bbc161a479b6b8a33dcd59ea}\label{classarcade_1_1game_1_1_menu_aeca7ed36bbc161a479b6b8a33dcd59ea}} 
+\index{arcade::game::Menu@{arcade::game::Menu}!doPendingEvent@{doPendingEvent}}
+\index{doPendingEvent@{doPendingEvent}!arcade::game::Menu@{arcade::game::Menu}}
+\doxysubsubsection{\texorpdfstring{doPendingEvent()}{doPendingEvent()}}
+{\footnotesize\ttfamily void arcade\+::game\+::\+Menu\+::do\+Pending\+Event (\begin{DoxyParamCaption}\item[{std\+::vector$<$ arcade\+::event\+\_\+t $>$ \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+It\textquotesingle{}s a function that does the pending event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The event vector \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classarcade_1_1game_1_1_i_game}{arcade\+::game\+::\+IGame}}.
+
+\mbox{\Hypertarget{classarcade_1_1game_1_1_menu_adab42d130bcc7b705df67f63df946ad9}\label{classarcade_1_1game_1_1_menu_adab42d130bcc7b705df67f63df946ad9}} 
+\index{arcade::game::Menu@{arcade::game::Menu}!drawABox@{drawABox}}
+\index{drawABox@{drawABox}!arcade::game::Menu@{arcade::game::Menu}}
+\doxysubsubsection{\texorpdfstring{drawABox()}{drawABox()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} arcade\+::game\+::\+Menu\+::draw\+ABox (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structarcade_1_1vector2i__s}{arcade\+::vector2i\+\_\+t}}}]{pos }\end{DoxyParamCaption}) const}
+
+
+
+It draws a box. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The position of the box\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A game object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1game_1_1_menu_ab8bed61c26ffdb4aa6565da6db3ceda8}\label{classarcade_1_1game_1_1_menu_ab8bed61c26ffdb4aa6565da6db3ceda8}} 
+\index{arcade::game::Menu@{arcade::game::Menu}!drawAText@{drawAText}}
+\index{drawAText@{drawAText}!arcade::game::Menu@{arcade::game::Menu}}
+\doxysubsubsection{\texorpdfstring{drawAText()}{drawAText()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structarcade_1_1text__object__s}{arcade\+::text\+\_\+object\+\_\+t}} arcade\+::game\+::\+Menu\+::draw\+AText (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message,  }\item[{std\+::size\+\_\+t}]{size,  }\item[{const std\+::string \&}]{back,  }\item[{\mbox{\hyperlink{structarcade_1_1vector2i__s}{arcade\+::vector2i\+\_\+t}}}]{pos }\end{DoxyParamCaption}) const}
+
+
+
+It draws a text. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The text to display \\
+\hline
+{\em size} & The size of the text \\
+\hline
+{\em back} & background color of the text \\
+\hline
+{\em pos} & The position of the text\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A text object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1game_1_1_menu_ab926fa3bf03bf288525d2e6a7e5ecbc7}\label{classarcade_1_1game_1_1_menu_ab926fa3bf03bf288525d2e6a7e5ecbc7}} 
+\index{arcade::game::Menu@{arcade::game::Menu}!drawAvailableGame@{drawAvailableGame}}
+\index{drawAvailableGame@{drawAvailableGame}!arcade::game::Menu@{arcade::game::Menu}}
+\doxysubsubsection{\texorpdfstring{drawAvailableGame()}{drawAvailableGame()}}
+{\footnotesize\ttfamily void arcade\+::game\+::\+Menu\+::draw\+Available\+Game (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1text__object__s}{arcade\+::text\+\_\+object\+\_\+t}} $>$ \&}]{text\+\_\+object }\end{DoxyParamCaption}) const}
+
+
+
+It draws the available games in the menu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text\+\_\+object} & The vector of text\+\_\+object\+\_\+t that will be used to draw the text. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classarcade_1_1game_1_1_menu_a0e820343049227dd608beb5b252a1a1a}\label{classarcade_1_1game_1_1_menu_a0e820343049227dd608beb5b252a1a1a}} 
+\index{arcade::game::Menu@{arcade::game::Menu}!drawAvailableGraphic@{drawAvailableGraphic}}
+\index{drawAvailableGraphic@{drawAvailableGraphic}!arcade::game::Menu@{arcade::game::Menu}}
+\doxysubsubsection{\texorpdfstring{drawAvailableGraphic()}{drawAvailableGraphic()}}
+{\footnotesize\ttfamily void arcade\+::game\+::\+Menu\+::draw\+Available\+Graphic (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1text__object__s}{arcade\+::text\+\_\+object\+\_\+t}} $>$ \&}]{text\+\_\+object }\end{DoxyParamCaption}) const}
+
+
+
+It draws the available graphic libraries. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text\+\_\+object} & The vector of text\+\_\+object\+\_\+t that will be used to draw the text. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classarcade_1_1game_1_1_menu_a4c54ee080357beb58d7f343b2d06aef7}\label{classarcade_1_1game_1_1_menu_a4c54ee080357beb58d7f343b2d06aef7}} 
+\index{arcade::game::Menu@{arcade::game::Menu}!drawPseudo@{drawPseudo}}
+\index{drawPseudo@{drawPseudo}!arcade::game::Menu@{arcade::game::Menu}}
+\doxysubsubsection{\texorpdfstring{drawPseudo()}{drawPseudo()}}
+{\footnotesize\ttfamily void arcade\+::game\+::\+Menu\+::draw\+Pseudo (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1text__object__s}{arcade\+::text\+\_\+object\+\_\+t}} $>$ \&}]{text\+\_\+object }\end{DoxyParamCaption}) const}
+
+
+
+It draws the pseudo that the user is currently typing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text\+\_\+object} & The vector of text\+\_\+object\+\_\+t that will be filled by the function. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classarcade_1_1game_1_1_menu_a5df9a62d456582fc97601df7e87e0f9d}\label{classarcade_1_1game_1_1_menu_a5df9a62d456582fc97601df7e87e0f9d}} 
+\index{arcade::game::Menu@{arcade::game::Menu}!drawSavedScore@{drawSavedScore}}
+\index{drawSavedScore@{drawSavedScore}!arcade::game::Menu@{arcade::game::Menu}}
+\doxysubsubsection{\texorpdfstring{drawSavedScore()}{drawSavedScore()}}
+{\footnotesize\ttfamily void arcade\+::game\+::\+Menu\+::draw\+Saved\+Score (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1text__object__s}{arcade\+::text\+\_\+object\+\_\+t}} $>$ \&}]{text\+\_\+object }\end{DoxyParamCaption}) const}
+
+
+
+It draws the saved scores on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text\+\_\+object} & The vector of text\+\_\+object\+\_\+t to fill \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classarcade_1_1game_1_1_menu_aeeef7ca288ad89bfa5ac9f69164bf98c}\label{classarcade_1_1game_1_1_menu_aeeef7ca288ad89bfa5ac9f69164bf98c}} 
+\index{arcade::game::Menu@{arcade::game::Menu}!getBackground@{getBackground}}
+\index{getBackground@{getBackground}!arcade::game::Menu@{arcade::game::Menu}}
+\doxysubsubsection{\texorpdfstring{getBackground()}{getBackground()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} arcade\+::game\+::\+Menu\+::get\+Background (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+It returns a game object that represents the background of the menu. 
+
+\begin{DoxyReturn}{Returns}
+A game object 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classarcade_1_1game_1_1_i_game}{arcade\+::game\+::\+IGame}}.
+
+\mbox{\Hypertarget{classarcade_1_1game_1_1_menu_a3ff3f85edb2e87219cc724391db6b868}\label{classarcade_1_1game_1_1_menu_a3ff3f85edb2e87219cc724391db6b868}} 
+\index{arcade::game::Menu@{arcade::game::Menu}!getGameStatus@{getGameStatus}}
+\index{getGameStatus@{getGameStatus}!arcade::game::Menu@{arcade::game::Menu}}
+\doxysubsubsection{\texorpdfstring{getGameStatus()}{getGameStatus()}}
+{\footnotesize\ttfamily arcade\+::game\+\_\+status\+\_\+t arcade\+::game\+::\+Menu\+::get\+Game\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Return the game status. 
+
+\begin{DoxyReturn}{Returns}
+The game status. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classarcade_1_1game_1_1_i_game}{arcade\+::game\+::\+IGame}}.
+
+\mbox{\Hypertarget{classarcade_1_1game_1_1_menu_a6e6f55f3d6093fc2279ecec421953a79}\label{classarcade_1_1game_1_1_menu_a6e6f55f3d6093fc2279ecec421953a79}} 
+\index{arcade::game::Menu@{arcade::game::Menu}!getPendingItems@{getPendingItems}}
+\index{getPendingItems@{getPendingItems}!arcade::game::Menu@{arcade::game::Menu}}
+\doxysubsubsection{\texorpdfstring{getPendingItems()}{getPendingItems()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} $>$ arcade\+::game\+::\+Menu\+::get\+Pending\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+It returns a vector of game\+\_\+object\+\_\+t, which are the boxes that will be drawn on the screen. 
+
+\begin{DoxyReturn}{Returns}
+A vector of game\+\_\+object\+\_\+t 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classarcade_1_1game_1_1_i_game}{arcade\+::game\+::\+IGame}}.
+
+\mbox{\Hypertarget{classarcade_1_1game_1_1_menu_ae201fe52b375efd3b7a77dd91ded1344}\label{classarcade_1_1game_1_1_menu_ae201fe52b375efd3b7a77dd91ded1344}} 
+\index{arcade::game::Menu@{arcade::game::Menu}!getPendingTexts@{getPendingTexts}}
+\index{getPendingTexts@{getPendingTexts}!arcade::game::Menu@{arcade::game::Menu}}
+\doxysubsubsection{\texorpdfstring{getPendingTexts()}{getPendingTexts()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1text__object__s}{arcade\+::text\+\_\+object\+\_\+t}} $>$ arcade\+::game\+::\+Menu\+::get\+Pending\+Texts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+It returns a vector of text\+\_\+object\+\_\+t, which is a struct containing the text to display, the font, the size, the position, the color and the background color. 
+
+\begin{DoxyReturn}{Returns}
+A vector of text\+\_\+object\+\_\+t 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classarcade_1_1game_1_1_i_game}{arcade\+::game\+::\+IGame}}.
+
+\mbox{\Hypertarget{classarcade_1_1game_1_1_menu_a5c3d878aaf6406e31ab8269f45512e65}\label{classarcade_1_1game_1_1_menu_a5c3d878aaf6406e31ab8269f45512e65}} 
+\index{arcade::game::Menu@{arcade::game::Menu}!initGame@{initGame}}
+\index{initGame@{initGame}!arcade::game::Menu@{arcade::game::Menu}}
+\doxysubsubsection{\texorpdfstring{initGame()}{initGame()}}
+{\footnotesize\ttfamily void arcade\+::game\+::\+Menu\+::init\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+It initializes the game. 
+
+
+
+Implements \mbox{\hyperlink{classarcade_1_1game_1_1_i_game}{arcade\+::game\+::\+IGame}}.
+
+\mbox{\Hypertarget{classarcade_1_1game_1_1_menu_a30fd9abf4d0a1e19692f803062421048}\label{classarcade_1_1game_1_1_menu_a30fd9abf4d0a1e19692f803062421048}} 
+\index{arcade::game::Menu@{arcade::game::Menu}!reset@{reset}}
+\index{reset@{reset}!arcade::game::Menu@{arcade::game::Menu}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void arcade\+::game\+::\+Menu\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This function resets the game. 
+
+
+
+Implements \mbox{\hyperlink{classarcade_1_1game_1_1_i_game}{arcade\+::game\+::\+IGame}}.
+
+\mbox{\Hypertarget{classarcade_1_1game_1_1_menu_af5ba627dadbe90637f23ed23eaa92c37}\label{classarcade_1_1game_1_1_menu_af5ba627dadbe90637f23ed23eaa92c37}} 
+\index{arcade::game::Menu@{arcade::game::Menu}!simulate@{simulate}}
+\index{simulate@{simulate}!arcade::game::Menu@{arcade::game::Menu}}
+\doxysubsubsection{\texorpdfstring{simulate()}{simulate()}}
+{\footnotesize\ttfamily void arcade\+::game\+::\+Menu\+::simulate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+It does nothing. 
+
+
+
+Implements \mbox{\hyperlink{classarcade_1_1game_1_1_i_game}{arcade\+::game\+::\+IGame}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Core/\+Menu/Menu.\+hpp\item 
+src/\+Core/\+Menu/Menu.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,78 @@
+\hypertarget{game__object_8hpp_source}{}\doxysection{game\+\_\+object.\+hpp}
+\label{game__object_8hpp_source}\index{src/game\_object.hpp@{src/game\_object.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{** EPITECH PROJECT, 2022}}
+\DoxyCodeLine{3 \textcolor{comment}{** ARCADE}}
+\DoxyCodeLine{4 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{5 \textcolor{comment}{** game\_object}}
+\DoxyCodeLine{6 \textcolor{comment}{*/}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef GAME\_OBJECT\_HPP\_}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{    \#define GAME\_OBJECT\_HPP\_}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{namespace }arcade \{}
+\DoxyCodeLine{14     \textcolor{keyword}{typedef} \textcolor{keyword}{enum} orientation\_e \{}
+\DoxyCodeLine{15         EUP = 0,}
+\DoxyCodeLine{16         ERIGHT = 90,}
+\DoxyCodeLine{17         EDOWN = 180,}
+\DoxyCodeLine{18         ELEFT = 270,}
+\DoxyCodeLine{19     \} orientation\_t;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{keyword}{typedef} \textcolor{keyword}{enum} event\_e \{}
+\DoxyCodeLine{22         UP,}
+\DoxyCodeLine{23         RIGHT,}
+\DoxyCodeLine{24         DOWN,}
+\DoxyCodeLine{25         LEFT,}
+\DoxyCodeLine{26         PREV\_GRAPHIC,}
+\DoxyCodeLine{27         NEXT\_GRAPHIC,}
+\DoxyCodeLine{28         NEXT\_GAME,}
+\DoxyCodeLine{29         PREV\_GAME,}
+\DoxyCodeLine{30         ESCAPE,}
+\DoxyCodeLine{31         PAUSE,}
+\DoxyCodeLine{32         RESTART,}
+\DoxyCodeLine{33         MENU,}
+\DoxyCodeLine{34         ACTION}
+\DoxyCodeLine{35     \} event\_t;}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{keyword}{typedef} \textcolor{keyword}{enum} game\_status\_e \{}
+\DoxyCodeLine{38         WIN,}
+\DoxyCodeLine{39         LOSE,}
+\DoxyCodeLine{40         IN\_PROGRESS,}
+\DoxyCodeLine{41         IN\_PAUSE}
+\DoxyCodeLine{42     \} game\_status\_t;}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{49     \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structarcade_1_1vector2i__s}{vector2i\_s}} \{}
+\DoxyCodeLine{50         std::size\_t x;}
+\DoxyCodeLine{51         std::size\_t y;}
+\DoxyCodeLine{52     \} \mbox{\hyperlink{structarcade_1_1vector2i__s}{vector2i\_t}};}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{59     \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structarcade_1_1game__object__s}{game\_object\_s}} \{}
+\DoxyCodeLine{60         std::string path;}
+\DoxyCodeLine{61         std::string color;}
+\DoxyCodeLine{62         \mbox{\hyperlink{structarcade_1_1vector2i__s}{vector2i\_t}} pos;}
+\DoxyCodeLine{63         orientation\_t orientation;}
+\DoxyCodeLine{64         \mbox{\hyperlink{structarcade_1_1vector2i__s}{vector2i\_t}} size;}
+\DoxyCodeLine{65     \} \mbox{\hyperlink{structarcade_1_1game__object__s}{game\_object\_t}};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{72     \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structarcade_1_1text__object__s}{text\_object\_s}} \{}
+\DoxyCodeLine{73         std::string message;}
+\DoxyCodeLine{74         std::string fontPath;}
+\DoxyCodeLine{75         std::size\_t size;}
+\DoxyCodeLine{76         \mbox{\hyperlink{structarcade_1_1vector2i__s}{vector2i\_t}} pos;}
+\DoxyCodeLine{77         std::string textColor;}
+\DoxyCodeLine{78         std::string backgroundColor;}
+\DoxyCodeLine{79     \} \mbox{\hyperlink{structarcade_1_1text__object__s}{text\_object\_t}};}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{85     \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structarcade_1_1score__object__s}{score\_object\_s}} \{}
+\DoxyCodeLine{86         std::string pseudo;}
+\DoxyCodeLine{87         \textcolor{keywordtype}{int} score;}
+\DoxyCodeLine{88     \} \mbox{\hyperlink{structarcade_1_1score__object__s}{score\_object\_t}};}
+\DoxyCodeLine{89 \}}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !GAME\_OBJECT\_HPP\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

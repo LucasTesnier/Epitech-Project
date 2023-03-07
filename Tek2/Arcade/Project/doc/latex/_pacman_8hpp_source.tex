@@ -1,0 +1,107 @@
+\hypertarget{_pacman_8hpp_source}{}\doxysection{Pacman.\+hpp}
+\label{_pacman_8hpp_source}\index{src/Game/Pacman/Pacman.hpp@{src/Game/Pacman/Pacman.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{** EPITECH PROJECT, 2022}}
+\DoxyCodeLine{3 \textcolor{comment}{** Project}}
+\DoxyCodeLine{4 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{5 \textcolor{comment}{** Pacman}}
+\DoxyCodeLine{6 \textcolor{comment}{*/}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef PACMAN\_HPP}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define PACMAN\_HPP}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}AGame.hpp"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}game\_object.hpp"{}}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{namespace }arcade \{}
+\DoxyCodeLine{18     \textcolor{keyword}{namespace }game \{ }
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20         \textcolor{keyword}{typedef} \textcolor{keyword}{enum} entity\_s \{}
+\DoxyCodeLine{21             BEINVINIBLE = 20}
+\DoxyCodeLine{22         \} entity\_t;}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24         \textcolor{keyword}{class }\mbox{\hyperlink{classarcade_1_1game_1_1_pacman}{Pacman}} : \textcolor{keyword}{public} \mbox{\hyperlink{classarcade_1_1game_1_1_a_game}{AGame}} \{}
+\DoxyCodeLine{25             \textcolor{keyword}{public}:}
+\DoxyCodeLine{26                 \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_ab01a395338e568e450994ff3a858cf36}{Pacman}}();}
+\DoxyCodeLine{27                 \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a7dc3fe9df1f365bdfa69506ec4835bc6}{\string~Pacman}}();}
+\DoxyCodeLine{28                 \textcolor{keyword}{const} std::vector<arcade::game\_object\_t> \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a36a2ceb3d87f7ebc4240969438c15e6c}{getPendingItems}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{29                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_aa0e2a1810b673263bc54e184714c3c2d}{simulate}}();}
+\DoxyCodeLine{30                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_ac40f0b3b11e9158e5ee576a5e20fac12}{doPendingEvent}}(std::vector<arcade::event\_t> \&);}
+\DoxyCodeLine{31                 \textcolor{keyword}{const} \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade::game\_object\_t}} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a320c5311026c8bba1673b219a925190d}{getBackground}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{32                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a633ec161e0fbe6d93dbf15df667a7e9b}{reset}}();}
+\DoxyCodeLine{33                 arcade::game\_status\_t \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a4df2086ae36b4a84cc79e32fb11f2a06}{getGameStatus}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{34                 \textcolor{keyword}{const} std::vector<arcade::text\_object\_t> \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a07da3ebac9123ad163bd5a2bf3b9f490}{getPendingTexts}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{35                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a115e14d216de09621e947198183dea64}{initGame}}();}
+\DoxyCodeLine{36                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a4ac2129d6c53837de97a905cd170bb24}{destroyGame}}();}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38             \textcolor{keyword}{protected}:}
+\DoxyCodeLine{39                 \textcolor{keywordtype}{bool} isGameOver(\textcolor{keywordtype}{bool} \_isGameOver);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a83bd117cd2378351bb3774136d1c8e0d}{loadMap}}(\textcolor{keywordtype}{char} \textcolor{keyword}{const} *path);}
+\DoxyCodeLine{42                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a90eb6af1ed5d06c7541e6e68552d6797}{deleteMap}}();}
+\DoxyCodeLine{43                 \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade::game\_object\_t}} makeEntity();}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45                 std::vector<arcade::game\_object\_t> loadEntity(std::vector<arcade::game\_object\_t> \&);}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48                 \textcolor{keywordtype}{bool} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a8c70d4ea0653b26a9d6ffde3c17ab8b1}{isAPoint}}(\mbox{\hyperlink{structarcade_1_1vector2i__s}{vector2i\_t}} posNextentity);}
+\DoxyCodeLine{49                 \textcolor{keywordtype}{bool} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_ae237d071b8e8d65af1c70df9ab61cf7b}{isACherry}}(\mbox{\hyperlink{structarcade_1_1vector2i__s}{vector2i\_t}} posNextentity);}
+\DoxyCodeLine{50                 \textcolor{keywordtype}{bool} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a6c65da99d5403988ed4540570a3aac44}{isInvincible}}();}
+\DoxyCodeLine{51                 \textcolor{keywordtype}{bool} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a252b529dbb1ecf784a50fb302df88eca}{isAGhost}}(\mbox{\hyperlink{structarcade_1_1vector2i__s}{vector2i\_t}} posNextentity);}
+\DoxyCodeLine{52                 \textcolor{keywordtype}{bool} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a3a644982eab22aa80a2c74d2a95d9949}{isATp}}(\mbox{\hyperlink{structarcade_1_1vector2i__s}{vector2i\_t}} posNextentity);}
+\DoxyCodeLine{53                 \textcolor{keywordtype}{bool} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a68912549b2be2138d1176b8ca23b60d4}{isAWall}}(\mbox{\hyperlink{structarcade_1_1vector2i__s}{vector2i\_t}} posNextentity);}
+\DoxyCodeLine{54                 \textcolor{keywordtype}{bool} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a8d11b54b7ae8f13afa5b1164f0533293}{isEatbyGhost}}(\mbox{\hyperlink{structarcade_1_1vector2i__s}{vector2i\_t}} posNextentity);}
+\DoxyCodeLine{55                 \textcolor{keywordtype}{bool} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a70070e615916aab184f26133c47e6806}{isEataGhost}}(\mbox{\hyperlink{structarcade_1_1vector2i__s}{vector2i\_t}} posNextentity);}
+\DoxyCodeLine{56                 \textcolor{keywordtype}{bool} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_ac093821883b89d7daa51daf9ccbac3e1}{isAlive}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{57                 \textcolor{keywordtype}{bool} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a85b0613e830c863f35cc9934df8f5620}{isWin}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{58                 \textcolor{keywordtype}{bool} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a0445a3d4a9fd6218b8edeba64996084b}{isEmptyCase}}(\mbox{\hyperlink{structarcade_1_1vector2i__s}{vector2i\_s}} posNextentity);}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60                 \mbox{\hyperlink{structarcade_1_1vector2i__s}{vector2i\_t}} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a2ea5577c73bc64174938c864944cd212}{getNextEntity}}(\mbox{\hyperlink{structarcade_1_1vector2i__s}{vector2i\_t}} entity, orientation\_t orientation);}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62                 \textcolor{keywordtype}{void} upgradePoints();}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64                 \textcolor{keywordtype}{bool} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_aea47972389df859be09416dab279fe89}{checkNextMoove}}(\mbox{\hyperlink{structarcade_1_1vector2i__s}{vector2i\_t}} \&entity, orientation\_t orientation);}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a826e5172351d7b7749b34a3ca9b8be9e}{makeMoovPac}}(\mbox{\hyperlink{structarcade_1_1vector2i__s}{vector2i\_t}} \&entity);}
+\DoxyCodeLine{67                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_ad64f4bbf1d7fd82e6aa81dc9f4567645}{makeMoovGhost}}(\mbox{\hyperlink{structarcade_1_1vector2i__s}{vector2i\_t}} entity);}
+\DoxyCodeLine{68                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_aa972b0e501da919381518fe236e6f72e}{moove}}(\mbox{\hyperlink{structarcade_1_1vector2i__s}{vector2i\_t}} entity, orientation\_t orientation);}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a738a22ef7150bda3ac830249f4eae6b6}{mooveLeft}}(\mbox{\hyperlink{structarcade_1_1vector2i__s}{vector2i\_t}} posEntity);}
+\DoxyCodeLine{71                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a349ee629df4c93efce580a5f34472bf9}{mooveRight}}(\mbox{\hyperlink{structarcade_1_1vector2i__s}{vector2i\_t}} posEntity);}
+\DoxyCodeLine{72                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a9d85433c4cd6f40e06fb31688d70b0c2}{mooveUp}}(\mbox{\hyperlink{structarcade_1_1vector2i__s}{vector2i\_t}} posEntity);}
+\DoxyCodeLine{73                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a0db569cf4d57f54c8a932923abfdd4c3}{mooveDown}}(\mbox{\hyperlink{structarcade_1_1vector2i__s}{vector2i\_t}} posEntity);}
+\DoxyCodeLine{74                 }
+\DoxyCodeLine{75                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a25a070dcd466f7b47e1497b034293be0}{TPEntity}}(\mbox{\hyperlink{structarcade_1_1vector2i__s}{vector2i\_t}} posEntity, orientation\_t orientation);}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_ad1a7af8d54e454b605bf00f11bf69f82}{addPoints}}(\textcolor{keywordtype}{char} c);}
+\DoxyCodeLine{78                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_accc7aaab167fa32d44a6a0d9c59fd646}{killGhost}}(\mbox{\hyperlink{structarcade_1_1vector2i__s}{vector2i\_t}} \&entity);}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82             \textcolor{keyword}{private}:}
+\DoxyCodeLine{83                 \textcolor{keywordtype}{bool} \_isGameOver;}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85                 \textcolor{keywordtype}{char} \_map[21][34];}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87                 \textcolor{keywordtype}{int} \_timeToBeInvicible;}
+\DoxyCodeLine{88                 \textcolor{keywordtype}{int} \_opeeeen;}
+\DoxyCodeLine{89                 \textcolor{keywordtype}{int} \_points;}
+\DoxyCodeLine{90                 \textcolor{keywordtype}{int} \_life;}
+\DoxyCodeLine{91                 arcade::orientation\_t \_direction;}
+\DoxyCodeLine{92                 std::size\_t \_animation;}
+\DoxyCodeLine{93                 std::vector<arcade::game\_object\_t> \_mapVector;}
+\DoxyCodeLine{94                 \mbox{\hyperlink{structarcade_1_1vector2i__s}{vector2i\_t}} \_posEntityPac;}
+\DoxyCodeLine{95                 \textcolor{keywordtype}{char} \_temp;}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97         \};}
+\DoxyCodeLine{98     \};}
+\DoxyCodeLine{99 \};}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !PACMAN\_HPP */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

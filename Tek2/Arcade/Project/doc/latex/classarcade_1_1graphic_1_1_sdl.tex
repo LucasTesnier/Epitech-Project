@@ -1,0 +1,342 @@
+\hypertarget{classarcade_1_1graphic_1_1_sdl}{}\doxysection{arcade\+::graphic\+::Sdl Class Reference}
+\label{classarcade_1_1graphic_1_1_sdl}\index{arcade::graphic::Sdl@{arcade::graphic::Sdl}}
+Inheritance diagram for arcade\+::graphic\+::Sdl\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classarcade_1_1graphic_1_1_sdl}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_sdl_aef5f0d09cb5ac1d3c401fab38557e96b}\label{classarcade_1_1graphic_1_1_sdl_aef5f0d09cb5ac1d3c401fab38557e96b}} 
+{\bfseries Sdl} ()
+\begin{DoxyCompactList}\small\item\em It initializes the window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_sdl_a7a23a3ff71afadac4420d24079b1097c}\label{classarcade_1_1graphic_1_1_sdl_a7a23a3ff71afadac4420d24079b1097c}} 
+{\bfseries $\sim$\+Sdl} ()
+\begin{DoxyCompactList}\small\item\em It closes the window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_a664c2f2714dff312f96c9dc89192107e}{init\+Window}} (std\+::string const \&name)
+\begin{DoxyCompactList}\small\item\em It initializes the SDL library, creates a window, and initializes the SDL\+\_\+ttf library. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_adf2bb43e847a34e0ba97e21f24e1d5dd}{close\+Window}} ()
+\begin{DoxyCompactList}\small\item\em It closes the window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_a3fc3f1922eabc21c2108aeabe38665a8}{clear\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em It clears the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_afc12c493cd443ecd86e4364c510eebb5}{display\+Background}} (const \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} \&)
+\begin{DoxyCompactList}\small\item\em It loads the image from the path given in the game\+\_\+object\+\_\+t, then blits it to the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_ac2adb830258cc4fbf50b1b9e71849276}{display\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em It updates the window surface. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_aec9c7e219d7f7de8b218371da4f83727}{display\+Game\+Object}} (const \mbox{\hyperlink{structarcade_1_1game__object__s}{game\+\_\+object\+\_\+t}} \&)
+\begin{DoxyCompactList}\small\item\em It takes a game\+\_\+object\+\_\+t and displays it on the screen. \end{DoxyCompactList}\item 
+std\+::vector$<$ arcade\+::event\+\_\+t $>$ \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_acc7084d3b9de404318c142099a478321}{get\+Pending\+Event}} ()
+\begin{DoxyCompactList}\small\item\em It takes the events that have been triggered and puts them in a vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_a765ede62d212e4f8fa777677c65d3d8c}{draw\+Pending\+Game\+Objects}} (const std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} $>$ \&)
+\begin{DoxyCompactList}\small\item\em It takes a vector of game\+\_\+object\+\_\+t and displays them on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_a8526ce8128588fa3b06b9fece0354193}{draw\+Pending\+Texts}} (const std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1text__object__s}{arcade\+::text\+\_\+object\+\_\+t}} $>$ \&)
+\begin{DoxyCompactList}\small\item\em It takes a vector of text objects and displays them on the screen. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_a5c58ec3fb3d5bed4baa2828aa339f525}{get\+Status}} () const
+\begin{DoxyCompactList}\small\item\em It returns the status of the SDL library. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structarcade_1_1graphic_1_1pixel__s}{arcade\+::graphic\+::pixel\+\_\+t}} \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_a5d5d1c9972b4dae996e63762857656ae}{transform\+Hexa\+Color\+To\+Pixel}} (const std\+::string \&) const
+\begin{DoxyCompactList}\small\item\em It converts a hexadecimal color to a pixel\+\_\+t structure. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_ad918717dcbcde7fb53810846f1917097}{transform\+Virtual\+Case\+To\+Int}} (std\+::size\+\_\+t size, bool axe\+\_\+x) const
+\begin{DoxyCompactList}\small\item\em It transforms a virtual case size to a real case size. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Rect \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_a0f415cd2627c7da864a5e8ba434acdd4}{transform\+Game\+Object\+To\+Rect}} (const \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} \&game\+\_\+object) const
+\begin{DoxyCompactList}\small\item\em It transforms a game object into a SDL\+\_\+\+Rect. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_a60bdb93ddbffaf56823dfc02a310feb1}{display\+Rect}} (const \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} \&game\+\_\+object) const
+\begin{DoxyCompactList}\small\item\em It takes a game\+\_\+object\+\_\+t and displays it on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_a54e1e2ff935ae189326dd272bfe0bc3a}{display\+Text\+Object}} (const \mbox{\hyperlink{structarcade_1_1text__object__s}{text\+\_\+object\+\_\+t}} \&text\+\_\+object)
+\begin{DoxyCompactList}\small\item\em It takes a text\+\_\+object\+\_\+t, which is a struct containing all the information needed to display a text, and displays it on the screen. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Rect \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_a07d89da22ee2c041b5774e3fed8d69f3}{transform\+Text\+Object\+To\+Rect}} (const \mbox{\hyperlink{structarcade_1_1text__object__s}{arcade\+::text\+\_\+object\+\_\+t}} \&text\+\_\+object) const
+\begin{DoxyCompactList}\small\item\em It transforms a text object into a SDL\+\_\+\+Rect. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_sdl_a3fc3f1922eabc21c2108aeabe38665a8}\label{classarcade_1_1graphic_1_1_sdl_a3fc3f1922eabc21c2108aeabe38665a8}} 
+\index{arcade::graphic::Sdl@{arcade::graphic::Sdl}!clearScreen@{clearScreen}}
+\index{clearScreen@{clearScreen}!arcade::graphic::Sdl@{arcade::graphic::Sdl}}
+\doxysubsubsection{\texorpdfstring{clearScreen()}{clearScreen()}}
+{\footnotesize\ttfamily void arcade\+::graphic\+::\+Sdl\+::clear\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+It clears the screen. 
+
+
+
+Implements \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphic}{arcade\+::graphic\+::\+IGraphic}}.
+
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_sdl_adf2bb43e847a34e0ba97e21f24e1d5dd}\label{classarcade_1_1graphic_1_1_sdl_adf2bb43e847a34e0ba97e21f24e1d5dd}} 
+\index{arcade::graphic::Sdl@{arcade::graphic::Sdl}!closeWindow@{closeWindow}}
+\index{closeWindow@{closeWindow}!arcade::graphic::Sdl@{arcade::graphic::Sdl}}
+\doxysubsubsection{\texorpdfstring{closeWindow()}{closeWindow()}}
+{\footnotesize\ttfamily void arcade\+::graphic\+::\+Sdl\+::close\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+It closes the window. 
+
+
+
+Implements \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphic}{arcade\+::graphic\+::\+IGraphic}}.
+
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_sdl_afc12c493cd443ecd86e4364c510eebb5}\label{classarcade_1_1graphic_1_1_sdl_afc12c493cd443ecd86e4364c510eebb5}} 
+\index{arcade::graphic::Sdl@{arcade::graphic::Sdl}!displayBackground@{displayBackground}}
+\index{displayBackground@{displayBackground}!arcade::graphic::Sdl@{arcade::graphic::Sdl}}
+\doxysubsubsection{\texorpdfstring{displayBackground()}{displayBackground()}}
+{\footnotesize\ttfamily void arcade\+::graphic\+::\+Sdl\+::display\+Background (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} \&}]{game\+\_\+object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+It loads the image from the path given in the game\+\_\+object\+\_\+t, then blits it to the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+\_\+object} & The game object to display\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the surface 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphic}{arcade\+::graphic\+::\+IGraphic}}.
+
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_sdl_aec9c7e219d7f7de8b218371da4f83727}\label{classarcade_1_1graphic_1_1_sdl_aec9c7e219d7f7de8b218371da4f83727}} 
+\index{arcade::graphic::Sdl@{arcade::graphic::Sdl}!displayGameObject@{displayGameObject}}
+\index{displayGameObject@{displayGameObject}!arcade::graphic::Sdl@{arcade::graphic::Sdl}}
+\doxysubsubsection{\texorpdfstring{displayGameObject()}{displayGameObject()}}
+{\footnotesize\ttfamily void arcade\+::graphic\+::\+Sdl\+::display\+Game\+Object (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structarcade_1_1game__object__s}{game\+\_\+object\+\_\+t}} \&}]{game\+\_\+object }\end{DoxyParamCaption})}
+
+
+
+It takes a game\+\_\+object\+\_\+t and displays it on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+\_\+object} & The game object to display.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A rectangle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_sdl_a60bdb93ddbffaf56823dfc02a310feb1}\label{classarcade_1_1graphic_1_1_sdl_a60bdb93ddbffaf56823dfc02a310feb1}} 
+\index{arcade::graphic::Sdl@{arcade::graphic::Sdl}!displayRect@{displayRect}}
+\index{displayRect@{displayRect}!arcade::graphic::Sdl@{arcade::graphic::Sdl}}
+\doxysubsubsection{\texorpdfstring{displayRect()}{displayRect()}}
+{\footnotesize\ttfamily void arcade\+::graphic\+::\+Sdl\+::display\+Rect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} \&}]{game\+\_\+object }\end{DoxyParamCaption}) const}
+
+
+
+It takes a game\+\_\+object\+\_\+t and displays it on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+\_\+object} & The game object to display \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_sdl_ac2adb830258cc4fbf50b1b9e71849276}\label{classarcade_1_1graphic_1_1_sdl_ac2adb830258cc4fbf50b1b9e71849276}} 
+\index{arcade::graphic::Sdl@{arcade::graphic::Sdl}!displayScreen@{displayScreen}}
+\index{displayScreen@{displayScreen}!arcade::graphic::Sdl@{arcade::graphic::Sdl}}
+\doxysubsubsection{\texorpdfstring{displayScreen()}{displayScreen()}}
+{\footnotesize\ttfamily void arcade\+::graphic\+::\+Sdl\+::display\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+It updates the window surface. 
+
+
+
+Implements \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphic}{arcade\+::graphic\+::\+IGraphic}}.
+
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_sdl_a54e1e2ff935ae189326dd272bfe0bc3a}\label{classarcade_1_1graphic_1_1_sdl_a54e1e2ff935ae189326dd272bfe0bc3a}} 
+\index{arcade::graphic::Sdl@{arcade::graphic::Sdl}!displayTextObject@{displayTextObject}}
+\index{displayTextObject@{displayTextObject}!arcade::graphic::Sdl@{arcade::graphic::Sdl}}
+\doxysubsubsection{\texorpdfstring{displayTextObject()}{displayTextObject()}}
+{\footnotesize\ttfamily void arcade\+::graphic\+::\+Sdl\+::display\+Text\+Object (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structarcade_1_1text__object__s}{text\+\_\+object\+\_\+t}} \&}]{text\+\_\+object }\end{DoxyParamCaption})}
+
+
+
+It takes a text\+\_\+object\+\_\+t, which is a struct containing all the information needed to display a text, and displays it on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text\+\_\+object} & the text object to display\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A SDL\+\_\+\+Rect 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_sdl_a765ede62d212e4f8fa777677c65d3d8c}\label{classarcade_1_1graphic_1_1_sdl_a765ede62d212e4f8fa777677c65d3d8c}} 
+\index{arcade::graphic::Sdl@{arcade::graphic::Sdl}!drawPendingGameObjects@{drawPendingGameObjects}}
+\index{drawPendingGameObjects@{drawPendingGameObjects}!arcade::graphic::Sdl@{arcade::graphic::Sdl}}
+\doxysubsubsection{\texorpdfstring{drawPendingGameObjects()}{drawPendingGameObjects()}}
+{\footnotesize\ttfamily void arcade\+::graphic\+::\+Sdl\+::draw\+Pending\+Game\+Objects (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} $>$ \&}]{game\+\_\+object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+It takes a vector of game\+\_\+object\+\_\+t and displays them on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+\_\+object} & A vector of game\+\_\+object\+\_\+t. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphic}{arcade\+::graphic\+::\+IGraphic}}.
+
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_sdl_a8526ce8128588fa3b06b9fece0354193}\label{classarcade_1_1graphic_1_1_sdl_a8526ce8128588fa3b06b9fece0354193}} 
+\index{arcade::graphic::Sdl@{arcade::graphic::Sdl}!drawPendingTexts@{drawPendingTexts}}
+\index{drawPendingTexts@{drawPendingTexts}!arcade::graphic::Sdl@{arcade::graphic::Sdl}}
+\doxysubsubsection{\texorpdfstring{drawPendingTexts()}{drawPendingTexts()}}
+{\footnotesize\ttfamily void arcade\+::graphic\+::\+Sdl\+::draw\+Pending\+Texts (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1text__object__s}{arcade\+::text\+\_\+object\+\_\+t}} $>$ \&}]{text\+\_\+object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+It takes a vector of text objects and displays them on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text\+\_\+object} & a vector of text\+\_\+object\+\_\+t, which is a struct containing the following\+: \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphic}{arcade\+::graphic\+::\+IGraphic}}.
+
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_sdl_acc7084d3b9de404318c142099a478321}\label{classarcade_1_1graphic_1_1_sdl_acc7084d3b9de404318c142099a478321}} 
+\index{arcade::graphic::Sdl@{arcade::graphic::Sdl}!getPendingEvent@{getPendingEvent}}
+\index{getPendingEvent@{getPendingEvent}!arcade::graphic::Sdl@{arcade::graphic::Sdl}}
+\doxysubsubsection{\texorpdfstring{getPendingEvent()}{getPendingEvent()}}
+{\footnotesize\ttfamily std\+::vector$<$ arcade\+::event\+\_\+t $>$ arcade\+::graphic\+::\+Sdl\+::get\+Pending\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+It takes the events that have been triggered and puts them in a vector. 
+
+\begin{DoxyReturn}{Returns}
+A vector of event\+\_\+t 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphic}{arcade\+::graphic\+::\+IGraphic}}.
+
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_sdl_a5c58ec3fb3d5bed4baa2828aa339f525}\label{classarcade_1_1graphic_1_1_sdl_a5c58ec3fb3d5bed4baa2828aa339f525}} 
+\index{arcade::graphic::Sdl@{arcade::graphic::Sdl}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!arcade::graphic::Sdl@{arcade::graphic::Sdl}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily bool arcade\+::graphic\+::\+Sdl\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+It returns the status of the SDL library. 
+
+\begin{DoxyReturn}{Returns}
+The status of the window. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphic}{arcade\+::graphic\+::\+IGraphic}}.
+
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_sdl_a664c2f2714dff312f96c9dc89192107e}\label{classarcade_1_1graphic_1_1_sdl_a664c2f2714dff312f96c9dc89192107e}} 
+\index{arcade::graphic::Sdl@{arcade::graphic::Sdl}!initWindow@{initWindow}}
+\index{initWindow@{initWindow}!arcade::graphic::Sdl@{arcade::graphic::Sdl}}
+\doxysubsubsection{\texorpdfstring{initWindow()}{initWindow()}}
+{\footnotesize\ttfamily void arcade\+::graphic\+::\+Sdl\+::init\+Window (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{name = {\ttfamily \char`\"{}ARCADE~SFML\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+It initializes the SDL library, creates a window, and initializes the SDL\+\_\+ttf library. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the window.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the window surface. 
+\end{DoxyReturn}
+THROW ERROR
+
+Implements \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphic}{arcade\+::graphic\+::\+IGraphic}}.
+
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_sdl_a0f415cd2627c7da864a5e8ba434acdd4}\label{classarcade_1_1graphic_1_1_sdl_a0f415cd2627c7da864a5e8ba434acdd4}} 
+\index{arcade::graphic::Sdl@{arcade::graphic::Sdl}!transformGameObjectToRect@{transformGameObjectToRect}}
+\index{transformGameObjectToRect@{transformGameObjectToRect}!arcade::graphic::Sdl@{arcade::graphic::Sdl}}
+\doxysubsubsection{\texorpdfstring{transformGameObjectToRect()}{transformGameObjectToRect()}}
+{\footnotesize\ttfamily SDL\+\_\+\+Rect arcade\+::graphic\+::\+Sdl\+::transform\+Game\+Object\+To\+Rect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} \&}]{game\+\_\+object }\end{DoxyParamCaption}) const}
+
+
+
+It transforms a game object into a SDL\+\_\+\+Rect. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+\_\+object} & The game object to transform\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A SDL\+\_\+\+Rect 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_sdl_a5d5d1c9972b4dae996e63762857656ae}\label{classarcade_1_1graphic_1_1_sdl_a5d5d1c9972b4dae996e63762857656ae}} 
+\index{arcade::graphic::Sdl@{arcade::graphic::Sdl}!transformHexaColorToPixel@{transformHexaColorToPixel}}
+\index{transformHexaColorToPixel@{transformHexaColorToPixel}!arcade::graphic::Sdl@{arcade::graphic::Sdl}}
+\doxysubsubsection{\texorpdfstring{transformHexaColorToPixel()}{transformHexaColorToPixel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structarcade_1_1graphic_1_1pixel__s}{arcade\+::graphic\+::pixel\+\_\+t}} arcade\+::graphic\+::\+Sdl\+::transform\+Hexa\+Color\+To\+Pixel (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{color }\end{DoxyParamCaption}) const}
+
+
+
+It converts a hexadecimal color to a pixel\+\_\+t structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The color to transform\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pixel\+\_\+t struct 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_sdl_a07d89da22ee2c041b5774e3fed8d69f3}\label{classarcade_1_1graphic_1_1_sdl_a07d89da22ee2c041b5774e3fed8d69f3}} 
+\index{arcade::graphic::Sdl@{arcade::graphic::Sdl}!transformTextObjectToRect@{transformTextObjectToRect}}
+\index{transformTextObjectToRect@{transformTextObjectToRect}!arcade::graphic::Sdl@{arcade::graphic::Sdl}}
+\doxysubsubsection{\texorpdfstring{transformTextObjectToRect()}{transformTextObjectToRect()}}
+{\footnotesize\ttfamily SDL\+\_\+\+Rect arcade\+::graphic\+::\+Sdl\+::transform\+Text\+Object\+To\+Rect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structarcade_1_1text__object__s}{arcade\+::text\+\_\+object\+\_\+t}} \&}]{text\+\_\+object }\end{DoxyParamCaption}) const}
+
+
+
+It transforms a text object into a SDL\+\_\+\+Rect. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text\+\_\+object} & The text object to transform\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A SDL\+\_\+\+Rect object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_sdl_ad918717dcbcde7fb53810846f1917097}\label{classarcade_1_1graphic_1_1_sdl_ad918717dcbcde7fb53810846f1917097}} 
+\index{arcade::graphic::Sdl@{arcade::graphic::Sdl}!transformVirtualCaseToInt@{transformVirtualCaseToInt}}
+\index{transformVirtualCaseToInt@{transformVirtualCaseToInt}!arcade::graphic::Sdl@{arcade::graphic::Sdl}}
+\doxysubsubsection{\texorpdfstring{transformVirtualCaseToInt()}{transformVirtualCaseToInt()}}
+{\footnotesize\ttfamily int arcade\+::graphic\+::\+Sdl\+::transform\+Virtual\+Case\+To\+Int (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{size,  }\item[{bool}]{axe\+\_\+x }\end{DoxyParamCaption}) const}
+
+
+
+It transforms a virtual case size to a real case size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & the size of the case in percentage \\
+\hline
+{\em axe\+\_\+x} & true if you want to transform a virtual case on the x axe, false if you want to transform a virtual case on the y axe.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the position of the case in the window. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graphic/\+Sdl/Sdl.\+hpp\item 
+src/\+Graphic/\+Sdl/Sdl.\+cpp\end{DoxyCompactItemize}

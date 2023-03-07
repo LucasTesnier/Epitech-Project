@@ -1,0 +1,73 @@
+\hypertarget{_ncurse_8hpp_source}{}\doxysection{Ncurse.\+hpp}
+\label{_ncurse_8hpp_source}\index{src/Graphic/Ncurse/Ncurse.hpp@{src/Graphic/Ncurse/Ncurse.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{** EPITECH PROJECT, 2022}}
+\DoxyCodeLine{3 \textcolor{comment}{** Project}}
+\DoxyCodeLine{4 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{5 \textcolor{comment}{** Ncurse}}
+\DoxyCodeLine{6 \textcolor{comment}{*/}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef NCURSE\_HPP\_}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define NCURSE\_HPP\_}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <ncurses.h>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}AGraphic.hpp"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}game\_object.hpp"{}}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{namespace }arcade \{}
+\DoxyCodeLine{17     \textcolor{keyword}{namespace }graphic \{}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19         \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structarcade_1_1graphic_1_1pixel__s}{pixel\_s}} \{}
+\DoxyCodeLine{20             \textcolor{keywordtype}{int} r;}
+\DoxyCodeLine{21             \textcolor{keywordtype}{int} g;}
+\DoxyCodeLine{22             \textcolor{keywordtype}{int} b;}
+\DoxyCodeLine{23         \} \mbox{\hyperlink{structarcade_1_1graphic_1_1pixel__s}{pixel\_t}};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25         \textcolor{keyword}{class }\mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse}{Ncurse}} : \textcolor{keyword}{public} \mbox{\hyperlink{classarcade_1_1graphic_1_1_a_graphic}{AGraphic}}\{}
+\DoxyCodeLine{26             \textcolor{keyword}{public}:}
+\DoxyCodeLine{27                 \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_aa07e7bcecccb10ecd2c3b7275d43489e}{Ncurse}}();}
+\DoxyCodeLine{28                 \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_aabf076607ab08e6e3f7d0cdc56191709}{\string~Ncurse}}();}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_ab7a75694fd7b71b902f6f736e65c4f5c}{clearScreen}}();}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34                 \textcolor{comment}{//Displays function}}
+\DoxyCodeLine{35                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_ae885a2cd0d109b1db2f99ac90c350f5a}{drawPendingGameObjects}}(\textcolor{keyword}{const} std::vector<arcade::game\_object\_t> \&);}
+\DoxyCodeLine{36                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_a46e71c33fbebbcb63bf5e81aceee650a}{displayScreen}}();}
+\DoxyCodeLine{37                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_a5043f280d326ede8e3dff6fb8506b604}{displayBackground}}(\textcolor{keyword}{const} \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade::game\_object\_t}} \&);}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39                 \textcolor{comment}{//std::vector<arcade::game\_object\_t> getPendingEvent();}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_a171555755c88fd747c9700cd1be9a154}{initWindow}}(std::string \textcolor{keyword}{const} \&name);}
+\DoxyCodeLine{42                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_a44a75f133c0ee2b20f339a9802a4f52b}{closeWindow}}();}
+\DoxyCodeLine{43                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_a594cb08f10ba0463127ea65886d4367b}{displayGameObject}}(\textcolor{keyword}{const} \mbox{\hyperlink{structarcade_1_1game__object__s}{game\_object\_t}} \&);}
+\DoxyCodeLine{44                 std::vector<arcade::event\_t> \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_a341529f6769d48c209c5b586ab5dde0b}{getPendingEvent}}();}
+\DoxyCodeLine{45                 \textcolor{keywordtype}{void} drawPendingTexts(\textcolor{keyword}{const} std::vector<arcade::text\_object\_t> \&);}
+\DoxyCodeLine{46                 \textcolor{keywordtype}{bool} \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_a4cd9bba8ea5e66b3011e3a47534387b0}{getStatus}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48             \textcolor{keyword}{protected}:}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50                 \textcolor{comment}{//Init settings function}}
+\DoxyCodeLine{51                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_a7b5db7506d993a664acb1ec9a62e6881}{initKeypad}}();}
+\DoxyCodeLine{52                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_a7d0238d6b454ef349465b9e3d47c8334}{initColors}}();}
+\DoxyCodeLine{53                 \textcolor{keywordtype}{void} refreshScreen();}
+\DoxyCodeLine{54                 \mbox{\hyperlink{structarcade_1_1graphic_1_1pixel__s}{arcade::graphic::pixel\_t}} \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_a9516ae2e2673698748552d45c58ed4b0}{transformHexaColorToPixel}}(\textcolor{keyword}{const} std::string \&color) \textcolor{keyword}{const};}
+\DoxyCodeLine{55                 \mbox{\hyperlink{structarcade_1_1graphic_1_1pixel__s}{arcade::graphic::pixel\_t}} \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_a56b0c36d5db9c4bde6af1ca67097f2df}{transformRgbToBinary}}(\mbox{\hyperlink{structarcade_1_1graphic_1_1pixel__s}{arcade::graphic::pixel\_t}} color);}
+\DoxyCodeLine{56                 \textcolor{keywordtype}{int} \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_aa6a8a5d41c573804e57e07f2964efcb6}{transformBinarytoColor}}(\mbox{\hyperlink{structarcade_1_1graphic_1_1pixel__s}{arcade::graphic::pixel\_t}} color);}
+\DoxyCodeLine{57                 \textcolor{keywordtype}{void} displayTextObject(\mbox{\hyperlink{structarcade_1_1text__object__s}{arcade::text\_object\_t}} text\_object);}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59             \textcolor{keyword}{private}:}
+\DoxyCodeLine{60                 WINDOW *\_window;}
+\DoxyCodeLine{61                 \textcolor{keywordtype}{bool} \_isOpen;}
+\DoxyCodeLine{62                 std::string \_name;}
+\DoxyCodeLine{63         \};}
+\DoxyCodeLine{64     \};}
+\DoxyCodeLine{65 \};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !NCURSE\_HPP\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

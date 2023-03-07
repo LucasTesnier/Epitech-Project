@@ -1,0 +1,54 @@
+\hypertarget{_sfml_8hpp_source}{}\doxysection{Sfml.\+hpp}
+\label{_sfml_8hpp_source}\index{src/Graphic/Sfml/Sfml.hpp@{src/Graphic/Sfml/Sfml.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{** EPITECH PROJECT, 2022}}
+\DoxyCodeLine{3 \textcolor{comment}{** Project}}
+\DoxyCodeLine{4 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{5 \textcolor{comment}{** Sfml}}
+\DoxyCodeLine{6 \textcolor{comment}{*/}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef SFML\_HPP\_}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define SFML\_HPP\_}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}AGraphic.hpp"{}}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{namespace }arcade \{}
+\DoxyCodeLine{15     \textcolor{keyword}{namespace }graphic \{}
+\DoxyCodeLine{16         \textcolor{keyword}{class }\mbox{\hyperlink{classarcade_1_1graphic_1_1_sfml}{Sfml}} : \textcolor{keyword}{public} \mbox{\hyperlink{classarcade_1_1graphic_1_1_a_graphic}{AGraphic}} \{}
+\DoxyCodeLine{17         \textcolor{keyword}{public}:}
+\DoxyCodeLine{18             \mbox{\hyperlink{classarcade_1_1graphic_1_1_sfml_a865eb5fa62923099954cd189308c6dbd}{Sfml}}();}
+\DoxyCodeLine{19             \mbox{\hyperlink{classarcade_1_1graphic_1_1_sfml_a0ba293b94e911109693905c5c4624648}{\string~Sfml}}();}
+\DoxyCodeLine{20             \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1graphic_1_1_sfml_adb7d80a277e35a6e6d8819fe6dbbfd3f}{initWindow}}(std::string \textcolor{keyword}{const} \&name);}
+\DoxyCodeLine{21             \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1graphic_1_1_sfml_a1f49520411c35dc4c11e10cbbd2414f1}{closeWindow}}();}
+\DoxyCodeLine{22             \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1graphic_1_1_sfml_a626f9846cc1c07a47ef1ebb7dd09dbb2}{clearScreen}}();}
+\DoxyCodeLine{23             \textcolor{keywordtype}{int} transformVirtualCaseToInt(std::size\_t size, \textcolor{keywordtype}{bool} axe\_x) \textcolor{keyword}{const};}
+\DoxyCodeLine{24             \textcolor{keywordtype}{void} displayBackground(\textcolor{keyword}{const} \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade::game\_object\_t}} \&);}
+\DoxyCodeLine{25             \textcolor{keywordtype}{void} displayScreen();}
+\DoxyCodeLine{26             \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1graphic_1_1_sfml_ab6aed09c987ed6e71fce69153b61fb80}{displayGameObject}}(\textcolor{keyword}{const} \mbox{\hyperlink{structarcade_1_1game__object__s}{game\_object\_t}} \&);}
+\DoxyCodeLine{27             \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1graphic_1_1_sfml_addd630a2ab1cf938e1ca71d609906d12}{drawPendingGameObjects}}(\textcolor{keyword}{const} std::vector<arcade::game\_object\_t> \&);}
+\DoxyCodeLine{28             \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1graphic_1_1_sfml_af2a554a6838ac73e31ce42977422a4b7}{drawPendingTexts}}(\textcolor{keyword}{const} std::vector<arcade::text\_object\_t> \&);}
+\DoxyCodeLine{29             std::vector<arcade::event\_t> \mbox{\hyperlink{classarcade_1_1graphic_1_1_sfml_a436b667c470064e378b40dec9508d926}{getPendingEvent}}();}
+\DoxyCodeLine{30             \textcolor{keywordtype}{bool} \mbox{\hyperlink{classarcade_1_1graphic_1_1_sfml_aa15238555fd9931cd04a5ab5d456b643}{getStatus}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32         \textcolor{keyword}{protected}:}
+\DoxyCodeLine{33         \textcolor{keyword}{private}:}
+\DoxyCodeLine{34             \textcolor{keywordtype}{void} displayElem(std::string path, std::string color, \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{int} x2, \textcolor{keywordtype}{int} y2, \textcolor{keywordtype}{int} rotation);}
+\DoxyCodeLine{35             \textcolor{keywordtype}{void} displaySquare(std::string color, \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{int} x2, \textcolor{keywordtype}{int} y2);}
+\DoxyCodeLine{36             \textcolor{keywordtype}{void} displayText(\mbox{\hyperlink{structarcade_1_1text__object__s}{arcade::text\_object\_t}});}
+\DoxyCodeLine{37             sf::RenderWindow \_window;}
+\DoxyCodeLine{38             \textcolor{keywordtype}{int} \_sizeWindow\_x;}
+\DoxyCodeLine{39             \textcolor{keywordtype}{int} \_sizeWindow\_y;}
+\DoxyCodeLine{40             \textcolor{keywordtype}{bool} \_gameOver;}
+\DoxyCodeLine{41             sf::Texture \_bgtexture;}
+\DoxyCodeLine{42             sf::Sprite \_bgsprite;}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44         \};}
+\DoxyCodeLine{45     \};}
+\DoxyCodeLine{46 \};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !SFML\_HPP\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

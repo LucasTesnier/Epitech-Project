@@ -1,0 +1,130 @@
+\hypertarget{classarcade_1_1game_1_1_i_game}{}\doxysection{arcade\+::game\+::IGame Class Reference}
+\label{classarcade_1_1game_1_1_i_game}\index{arcade::game::IGame@{arcade::game::IGame}}
+Inheritance diagram for arcade\+::game\+::IGame\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classarcade_1_1game_1_1_i_game}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual const std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} $>$ \mbox{\hyperlink{classarcade_1_1game_1_1_i_game_a8f73aac96f829c387f0e16ad4797e84f}{get\+Pending\+Items}} () const =0
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1game_1_1_i_game_a1e9aa856488f71b0c184ce30146fb053}{simulate}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1game_1_1_i_game_a2856604d81d86cf4c698334979388b77}{do\+Pending\+Event}} (std\+::vector$<$ arcade\+::event\+\_\+t $>$ \&)=0
+\item 
+virtual const \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} \mbox{\hyperlink{classarcade_1_1game_1_1_i_game_a3b00899b6291cf1ec720dfb3fd8371bf}{get\+Background}} () const =0
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1game_1_1_i_game_af494c314167990fee29b1664769ce047}{reset}} ()=0
+\item 
+virtual arcade\+::game\+\_\+status\+\_\+t \mbox{\hyperlink{classarcade_1_1game_1_1_i_game_a9fbe33d63e8cfe8106069f9809f8e356}{get\+Game\+Status}} () const =0
+\item 
+virtual const std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1text__object__s}{arcade\+::text\+\_\+object\+\_\+t}} $>$ \mbox{\hyperlink{classarcade_1_1game_1_1_i_game_af562d9da53374274ef6b7caa9415a5a1}{get\+Pending\+Texts}} () const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1game_1_1_i_game_acf36966b868e7e5448f30001d3fd01e2}{init\+Game}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1game_1_1_i_game_a0e8246c7e6c80004b43d22be0d86174f}{destroy\+Game}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classarcade_1_1game_1_1_i_game_a0e8246c7e6c80004b43d22be0d86174f}\label{classarcade_1_1game_1_1_i_game_a0e8246c7e6c80004b43d22be0d86174f}} 
+\index{arcade::game::IGame@{arcade::game::IGame}!destroyGame@{destroyGame}}
+\index{destroyGame@{destroyGame}!arcade::game::IGame@{arcade::game::IGame}}
+\doxysubsubsection{\texorpdfstring{destroyGame()}{destroyGame()}}
+{\footnotesize\ttfamily virtual void arcade\+::game\+::\+IGame\+::destroy\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classarcade_1_1game_1_1_menu_a217c76fa1def9e6298752c1865142970}{arcade\+::game\+::\+Menu}}, \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_ad1f9f449a3053ed01c1bf4dcbcd1d132}{arcade\+::game\+::\+Nibbler}}, and \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a4ac2129d6c53837de97a905cd170bb24}{arcade\+::game\+::\+Pacman}}.
+
+\mbox{\Hypertarget{classarcade_1_1game_1_1_i_game_a2856604d81d86cf4c698334979388b77}\label{classarcade_1_1game_1_1_i_game_a2856604d81d86cf4c698334979388b77}} 
+\index{arcade::game::IGame@{arcade::game::IGame}!doPendingEvent@{doPendingEvent}}
+\index{doPendingEvent@{doPendingEvent}!arcade::game::IGame@{arcade::game::IGame}}
+\doxysubsubsection{\texorpdfstring{doPendingEvent()}{doPendingEvent()}}
+{\footnotesize\ttfamily virtual void arcade\+::game\+::\+IGame\+::do\+Pending\+Event (\begin{DoxyParamCaption}\item[{std\+::vector$<$ arcade\+::event\+\_\+t $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classarcade_1_1game_1_1_menu_aeca7ed36bbc161a479b6b8a33dcd59ea}{arcade\+::game\+::\+Menu}}, \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_a64a792522dc2d2be1708df0c8e1a0cbf}{arcade\+::game\+::\+Nibbler}}, and \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_ac40f0b3b11e9158e5ee576a5e20fac12}{arcade\+::game\+::\+Pacman}}.
+
+\mbox{\Hypertarget{classarcade_1_1game_1_1_i_game_a3b00899b6291cf1ec720dfb3fd8371bf}\label{classarcade_1_1game_1_1_i_game_a3b00899b6291cf1ec720dfb3fd8371bf}} 
+\index{arcade::game::IGame@{arcade::game::IGame}!getBackground@{getBackground}}
+\index{getBackground@{getBackground}!arcade::game::IGame@{arcade::game::IGame}}
+\doxysubsubsection{\texorpdfstring{getBackground()}{getBackground()}}
+{\footnotesize\ttfamily virtual const \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} arcade\+::game\+::\+IGame\+::get\+Background (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classarcade_1_1game_1_1_menu_aeeef7ca288ad89bfa5ac9f69164bf98c}{arcade\+::game\+::\+Menu}}, \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_a68dd6196051a52dd39c5048bd7a386bf}{arcade\+::game\+::\+Nibbler}}, and \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a320c5311026c8bba1673b219a925190d}{arcade\+::game\+::\+Pacman}}.
+
+\mbox{\Hypertarget{classarcade_1_1game_1_1_i_game_a9fbe33d63e8cfe8106069f9809f8e356}\label{classarcade_1_1game_1_1_i_game_a9fbe33d63e8cfe8106069f9809f8e356}} 
+\index{arcade::game::IGame@{arcade::game::IGame}!getGameStatus@{getGameStatus}}
+\index{getGameStatus@{getGameStatus}!arcade::game::IGame@{arcade::game::IGame}}
+\doxysubsubsection{\texorpdfstring{getGameStatus()}{getGameStatus()}}
+{\footnotesize\ttfamily virtual arcade\+::game\+\_\+status\+\_\+t arcade\+::game\+::\+IGame\+::get\+Game\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classarcade_1_1game_1_1_menu_a3ff3f85edb2e87219cc724391db6b868}{arcade\+::game\+::\+Menu}}, \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_a5d7065b359a61e6da8ee7ad513c91d51}{arcade\+::game\+::\+Nibbler}}, and \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a4df2086ae36b4a84cc79e32fb11f2a06}{arcade\+::game\+::\+Pacman}}.
+
+\mbox{\Hypertarget{classarcade_1_1game_1_1_i_game_a8f73aac96f829c387f0e16ad4797e84f}\label{classarcade_1_1game_1_1_i_game_a8f73aac96f829c387f0e16ad4797e84f}} 
+\index{arcade::game::IGame@{arcade::game::IGame}!getPendingItems@{getPendingItems}}
+\index{getPendingItems@{getPendingItems}!arcade::game::IGame@{arcade::game::IGame}}
+\doxysubsubsection{\texorpdfstring{getPendingItems()}{getPendingItems()}}
+{\footnotesize\ttfamily virtual const std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} $>$ arcade\+::game\+::\+IGame\+::get\+Pending\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classarcade_1_1game_1_1_menu_a6e6f55f3d6093fc2279ecec421953a79}{arcade\+::game\+::\+Menu}}, \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_ad371f551bab7d7c5bcc647449e44b343}{arcade\+::game\+::\+Nibbler}}, and \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a36a2ceb3d87f7ebc4240969438c15e6c}{arcade\+::game\+::\+Pacman}}.
+
+\mbox{\Hypertarget{classarcade_1_1game_1_1_i_game_af562d9da53374274ef6b7caa9415a5a1}\label{classarcade_1_1game_1_1_i_game_af562d9da53374274ef6b7caa9415a5a1}} 
+\index{arcade::game::IGame@{arcade::game::IGame}!getPendingTexts@{getPendingTexts}}
+\index{getPendingTexts@{getPendingTexts}!arcade::game::IGame@{arcade::game::IGame}}
+\doxysubsubsection{\texorpdfstring{getPendingTexts()}{getPendingTexts()}}
+{\footnotesize\ttfamily virtual const std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1text__object__s}{arcade\+::text\+\_\+object\+\_\+t}} $>$ arcade\+::game\+::\+IGame\+::get\+Pending\+Texts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classarcade_1_1game_1_1_menu_ae201fe52b375efd3b7a77dd91ded1344}{arcade\+::game\+::\+Menu}}, \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_ae9df39042af39a717cb9251d5bfc59cb}{arcade\+::game\+::\+Nibbler}}, and \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a07da3ebac9123ad163bd5a2bf3b9f490}{arcade\+::game\+::\+Pacman}}.
+
+\mbox{\Hypertarget{classarcade_1_1game_1_1_i_game_acf36966b868e7e5448f30001d3fd01e2}\label{classarcade_1_1game_1_1_i_game_acf36966b868e7e5448f30001d3fd01e2}} 
+\index{arcade::game::IGame@{arcade::game::IGame}!initGame@{initGame}}
+\index{initGame@{initGame}!arcade::game::IGame@{arcade::game::IGame}}
+\doxysubsubsection{\texorpdfstring{initGame()}{initGame()}}
+{\footnotesize\ttfamily virtual void arcade\+::game\+::\+IGame\+::init\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classarcade_1_1game_1_1_menu_a5c3d878aaf6406e31ab8269f45512e65}{arcade\+::game\+::\+Menu}}, \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_a617677fa5d50180e06034a53db8e4e6b}{arcade\+::game\+::\+Nibbler}}, and \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a115e14d216de09621e947198183dea64}{arcade\+::game\+::\+Pacman}}.
+
+\mbox{\Hypertarget{classarcade_1_1game_1_1_i_game_af494c314167990fee29b1664769ce047}\label{classarcade_1_1game_1_1_i_game_af494c314167990fee29b1664769ce047}} 
+\index{arcade::game::IGame@{arcade::game::IGame}!reset@{reset}}
+\index{reset@{reset}!arcade::game::IGame@{arcade::game::IGame}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily virtual void arcade\+::game\+::\+IGame\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classarcade_1_1game_1_1_menu_a30fd9abf4d0a1e19692f803062421048}{arcade\+::game\+::\+Menu}}, \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_a60a509983453c206fdd22504edc50180}{arcade\+::game\+::\+Nibbler}}, and \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_a633ec161e0fbe6d93dbf15df667a7e9b}{arcade\+::game\+::\+Pacman}}.
+
+\mbox{\Hypertarget{classarcade_1_1game_1_1_i_game_a1e9aa856488f71b0c184ce30146fb053}\label{classarcade_1_1game_1_1_i_game_a1e9aa856488f71b0c184ce30146fb053}} 
+\index{arcade::game::IGame@{arcade::game::IGame}!simulate@{simulate}}
+\index{simulate@{simulate}!arcade::game::IGame@{arcade::game::IGame}}
+\doxysubsubsection{\texorpdfstring{simulate()}{simulate()}}
+{\footnotesize\ttfamily virtual void arcade\+::game\+::\+IGame\+::simulate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classarcade_1_1game_1_1_menu_af5ba627dadbe90637f23ed23eaa92c37}{arcade\+::game\+::\+Menu}}, \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_a66f580ef09fc3b467dd2ea6b576f956e}{arcade\+::game\+::\+Nibbler}}, and \mbox{\hyperlink{classarcade_1_1game_1_1_pacman_aa0e2a1810b673263bc54e184714c3c2d}{arcade\+::game\+::\+Pacman}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Game/IGame.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,64 @@
+\hypertarget{_sdl_8hpp_source}{}\doxysection{Sdl.\+hpp}
+\label{_sdl_8hpp_source}\index{src/Graphic/Sdl/Sdl.hpp@{src/Graphic/Sdl/Sdl.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{** EPITECH PROJECT, 2022}}
+\DoxyCodeLine{3 \textcolor{comment}{** Project}}
+\DoxyCodeLine{4 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{5 \textcolor{comment}{** Sdl}}
+\DoxyCodeLine{6 \textcolor{comment}{*/}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef SDL\_HPP\_}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define SDL\_HPP\_}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <SDL2/SDL.h>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <SDL2/SDL\_ttf.h>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}AGraphic.hpp"{}}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{namespace }arcade \{}
+\DoxyCodeLine{18     \textcolor{keyword}{namespace }graphic \{}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20         \textcolor{keyword}{typedef} \textcolor{keyword}{struct }pixel\_s \{}
+\DoxyCodeLine{21             \textcolor{keywordtype}{int} r;}
+\DoxyCodeLine{22             \textcolor{keywordtype}{int} g;}
+\DoxyCodeLine{23             \textcolor{keywordtype}{int} b;}
+\DoxyCodeLine{24         \} pixel\_t;}
+\DoxyCodeLine{25     }
+\DoxyCodeLine{26         \textcolor{keyword}{class }\mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl}{Sdl}} : \textcolor{keyword}{public} \mbox{\hyperlink{classarcade_1_1graphic_1_1_a_graphic}{AGraphic}} \{}
+\DoxyCodeLine{27             \textcolor{keyword}{public}:}
+\DoxyCodeLine{28                 \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_aef5f0d09cb5ac1d3c401fab38557e96b}{Sdl}}();}
+\DoxyCodeLine{29                 \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_a7a23a3ff71afadac4420d24079b1097c}{\string~Sdl}}();}
+\DoxyCodeLine{30                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_a664c2f2714dff312f96c9dc89192107e}{initWindow}}(std::string \textcolor{keyword}{const} \&name);}
+\DoxyCodeLine{31                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_adf2bb43e847a34e0ba97e21f24e1d5dd}{closeWindow}}();}
+\DoxyCodeLine{32                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_a3fc3f1922eabc21c2108aeabe38665a8}{clearScreen}}();}
+\DoxyCodeLine{33                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_afc12c493cd443ecd86e4364c510eebb5}{displayBackground}}(\textcolor{keyword}{const} \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade::game\_object\_t}} \&);}
+\DoxyCodeLine{34                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_ac2adb830258cc4fbf50b1b9e71849276}{displayScreen}}();}
+\DoxyCodeLine{35                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_aec9c7e219d7f7de8b218371da4f83727}{displayGameObject}}(\textcolor{keyword}{const} \mbox{\hyperlink{structarcade_1_1game__object__s}{game\_object\_t}} \&);}
+\DoxyCodeLine{36                 std::vector<arcade::event\_t> \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_acc7084d3b9de404318c142099a478321}{getPendingEvent}}();}
+\DoxyCodeLine{37                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_a765ede62d212e4f8fa777677c65d3d8c}{drawPendingGameObjects}}(\textcolor{keyword}{const} std::vector<arcade::game\_object\_t> \&);}
+\DoxyCodeLine{38                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_a8526ce8128588fa3b06b9fece0354193}{drawPendingTexts}}(\textcolor{keyword}{const} std::vector<arcade::text\_object\_t> \&);}
+\DoxyCodeLine{39                 \textcolor{keywordtype}{bool} \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_a5c58ec3fb3d5bed4baa2828aa339f525}{getStatus}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{40                 \mbox{\hyperlink{structarcade_1_1graphic_1_1pixel__s}{arcade::graphic::pixel\_t}} \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_a5d5d1c9972b4dae996e63762857656ae}{transformHexaColorToPixel}}(\textcolor{keyword}{const} std::string \&) \textcolor{keyword}{const};}
+\DoxyCodeLine{41                 \textcolor{keywordtype}{int} \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_ad918717dcbcde7fb53810846f1917097}{transformVirtualCaseToInt}}(std::size\_t size, \textcolor{keywordtype}{bool} axe\_x) \textcolor{keyword}{const};}
+\DoxyCodeLine{42                 SDL\_Rect \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_a0f415cd2627c7da864a5e8ba434acdd4}{transformGameObjectToRect}}(\textcolor{keyword}{const} \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade::game\_object\_t}} \&game\_object) \textcolor{keyword}{const};}
+\DoxyCodeLine{43                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_a60bdb93ddbffaf56823dfc02a310feb1}{displayRect}}(\textcolor{keyword}{const} \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade::game\_object\_t}} \&game\_object) \textcolor{keyword}{const};}
+\DoxyCodeLine{44                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_a54e1e2ff935ae189326dd272bfe0bc3a}{displayTextObject}}(\textcolor{keyword}{const} \mbox{\hyperlink{structarcade_1_1text__object__s}{text\_object\_t}} \&text\_object);}
+\DoxyCodeLine{45                 SDL\_Rect \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_a07d89da22ee2c041b5774e3fed8d69f3}{transformTextObjectToRect}}(\textcolor{keyword}{const} \mbox{\hyperlink{structarcade_1_1text__object__s}{arcade::text\_object\_t}} \&text\_object) \textcolor{keyword}{const};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47             \textcolor{keyword}{protected}:}
+\DoxyCodeLine{48             \textcolor{keyword}{private}:}
+\DoxyCodeLine{49                 SDL\_Window *\_window;}
+\DoxyCodeLine{50                 SDL\_Surface *\_screenSurface;}
+\DoxyCodeLine{51                 \textcolor{keywordtype}{int} \_screenWidth;}
+\DoxyCodeLine{52                 \textcolor{keywordtype}{int} \_screenHeight;}
+\DoxyCodeLine{53                 \textcolor{keywordtype}{bool} \_status;}
+\DoxyCodeLine{54         \};}
+\DoxyCodeLine{55     \};}
+\DoxyCodeLine{56 \};}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !SDL\_HPP\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

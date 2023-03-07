@@ -1,0 +1,73 @@
+\hypertarget{_d_l_loader_8hpp_source}{}\doxysection{DLLoader.\+hpp}
+\label{_d_l_loader_8hpp_source}\index{src/Core/DLLoader/DLLoader.hpp@{src/Core/DLLoader/DLLoader.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{** EPITECH PROJECT, 2022}}
+\DoxyCodeLine{3 \textcolor{comment}{** Arcade}}
+\DoxyCodeLine{4 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{5 \textcolor{comment}{** DLLoader}}
+\DoxyCodeLine{6 \textcolor{comment}{*/}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef DLLOADER\_HPP\_}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define DLLOADER\_HPP\_}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}Error/Error.hpp"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <dlfcn.h>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{namespace }arcade \{}
+\DoxyCodeLine{16     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{17         \textcolor{keyword}{class }\mbox{\hyperlink{classarcade_1_1_d_l_loader}{DLLoader}} \{}
+\DoxyCodeLine{18             \textcolor{keyword}{public}:}
+\DoxyCodeLine{26                 \mbox{\hyperlink{classarcade_1_1_d_l_loader_ae8f10383d9d4f466c39400ff326aae9c}{DLLoader}}(\textcolor{keyword}{const} std::string \&path, \textcolor{keyword}{const} std::string \&type) \{}
+\DoxyCodeLine{27                     T *(*func\_entry\_point)();}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29                     lib = dlopen(path.c\_str(), RTLD\_LAZY);}
+\DoxyCodeLine{30                     \textcolor{keywordflow}{if} (!lib)}
+\DoxyCodeLine{31                         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classarcade_1_1_error_loader}{arcade::ErrorLoader}}(dlerror(), \textcolor{stringliteral}{"{}DLLoader : "{}} + path);}
+\DoxyCodeLine{32                     *(\textcolor{keywordtype}{void}**)(\&func\_entry\_point) = dlsym(lib, (\textcolor{stringliteral}{"{}entryPoint"{}} + type).c\_str());}
+\DoxyCodeLine{33                     \textcolor{keywordflow}{if} (!func\_entry\_point) \{}
+\DoxyCodeLine{34                         dlclose(lib);}
+\DoxyCodeLine{35                         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classarcade_1_1_error_loader}{arcade::ErrorLoader}}(\textcolor{stringliteral}{"{}Invalid entryPoint. No compatible library."{}}, \textcolor{stringliteral}{"{}DLLoader : "{}} + path);}
+\DoxyCodeLine{36                     \}}
+\DoxyCodeLine{37                     \_instance = func\_entry\_point();}
+\DoxyCodeLine{38                     \_thereIsALib = \textcolor{keyword}{true}; }
+\DoxyCodeLine{39                 \};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41                 \mbox{\hyperlink{classarcade_1_1_d_l_loader_ae8f10383d9d4f466c39400ff326aae9c}{DLLoader}}(\textcolor{keyword}{const} std::string \&path, \textcolor{keyword}{const} std::string \&type, \textcolor{keywordtype}{bool} trying) \{}
+\DoxyCodeLine{42                     T *(*func\_entry\_point)();}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44                     lib = dlopen(path.c\_str(), RTLD\_LAZY);}
+\DoxyCodeLine{45                     \textcolor{keywordflow}{if} (!lib) \{}
+\DoxyCodeLine{46                         \_thereIsALib = \textcolor{keyword}{false};}
+\DoxyCodeLine{47                         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classarcade_1_1_error_loader}{arcade::ErrorLoader}}(dlerror(), \textcolor{stringliteral}{"{}DLLoader : "{}} + path);}
+\DoxyCodeLine{48                     \}}
+\DoxyCodeLine{49                     *(\textcolor{keywordtype}{void}**)(\&func\_entry\_point) = dlsym(lib, (\textcolor{stringliteral}{"{}entryPoint"{}} + type).c\_str());}
+\DoxyCodeLine{50                     \textcolor{keywordflow}{if} (!func\_entry\_point) \{}
+\DoxyCodeLine{51                         dlclose(lib);}
+\DoxyCodeLine{52                         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classarcade_1_1_error_loader}{arcade::ErrorLoader}}(\textcolor{stringliteral}{"{}Invalid entryPoint. No compatible library."{}}, \textcolor{stringliteral}{"{}DLLoader : "{}} + path);}
+\DoxyCodeLine{53                     \}}
+\DoxyCodeLine{54                     (void) trying;}
+\DoxyCodeLine{55                     \_instance = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{56                     \_thereIsALib = \textcolor{keyword}{false};}
+\DoxyCodeLine{57                 \};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{64                 \mbox{\hyperlink{classarcade_1_1_d_l_loader_a9c7b88b3afeeb737d6f82d8f0f46549e}{\string~DLLoader}}() \{}
+\DoxyCodeLine{65                     \textcolor{keywordflow}{if} (\_thereIsALib)}
+\DoxyCodeLine{66                         dlclose(lib);}
+\DoxyCodeLine{67                 \};}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{75                 T *\mbox{\hyperlink{classarcade_1_1_d_l_loader_aa3f5b79cfc03cbd4ad478d34d156f4aa}{getInstance}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{76                     \textcolor{keywordflow}{return} \_instance;}
+\DoxyCodeLine{77                 \};}
+\DoxyCodeLine{78             \textcolor{keyword}{private}:}
+\DoxyCodeLine{79                 \textcolor{keywordtype}{void} *lib;}
+\DoxyCodeLine{80                 T *\_instance;}
+\DoxyCodeLine{81                 \textcolor{keywordtype}{bool} \_thereIsALib;}
+\DoxyCodeLine{82     \};}
+\DoxyCodeLine{83 \}}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !DLLOADER\_HPP\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

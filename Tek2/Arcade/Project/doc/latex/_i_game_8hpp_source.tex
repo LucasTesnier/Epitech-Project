@@ -1,0 +1,40 @@
+\hypertarget{_i_game_8hpp_source}{}\doxysection{IGame.\+hpp}
+\label{_i_game_8hpp_source}\index{src/Game/IGame.hpp@{src/Game/IGame.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{** EPITECH PROJECT, 2022}}
+\DoxyCodeLine{3 \textcolor{comment}{** Project}}
+\DoxyCodeLine{4 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{5 \textcolor{comment}{** IGame}}
+\DoxyCodeLine{6 \textcolor{comment}{*/}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef IGAME\_HPP\_}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define IGAME\_HPP\_}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}game\_object.hpp"{}}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{namespace }arcade \{}
+\DoxyCodeLine{16     \textcolor{keyword}{namespace }game \{}
+\DoxyCodeLine{17         \textcolor{keyword}{class }\mbox{\hyperlink{classarcade_1_1game_1_1_i_game}{IGame}} \{}
+\DoxyCodeLine{18             \textcolor{keyword}{public}:}
+\DoxyCodeLine{19                 \textcolor{keyword}{virtual} \mbox{\hyperlink{classarcade_1_1game_1_1_i_game}{\string~IGame}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{20                 \textcolor{keyword}{virtual} \textcolor{keyword}{const} std::vector<arcade::game\_object\_t> getPendingItems() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{21                 \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} simulate() = 0;}
+\DoxyCodeLine{22                 \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} doPendingEvent(std::vector<arcade::event\_t> \&) = 0;}
+\DoxyCodeLine{23                 \textcolor{keyword}{virtual} \textcolor{keyword}{const} \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade::game\_object\_t}} getBackground() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{24                 \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} reset() = 0;}
+\DoxyCodeLine{25                 \textcolor{keyword}{virtual} arcade::game\_status\_t getGameStatus() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{26                 \textcolor{keyword}{virtual} \textcolor{keyword}{const} std::vector<arcade::text\_object\_t> getPendingTexts() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{27             \textcolor{keyword}{protected}:}
+\DoxyCodeLine{28                 \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} initGame() = 0;}
+\DoxyCodeLine{29                 \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} destroyGame() = 0;}
+\DoxyCodeLine{30         \};}
+\DoxyCodeLine{31     \};}
+\DoxyCodeLine{32 \};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !IGAME\_HPP\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

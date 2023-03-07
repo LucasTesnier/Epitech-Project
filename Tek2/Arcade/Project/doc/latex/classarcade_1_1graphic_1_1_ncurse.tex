@@ -1,0 +1,283 @@
+\hypertarget{classarcade_1_1graphic_1_1_ncurse}{}\doxysection{arcade\+::graphic\+::Ncurse Class Reference}
+\label{classarcade_1_1graphic_1_1_ncurse}\index{arcade::graphic::Ncurse@{arcade::graphic::Ncurse}}
+Inheritance diagram for arcade\+::graphic\+::Ncurse\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classarcade_1_1graphic_1_1_ncurse}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_ncurse_aa07e7bcecccb10ecd2c3b7275d43489e}\label{classarcade_1_1graphic_1_1_ncurse_aa07e7bcecccb10ecd2c3b7275d43489e}} 
+{\bfseries Ncurse} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_aa07e7bcecccb10ecd2c3b7275d43489e}{arcade\+::graphic\+::\+Ncurse\+::\+Ncurse}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_ncurse_aabf076607ab08e6e3f7d0cdc56191709}\label{classarcade_1_1graphic_1_1_ncurse_aabf076607ab08e6e3f7d0cdc56191709}} 
+{\bfseries $\sim$\+Ncurse} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_aa07e7bcecccb10ecd2c3b7275d43489e}{arcade\+::graphic\+::\+Ncurse\+::\+Ncurse}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_ab7a75694fd7b71b902f6f736e65c4f5c}{clear\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em function clears the screen \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_ae885a2cd0d109b1db2f99ac90c350f5a}{draw\+Pending\+Game\+Objects}} (const std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} $>$ \&)
+\begin{DoxyCompactList}\small\item\em Draws all the game objects that are pending to be drawn. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_a46e71c33fbebbcb63bf5e81aceee650a}{display\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em This function displays the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_a5043f280d326ede8e3dff6fb8506b604}{display\+Background}} (const \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} \&)
+\begin{DoxyCompactList}\small\item\em This function displays the background of the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_a171555755c88fd747c9700cd1be9a154}{init\+Window}} (std\+::string const \&name)
+\begin{DoxyCompactList}\small\item\em Initialize the ncurses window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_a44a75f133c0ee2b20f339a9802a4f52b}{close\+Window}} ()
+\begin{DoxyCompactList}\small\item\em function is used to close the window \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_a594cb08f10ba0463127ea65886d4367b}{display\+Game\+Object}} (const \mbox{\hyperlink{structarcade_1_1game__object__s}{game\+\_\+object\+\_\+t}} \&)
+\begin{DoxyCompactList}\small\item\em Display the game object on the screen. \end{DoxyCompactList}\item 
+std\+::vector$<$ arcade\+::event\+\_\+t $>$ \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_a341529f6769d48c209c5b586ab5dde0b}{get\+Pending\+Event}} ()
+\begin{DoxyCompactList}\small\item\em Get the event from the keyboard (player input) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_ae5b1b7e98fb3c1d6e5d771cd8aac9a19}{draw\+Pending\+Texts}} (const std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1text__object__s}{arcade\+::text\+\_\+object\+\_\+t}} $>$ \&)
+\item 
+bool \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_a4cd9bba8ea5e66b3011e3a47534387b0}{get\+Status}} () const
+\begin{DoxyCompactList}\small\item\em It returns the status of the window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_ncurse_a7b5db7506d993a664acb1ec9a62e6881}\label{classarcade_1_1graphic_1_1_ncurse_a7b5db7506d993a664acb1ec9a62e6881}} 
+void {\bfseries init\+Keypad} ()
+\begin{DoxyCompactList}\small\item\em Initializes the keypad. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_a7d0238d6b454ef349465b9e3d47c8334}{init\+Colors}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the color pairs for the game in \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse}{Ncurse}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_ncurse_a09cc1322799892e8f97cc87c3b3b89c0}\label{classarcade_1_1graphic_1_1_ncurse_a09cc1322799892e8f97cc87c3b3b89c0}} 
+void {\bfseries refresh\+Screen} ()
+\item 
+\mbox{\hyperlink{structarcade_1_1graphic_1_1pixel__s}{arcade\+::graphic\+::pixel\+\_\+t}} \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_a9516ae2e2673698748552d45c58ed4b0}{transform\+Hexa\+Color\+To\+Pixel}} (const std\+::string \&color) const
+\begin{DoxyCompactList}\small\item\em It converts a hexadecimal color to a pixel\+\_\+t structure. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structarcade_1_1graphic_1_1pixel__s}{arcade\+::graphic\+::pixel\+\_\+t}} \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_a56b0c36d5db9c4bde6af1ca67097f2df}{transform\+Rgb\+To\+Binary}} (\mbox{\hyperlink{structarcade_1_1graphic_1_1pixel__s}{arcade\+::graphic\+::pixel\+\_\+t}} color)
+\item 
+int \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_aa6a8a5d41c573804e57e07f2964efcb6}{transform\+Binaryto\+Color}} (\mbox{\hyperlink{structarcade_1_1graphic_1_1pixel__s}{arcade\+::graphic\+::pixel\+\_\+t}} color)
+\begin{DoxyCompactList}\small\item\em It transforms a pixel\+\_\+t with binary values color into a ncurses color. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_ncurse_a685187adb54d962fcb83f9c556771367}\label{classarcade_1_1graphic_1_1_ncurse_a685187adb54d962fcb83f9c556771367}} 
+void {\bfseries display\+Text\+Object} (\mbox{\hyperlink{structarcade_1_1text__object__s}{arcade\+::text\+\_\+object\+\_\+t}} text\+\_\+object)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_ncurse_ab7a75694fd7b71b902f6f736e65c4f5c}\label{classarcade_1_1graphic_1_1_ncurse_ab7a75694fd7b71b902f6f736e65c4f5c}} 
+\index{arcade::graphic::Ncurse@{arcade::graphic::Ncurse}!clearScreen@{clearScreen}}
+\index{clearScreen@{clearScreen}!arcade::graphic::Ncurse@{arcade::graphic::Ncurse}}
+\doxysubsubsection{\texorpdfstring{clearScreen()}{clearScreen()}}
+{\footnotesize\ttfamily void arcade\+::graphic\+::\+Ncurse\+::clear\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+function clears the screen 
+
+
+
+Implements \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphic}{arcade\+::graphic\+::\+IGraphic}}.
+
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_ncurse_a44a75f133c0ee2b20f339a9802a4f52b}\label{classarcade_1_1graphic_1_1_ncurse_a44a75f133c0ee2b20f339a9802a4f52b}} 
+\index{arcade::graphic::Ncurse@{arcade::graphic::Ncurse}!closeWindow@{closeWindow}}
+\index{closeWindow@{closeWindow}!arcade::graphic::Ncurse@{arcade::graphic::Ncurse}}
+\doxysubsubsection{\texorpdfstring{closeWindow()}{closeWindow()}}
+{\footnotesize\ttfamily void arcade\+::graphic\+::\+Ncurse\+::close\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+function is used to close the window 
+
+
+
+Implements \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphic}{arcade\+::graphic\+::\+IGraphic}}.
+
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_ncurse_a5043f280d326ede8e3dff6fb8506b604}\label{classarcade_1_1graphic_1_1_ncurse_a5043f280d326ede8e3dff6fb8506b604}} 
+\index{arcade::graphic::Ncurse@{arcade::graphic::Ncurse}!displayBackground@{displayBackground}}
+\index{displayBackground@{displayBackground}!arcade::graphic::Ncurse@{arcade::graphic::Ncurse}}
+\doxysubsubsection{\texorpdfstring{displayBackground()}{displayBackground()}}
+{\footnotesize\ttfamily void arcade\+::graphic\+::\+Ncurse\+::display\+Background (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} \&}]{game\+\_\+object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This function displays the background of the game. 
+
+
+
+Implements \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphic}{arcade\+::graphic\+::\+IGraphic}}.
+
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_ncurse_a594cb08f10ba0463127ea65886d4367b}\label{classarcade_1_1graphic_1_1_ncurse_a594cb08f10ba0463127ea65886d4367b}} 
+\index{arcade::graphic::Ncurse@{arcade::graphic::Ncurse}!displayGameObject@{displayGameObject}}
+\index{displayGameObject@{displayGameObject}!arcade::graphic::Ncurse@{arcade::graphic::Ncurse}}
+\doxysubsubsection{\texorpdfstring{displayGameObject()}{displayGameObject()}}
+{\footnotesize\ttfamily void arcade\+::graphic\+::\+Ncurse\+::display\+Game\+Object (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structarcade_1_1game__object__s}{game\+\_\+object\+\_\+t}} \&}]{item }\end{DoxyParamCaption})}
+
+
+
+Display the game object on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The game object to be displayed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_ncurse_a46e71c33fbebbcb63bf5e81aceee650a}\label{classarcade_1_1graphic_1_1_ncurse_a46e71c33fbebbcb63bf5e81aceee650a}} 
+\index{arcade::graphic::Ncurse@{arcade::graphic::Ncurse}!displayScreen@{displayScreen}}
+\index{displayScreen@{displayScreen}!arcade::graphic::Ncurse@{arcade::graphic::Ncurse}}
+\doxysubsubsection{\texorpdfstring{displayScreen()}{displayScreen()}}
+{\footnotesize\ttfamily void arcade\+::graphic\+::\+Ncurse\+::display\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This function displays the screen. 
+
+
+
+Implements \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphic}{arcade\+::graphic\+::\+IGraphic}}.
+
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_ncurse_ae885a2cd0d109b1db2f99ac90c350f5a}\label{classarcade_1_1graphic_1_1_ncurse_ae885a2cd0d109b1db2f99ac90c350f5a}} 
+\index{arcade::graphic::Ncurse@{arcade::graphic::Ncurse}!drawPendingGameObjects@{drawPendingGameObjects}}
+\index{drawPendingGameObjects@{drawPendingGameObjects}!arcade::graphic::Ncurse@{arcade::graphic::Ncurse}}
+\doxysubsubsection{\texorpdfstring{drawPendingGameObjects()}{drawPendingGameObjects()}}
+{\footnotesize\ttfamily void arcade\+::graphic\+::\+Ncurse\+::draw\+Pending\+Game\+Objects (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} $>$ \&}]{Items }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Draws all the game objects that are pending to be drawn. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Items} & A vector of game objects to be drawn. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphic}{arcade\+::graphic\+::\+IGraphic}}.
+
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_ncurse_ae5b1b7e98fb3c1d6e5d771cd8aac9a19}\label{classarcade_1_1graphic_1_1_ncurse_ae5b1b7e98fb3c1d6e5d771cd8aac9a19}} 
+\index{arcade::graphic::Ncurse@{arcade::graphic::Ncurse}!drawPendingTexts@{drawPendingTexts}}
+\index{drawPendingTexts@{drawPendingTexts}!arcade::graphic::Ncurse@{arcade::graphic::Ncurse}}
+\doxysubsubsection{\texorpdfstring{drawPendingTexts()}{drawPendingTexts()}}
+{\footnotesize\ttfamily void arcade\+::graphic\+::\+Ncurse\+::draw\+Pending\+Texts (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1text__object__s}{arcade\+::text\+\_\+object\+\_\+t}} $>$ \&}]{text\+\_\+object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphic}{arcade\+::graphic\+::\+IGraphic}}.
+
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_ncurse_a341529f6769d48c209c5b586ab5dde0b}\label{classarcade_1_1graphic_1_1_ncurse_a341529f6769d48c209c5b586ab5dde0b}} 
+\index{arcade::graphic::Ncurse@{arcade::graphic::Ncurse}!getPendingEvent@{getPendingEvent}}
+\index{getPendingEvent@{getPendingEvent}!arcade::graphic::Ncurse@{arcade::graphic::Ncurse}}
+\doxysubsubsection{\texorpdfstring{getPendingEvent()}{getPendingEvent()}}
+{\footnotesize\ttfamily std\+::vector$<$ arcade\+::event\+\_\+t $>$ arcade\+::graphic\+::\+Ncurse\+::get\+Pending\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the event from the keyboard (player input) 
+
+\begin{DoxyReturn}{Returns}
+A vector of event\+\_\+t 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphic}{arcade\+::graphic\+::\+IGraphic}}.
+
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_ncurse_a4cd9bba8ea5e66b3011e3a47534387b0}\label{classarcade_1_1graphic_1_1_ncurse_a4cd9bba8ea5e66b3011e3a47534387b0}} 
+\index{arcade::graphic::Ncurse@{arcade::graphic::Ncurse}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!arcade::graphic::Ncurse@{arcade::graphic::Ncurse}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily bool arcade\+::graphic\+::\+Ncurse\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+It returns the status of the window. 
+
+\begin{DoxyReturn}{Returns}
+The status of the window. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphic}{arcade\+::graphic\+::\+IGraphic}}.
+
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_ncurse_a7d0238d6b454ef349465b9e3d47c8334}\label{classarcade_1_1graphic_1_1_ncurse_a7d0238d6b454ef349465b9e3d47c8334}} 
+\index{arcade::graphic::Ncurse@{arcade::graphic::Ncurse}!initColors@{initColors}}
+\index{initColors@{initColors}!arcade::graphic::Ncurse@{arcade::graphic::Ncurse}}
+\doxysubsubsection{\texorpdfstring{initColors()}{initColors()}}
+{\footnotesize\ttfamily void arcade\+::graphic\+::\+Ncurse\+::init\+Colors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Initialize the color pairs for the game in \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse}{Ncurse}}. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]In progress \end{DoxyRefDesc}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_ncurse_a171555755c88fd747c9700cd1be9a154}\label{classarcade_1_1graphic_1_1_ncurse_a171555755c88fd747c9700cd1be9a154}} 
+\index{arcade::graphic::Ncurse@{arcade::graphic::Ncurse}!initWindow@{initWindow}}
+\index{initWindow@{initWindow}!arcade::graphic::Ncurse@{arcade::graphic::Ncurse}}
+\doxysubsubsection{\texorpdfstring{initWindow()}{initWindow()}}
+{\footnotesize\ttfamily void arcade\+::graphic\+::\+Ncurse\+::init\+Window (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialize the ncurses window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the window. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphic}{arcade\+::graphic\+::\+IGraphic}}.
+
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_ncurse_aa6a8a5d41c573804e57e07f2964efcb6}\label{classarcade_1_1graphic_1_1_ncurse_aa6a8a5d41c573804e57e07f2964efcb6}} 
+\index{arcade::graphic::Ncurse@{arcade::graphic::Ncurse}!transformBinarytoColor@{transformBinarytoColor}}
+\index{transformBinarytoColor@{transformBinarytoColor}!arcade::graphic::Ncurse@{arcade::graphic::Ncurse}}
+\doxysubsubsection{\texorpdfstring{transformBinarytoColor()}{transformBinarytoColor()}}
+{\footnotesize\ttfamily int arcade\+::graphic\+::\+Ncurse\+::transform\+Binaryto\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structarcade_1_1graphic_1_1pixel__s}{arcade\+::graphic\+::pixel\+\_\+t}}}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+It transforms a pixel\+\_\+t with binary values color into a ncurses color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The color to transform\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The color of the pixel 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_ncurse_a9516ae2e2673698748552d45c58ed4b0}\label{classarcade_1_1graphic_1_1_ncurse_a9516ae2e2673698748552d45c58ed4b0}} 
+\index{arcade::graphic::Ncurse@{arcade::graphic::Ncurse}!transformHexaColorToPixel@{transformHexaColorToPixel}}
+\index{transformHexaColorToPixel@{transformHexaColorToPixel}!arcade::graphic::Ncurse@{arcade::graphic::Ncurse}}
+\doxysubsubsection{\texorpdfstring{transformHexaColorToPixel()}{transformHexaColorToPixel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structarcade_1_1graphic_1_1pixel__s}{arcade\+::graphic\+::pixel\+\_\+t}} arcade\+::graphic\+::\+Ncurse\+::transform\+Hexa\+Color\+To\+Pixel (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{color }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+It converts a hexadecimal color to a pixel\+\_\+t structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The color to transform\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pixel\+\_\+t struct 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_ncurse_a56b0c36d5db9c4bde6af1ca67097f2df}\label{classarcade_1_1graphic_1_1_ncurse_a56b0c36d5db9c4bde6af1ca67097f2df}} 
+\index{arcade::graphic::Ncurse@{arcade::graphic::Ncurse}!transformRgbToBinary@{transformRgbToBinary}}
+\index{transformRgbToBinary@{transformRgbToBinary}!arcade::graphic::Ncurse@{arcade::graphic::Ncurse}}
+\doxysubsubsection{\texorpdfstring{transformRgbToBinary()}{transformRgbToBinary()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structarcade_1_1graphic_1_1pixel__s}{arcade\+::graphic\+::pixel\+\_\+t}} arcade\+::graphic\+::\+Ncurse\+::transform\+Rgb\+To\+Binary (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structarcade_1_1graphic_1_1pixel__s}{arcade\+::graphic\+::pixel\+\_\+t}}}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+It transforms a color from RGB to binary
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The color to transform\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The color in binary 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graphic/\+Ncurse/Ncurse.\+hpp\item 
+src/\+Graphic/\+Ncurse/Ncurse.\+cpp\end{DoxyCompactItemize}

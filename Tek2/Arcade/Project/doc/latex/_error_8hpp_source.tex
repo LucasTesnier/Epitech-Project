@@ -1,0 +1,59 @@
+\hypertarget{_error_8hpp_source}{}\doxysection{Error.\+hpp}
+\label{_error_8hpp_source}\index{src/Error/Error.hpp@{src/Error/Error.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{** EPITECH PROJECT, 2022}}
+\DoxyCodeLine{3 \textcolor{comment}{** Project}}
+\DoxyCodeLine{4 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{5 \textcolor{comment}{** Error}}
+\DoxyCodeLine{6 \textcolor{comment}{*/}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef ERROR\_HPP\_}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define ERROR\_HPP\_}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <exception>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{namespace }arcade \{}
+\DoxyCodeLine{15     \textcolor{keyword}{class }\mbox{\hyperlink{classarcade_1_1_error}{Error}} : \textcolor{keyword}{public} std::exception \{}
+\DoxyCodeLine{16         \textcolor{keyword}{public}:}
+\DoxyCodeLine{17             \mbox{\hyperlink{classarcade_1_1_error_aa404799aa05747fdeeffe82c44b61770}{Error}}(std::string \textcolor{keyword}{const} \&message, std::string \textcolor{keyword}{const} \&component = \textcolor{stringliteral}{"{}Unknow"{}});}
+\DoxyCodeLine{18             \textcolor{keyword}{const} \textcolor{keywordtype}{char} *\mbox{\hyperlink{classarcade_1_1_error_a8c8c6a2aaa6f0a6b9ef4162d6e67459e}{what}}() \textcolor{keyword}{const} \textcolor{keyword}{noexcept} \textcolor{keyword}{override};}
+\DoxyCodeLine{19             \textcolor{keyword}{const} std::string \&\mbox{\hyperlink{classarcade_1_1_error_ac2c519527c9a1e61cbce98c8ae12313f}{getComponent}}() \textcolor{keyword}{const} \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21         \textcolor{keyword}{protected}:}
+\DoxyCodeLine{22         \textcolor{keyword}{private}:}
+\DoxyCodeLine{23             std::string \textcolor{keyword}{const} \_component;}
+\DoxyCodeLine{24             std::string \textcolor{keyword}{const} \_message;}
+\DoxyCodeLine{25     \};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{keyword}{class }\mbox{\hyperlink{classarcade_1_1_error_graphic}{ErrorGraphic}} : \textcolor{keyword}{public} \mbox{\hyperlink{classarcade_1_1_error}{Error}} \{}
+\DoxyCodeLine{28         \textcolor{keyword}{public}:}
+\DoxyCodeLine{29             \mbox{\hyperlink{classarcade_1_1_error_graphic_aa73d82738827f8a1bb584ea8743fe17c}{ErrorGraphic}}(std::string \textcolor{keyword}{const} \&message, std::string \textcolor{keyword}{const} \&component = \textcolor{stringliteral}{"{}Unknow"{}});}
+\DoxyCodeLine{30     \};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \textcolor{keyword}{class }\mbox{\hyperlink{classarcade_1_1_error_game}{ErrorGame}} : \textcolor{keyword}{public} \mbox{\hyperlink{classarcade_1_1_error}{Error}} \{}
+\DoxyCodeLine{33         \textcolor{keyword}{public}:}
+\DoxyCodeLine{34             \mbox{\hyperlink{classarcade_1_1_error_game_ae52f016c4858e0a4addd8414ca00d26c}{ErrorGame}}(std::string \textcolor{keyword}{const} \&message, std::string \textcolor{keyword}{const} \&component = \textcolor{stringliteral}{"{}Unknow"{}});}
+\DoxyCodeLine{35     \};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{keyword}{class }\mbox{\hyperlink{classarcade_1_1_error_core}{ErrorCore}} : \textcolor{keyword}{public} \mbox{\hyperlink{classarcade_1_1_error}{Error}} \{}
+\DoxyCodeLine{38         \textcolor{keyword}{public}:}
+\DoxyCodeLine{39             \mbox{\hyperlink{classarcade_1_1_error_core_ade1079294353aab176d13a4af52a9b8f}{ErrorCore}}(std::string \textcolor{keyword}{const} \&message, std::string \textcolor{keyword}{const} \&component = \textcolor{stringliteral}{"{}Unknow"{}});}
+\DoxyCodeLine{40     \};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     \textcolor{keyword}{class }\mbox{\hyperlink{classarcade_1_1_error_loader}{ErrorLoader}} : \textcolor{keyword}{public} \mbox{\hyperlink{classarcade_1_1_error}{Error}} \{}
+\DoxyCodeLine{43         \textcolor{keyword}{public}:}
+\DoxyCodeLine{44             \mbox{\hyperlink{classarcade_1_1_error_loader_a9846ab81b800360a4d9aed8822f8f498}{ErrorLoader}}(std::string \textcolor{keyword}{const} \&message, std::string \textcolor{keyword}{const} \&component = \textcolor{stringliteral}{"{}Unknow"{}});}
+\DoxyCodeLine{45     \};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47     \textcolor{keyword}{class }\mbox{\hyperlink{classarcade_1_1_error_usage}{ErrorUsage}} : \textcolor{keyword}{public} \mbox{\hyperlink{classarcade_1_1_error}{Error}} \{}
+\DoxyCodeLine{48         \textcolor{keyword}{public}:}
+\DoxyCodeLine{49             \mbox{\hyperlink{classarcade_1_1_error_usage_a46a032fc3ed435a004a2117082f99056}{ErrorUsage}}(std::string \textcolor{keyword}{const} \&message, std::string \textcolor{keyword}{const} \&component = \textcolor{stringliteral}{"{}Unknow"{}});}
+\DoxyCodeLine{50     \};}
+\DoxyCodeLine{51 \};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !ERROR\_HPP\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

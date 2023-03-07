@@ -1,0 +1,132 @@
+\hypertarget{classarcade_1_1_core}{}\doxysection{arcade\+::Core Class Reference}
+\label{classarcade_1_1_core}\index{arcade::Core@{arcade::Core}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classarcade_1_1_core_a4df26a87245b8cb158e80573d2f16a0f}\label{classarcade_1_1_core_a4df26a87245b8cb158e80573d2f16a0f}} 
+{\bfseries Core} ()
+\begin{DoxyCompactList}\small\item\em It initializes the \mbox{\hyperlink{classarcade_1_1_core}{Core}} class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classarcade_1_1_core_a4a80f4851276173b3055fc41268d3b3d}\label{classarcade_1_1_core_a4a80f4851276173b3055fc41268d3b3d}} 
+{\bfseries $\sim$\+Core} ()
+\begin{DoxyCompactList}\small\item\em It deletes the game and graphic libraries, and saves the score. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1_core_afaab088dabca335d2ae00048e216c4cd}{set\+Game\+Lib}} (const std\+::string \&lib\+Path)
+\begin{DoxyCompactList}\small\item\em It deletes the old game library and loads the new one. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classarcade_1_1_core_af3ff0a0fa525ad546edfbe2f6bec9042}\label{classarcade_1_1_core_af3ff0a0fa525ad546edfbe2f6bec9042}} 
+\mbox{\hyperlink{classarcade_1_1_d_l_loader}{arcade\+::\+DLLoader}}$<$ \mbox{\hyperlink{classarcade_1_1game_1_1_i_game}{arcade\+::game\+::\+IGame}} $>$ \& {\bfseries get\+Game\+Lib} () const
+\item 
+void \mbox{\hyperlink{classarcade_1_1_core_a0513c583c4dfc4b1a7054e7d2cbc439f}{set\+Graphic\+Lib}} (const std\+::string \&lib\+Path)
+\begin{DoxyCompactList}\small\item\em It sets the graphic library to the one specified by the path. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classarcade_1_1_core_aad23575003bff7fb2d7176ebde263cf8}\label{classarcade_1_1_core_aad23575003bff7fb2d7176ebde263cf8}} 
+\mbox{\hyperlink{classarcade_1_1_d_l_loader}{arcade\+::\+DLLoader}}$<$ \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphic}{arcade\+::graphic\+::\+IGraphic}} $>$ \& {\bfseries get\+Graphic\+Lib} () const
+\item 
+void \mbox{\hyperlink{classarcade_1_1_core_a1e20b8cd052510bb714ed79012a56a5d}{loop\+Arcade}} ()
+\begin{DoxyCompactList}\small\item\em It\textquotesingle{}s a loop that calls the functions of the graphic library and the game library. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1_core_a316c3cc7329cf966dc75463e7a3946c0}{loop\+Graphic\+Lib}} (bool)
+\begin{DoxyCompactList}\small\item\em It deletes the current graphic library, increments or decrements the index of the graphic library, and then sets the graphic library to the new index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1_core_a0241fff0039233646385c8c74876da57}{loop\+Game\+Lib}} (bool)
+\begin{DoxyCompactList}\small\item\em It deletes the current game, increments or decrements the index of the game library vector, sets the game library to the new index, and then creates a new instance of the game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classarcade_1_1_core_ae22e25ccd87f6786922d6d38b4da9398}\label{classarcade_1_1_core_ae22e25ccd87f6786922d6d38b4da9398}} 
+void {\bfseries switch\+To\+Menu} ()
+\begin{DoxyCompactList}\small\item\em It switches the current game to the menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1_core_aeba7600b14e1aa903398f9531081dda8}{update\+AScore}} (int score)
+\begin{DoxyCompactList}\small\item\em It updates the score of the player in the \+\_\+saved\+Score vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classarcade_1_1_core_a1e20b8cd052510bb714ed79012a56a5d}\label{classarcade_1_1_core_a1e20b8cd052510bb714ed79012a56a5d}} 
+\index{arcade::Core@{arcade::Core}!loopArcade@{loopArcade}}
+\index{loopArcade@{loopArcade}!arcade::Core@{arcade::Core}}
+\doxysubsubsection{\texorpdfstring{loopArcade()}{loopArcade()}}
+{\footnotesize\ttfamily void arcade\+::\+Core\+::loop\+Arcade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+It\textquotesingle{}s a loop that calls the functions of the graphic library and the game library. 
+
+\begin{DoxyReturn}{Returns}
+nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1_core_a0241fff0039233646385c8c74876da57}\label{classarcade_1_1_core_a0241fff0039233646385c8c74876da57}} 
+\index{arcade::Core@{arcade::Core}!loopGameLib@{loopGameLib}}
+\index{loopGameLib@{loopGameLib}!arcade::Core@{arcade::Core}}
+\doxysubsubsection{\texorpdfstring{loopGameLib()}{loopGameLib()}}
+{\footnotesize\ttfamily void arcade\+::\+Core\+::loop\+Game\+Lib (\begin{DoxyParamCaption}\item[{bool}]{is\+Next }\end{DoxyParamCaption})}
+
+
+
+It deletes the current game, increments or decrements the index of the game library vector, sets the game library to the new index, and then creates a new instance of the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Next} & true if we want to go to the next game, false if we want to go to the previous game. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classarcade_1_1_core_a316c3cc7329cf966dc75463e7a3946c0}\label{classarcade_1_1_core_a316c3cc7329cf966dc75463e7a3946c0}} 
+\index{arcade::Core@{arcade::Core}!loopGraphicLib@{loopGraphicLib}}
+\index{loopGraphicLib@{loopGraphicLib}!arcade::Core@{arcade::Core}}
+\doxysubsubsection{\texorpdfstring{loopGraphicLib()}{loopGraphicLib()}}
+{\footnotesize\ttfamily void arcade\+::\+Core\+::loop\+Graphic\+Lib (\begin{DoxyParamCaption}\item[{bool}]{is\+Next }\end{DoxyParamCaption})}
+
+
+
+It deletes the current graphic library, increments or decrements the index of the graphic library, and then sets the graphic library to the new index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Next} & true if we want to go to the next library, false if we want to go to the previous one. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classarcade_1_1_core_afaab088dabca335d2ae00048e216c4cd}\label{classarcade_1_1_core_afaab088dabca335d2ae00048e216c4cd}} 
+\index{arcade::Core@{arcade::Core}!setGameLib@{setGameLib}}
+\index{setGameLib@{setGameLib}!arcade::Core@{arcade::Core}}
+\doxysubsubsection{\texorpdfstring{setGameLib()}{setGameLib()}}
+{\footnotesize\ttfamily void arcade\+::\+Core\+::set\+Game\+Lib (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{lib\+Path }\end{DoxyParamCaption})}
+
+
+
+It deletes the old game library and loads the new one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lib\+Path} & The path to the library to load \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classarcade_1_1_core_a0513c583c4dfc4b1a7054e7d2cbc439f}\label{classarcade_1_1_core_a0513c583c4dfc4b1a7054e7d2cbc439f}} 
+\index{arcade::Core@{arcade::Core}!setGraphicLib@{setGraphicLib}}
+\index{setGraphicLib@{setGraphicLib}!arcade::Core@{arcade::Core}}
+\doxysubsubsection{\texorpdfstring{setGraphicLib()}{setGraphicLib()}}
+{\footnotesize\ttfamily void arcade\+::\+Core\+::set\+Graphic\+Lib (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{lib\+Path }\end{DoxyParamCaption})}
+
+
+
+It sets the graphic library to the one specified by the path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lib\+Path} & The path to the library \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classarcade_1_1_core_aeba7600b14e1aa903398f9531081dda8}\label{classarcade_1_1_core_aeba7600b14e1aa903398f9531081dda8}} 
+\index{arcade::Core@{arcade::Core}!updateAScore@{updateAScore}}
+\index{updateAScore@{updateAScore}!arcade::Core@{arcade::Core}}
+\doxysubsubsection{\texorpdfstring{updateAScore()}{updateAScore()}}
+{\footnotesize\ttfamily void arcade\+::\+Core\+::update\+AScore (\begin{DoxyParamCaption}\item[{int}]{score }\end{DoxyParamCaption})}
+
+
+
+It updates the score of the player in the \+\_\+saved\+Score vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & The score to add to the player\textquotesingle{}s score\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the score of the player. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Core/Core.\+hpp\item 
+src/\+Core/Core.\+cpp\end{DoxyCompactItemize}

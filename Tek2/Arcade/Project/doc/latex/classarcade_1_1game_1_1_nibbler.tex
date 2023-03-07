@@ -1,0 +1,284 @@
+\hypertarget{classarcade_1_1game_1_1_nibbler}{}\doxysection{arcade\+::game\+::Nibbler Class Reference}
+\label{classarcade_1_1game_1_1_nibbler}\index{arcade::game::Nibbler@{arcade::game::Nibbler}}
+Inheritance diagram for arcade\+::game\+::Nibbler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classarcade_1_1game_1_1_nibbler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classarcade_1_1game_1_1_nibbler_a788c08d42f7cbbd585f409120ee29b8b}\label{classarcade_1_1game_1_1_nibbler_a788c08d42f7cbbd585f409120ee29b8b}} 
+{\bfseries Nibbler} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_a788c08d42f7cbbd585f409120ee29b8b}{arcade\+::game\+::\+Nibbler\+::\+Nibbler}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classarcade_1_1game_1_1_nibbler_add994ad5bee6051a866185b29b93cbfb}\label{classarcade_1_1game_1_1_nibbler_add994ad5bee6051a866185b29b93cbfb}} 
+{\bfseries $\sim$\+Nibbler} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_a788c08d42f7cbbd585f409120ee29b8b}{arcade\+::game\+::\+Nibbler\+::\+Nibbler}} object. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} $>$ \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_ad371f551bab7d7c5bcc647449e44b343}{get\+Pending\+Items}} () const
+\begin{DoxyCompactList}\small\item\em It returns a vector of game\+\_\+object\+\_\+t, which is a struct containing the color, path, position, size and orientation of the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_a66f580ef09fc3b467dd2ea6b576f956e}{simulate}} ()
+\begin{DoxyCompactList}\small\item\em It moves the snake, checks if it\textquotesingle{}s eaten an apple, checks if it\textquotesingle{}s lost, checks if it\textquotesingle{}s won, and updates the map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_a64a792522dc2d2be1708df0c8e1a0cbf}{do\+Pending\+Event}} (std\+::vector$<$ arcade\+::event\+\_\+t $>$ \&)
+\begin{DoxyCompactList}\small\item\em It checks if the event is a direction change, and if it is, it checks if the direction is not the opposite of the current direction, and if it isn\textquotesingle{}t, it changes the direction. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_a68dd6196051a52dd39c5048bd7a386bf}{get\+Background}} () const
+\begin{DoxyCompactList}\small\item\em It returns a game\+\_\+object\+\_\+t struct with the path to the background image, the position of the image, the color of the image, and the orientation of the image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_a60a509983453c206fdd22504edc50180}{reset}} ()
+\begin{DoxyCompactList}\small\item\em It clears the map, clears the snake, and then initializes the game. \end{DoxyCompactList}\item 
+arcade\+::game\+\_\+status\+\_\+t \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_a5d7065b359a61e6da8ee7ad513c91d51}{get\+Game\+Status}} () const
+\begin{DoxyCompactList}\small\item\em It returns the game status. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1text__object__s}{arcade\+::text\+\_\+object\+\_\+t}} $>$ \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_ae9df39042af39a717cb9251d5bfc59cb}{get\+Pending\+Texts}} () const
+\begin{DoxyCompactList}\small\item\em It returns a vector of text\+\_\+object\+\_\+t, which contains the score of the player. \end{DoxyCompactList}\item 
+arcade\+::event\+\_\+t \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_aba77e353a162d51ead4a213ab7d7a9fb}{get\+Direction}} () const
+\begin{DoxyCompactList}\small\item\em It returns the direction of the snake. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_aa64b57f2306b5e45d7d2267a806b64bd}{set\+Apple}} (std\+::pair$<$ int, int $>$)
+\begin{DoxyCompactList}\small\item\em It sets the apple\textquotesingle{}s position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classarcade_1_1game_1_1_nibbler_ae5f5a1270d18b4b5cf8f8bf9cd04b91f}\label{classarcade_1_1game_1_1_nibbler_ae5f5a1270d18b4b5cf8f8bf9cd04b91f}} 
+void {\bfseries update\+Map} ()
+\begin{DoxyCompactList}\small\item\em It updates the map array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_a454ccf98292d1f16dac5592fef2d1006}{update\+Snake\+Apple}} (bool force\+\_\+update)
+\begin{DoxyCompactList}\small\item\em It generates a random position for the apple, and if the position is not occupied by the snake, it sets the apple to that position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_ac5ac81f4370c15b2bfb430d3e0ee977f}{update\+Snake\+Head}} (char map\+\_\+array\mbox{[}MAP\+\_\+\+HEIGHT\mbox{]}\mbox{[}MAP\+\_\+\+WIDTH\mbox{]}, \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler}{arcade\+::game\+::\+Nibbler}} $\ast$snake)
+\begin{DoxyCompactList}\small\item\em It updates the snake head\textquotesingle{}s character in the map array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_ae3dcd38dc25a0e4164e52d8188a2d51b}{clear\+Map}} (char map\+\_\+array\mbox{[}MAP\+\_\+\+HEIGHT\mbox{]}\mbox{[}MAP\+\_\+\+WIDTH\mbox{]})
+\begin{DoxyCompactList}\small\item\em It clears the map by filling it with the character MAP\+\_\+\+CHAR. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classarcade_1_1game_1_1_nibbler_a09948d478e7245a4245ffed083fad4b3}\label{classarcade_1_1game_1_1_nibbler_a09948d478e7245a4245ffed083fad4b3}} 
+std\+::pair$<$ int, int $>$ {\bfseries \+\_\+snake\+\_\+apple}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_a617677fa5d50180e06034a53db8e4e6b}{init\+Game}} ()
+\begin{DoxyCompactList}\small\item\em It initializes the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_ad1f9f449a3053ed01c1bf4dcbcd1d132}{destroy\+Game}} ()
+\begin{DoxyCompactList}\small\item\em It destroys the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classarcade_1_1game_1_1_nibbler_ae3dcd38dc25a0e4164e52d8188a2d51b}\label{classarcade_1_1game_1_1_nibbler_ae3dcd38dc25a0e4164e52d8188a2d51b}} 
+\index{arcade::game::Nibbler@{arcade::game::Nibbler}!clearMap@{clearMap}}
+\index{clearMap@{clearMap}!arcade::game::Nibbler@{arcade::game::Nibbler}}
+\doxysubsubsection{\texorpdfstring{clearMap()}{clearMap()}}
+{\footnotesize\ttfamily void arcade\+::game\+::\+Nibbler\+::clear\+Map (\begin{DoxyParamCaption}\item[{char}]{map\+\_\+array\mbox{[}\+MAP\+\_\+\+HEIGHT\mbox{]}\mbox{[}\+MAP\+\_\+\+WIDTH\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+It clears the map by filling it with the character MAP\+\_\+\+CHAR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map\+\_\+array} & the map array to clear \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classarcade_1_1game_1_1_nibbler_ad1f9f449a3053ed01c1bf4dcbcd1d132}\label{classarcade_1_1game_1_1_nibbler_ad1f9f449a3053ed01c1bf4dcbcd1d132}} 
+\index{arcade::game::Nibbler@{arcade::game::Nibbler}!destroyGame@{destroyGame}}
+\index{destroyGame@{destroyGame}!arcade::game::Nibbler@{arcade::game::Nibbler}}
+\doxysubsubsection{\texorpdfstring{destroyGame()}{destroyGame()}}
+{\footnotesize\ttfamily void arcade\+::game\+::\+Nibbler\+::destroy\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+It destroys the game. 
+
+
+
+Implements \mbox{\hyperlink{classarcade_1_1game_1_1_i_game}{arcade\+::game\+::\+IGame}}.
+
+\mbox{\Hypertarget{classarcade_1_1game_1_1_nibbler_a64a792522dc2d2be1708df0c8e1a0cbf}\label{classarcade_1_1game_1_1_nibbler_a64a792522dc2d2be1708df0c8e1a0cbf}} 
+\index{arcade::game::Nibbler@{arcade::game::Nibbler}!doPendingEvent@{doPendingEvent}}
+\index{doPendingEvent@{doPendingEvent}!arcade::game::Nibbler@{arcade::game::Nibbler}}
+\doxysubsubsection{\texorpdfstring{doPendingEvent()}{doPendingEvent()}}
+{\footnotesize\ttfamily void arcade\+::game\+::\+Nibbler\+::do\+Pending\+Event (\begin{DoxyParamCaption}\item[{std\+::vector$<$ arcade\+::event\+\_\+t $>$ \&}]{events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+It checks if the event is a direction change, and if it is, it checks if the direction is not the opposite of the current direction, and if it isn\textquotesingle{}t, it changes the direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em events} & A vector of events that happened since the last call to do\+Pending\+Event. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classarcade_1_1game_1_1_i_game}{arcade\+::game\+::\+IGame}}.
+
+\mbox{\Hypertarget{classarcade_1_1game_1_1_nibbler_a68dd6196051a52dd39c5048bd7a386bf}\label{classarcade_1_1game_1_1_nibbler_a68dd6196051a52dd39c5048bd7a386bf}} 
+\index{arcade::game::Nibbler@{arcade::game::Nibbler}!getBackground@{getBackground}}
+\index{getBackground@{getBackground}!arcade::game::Nibbler@{arcade::game::Nibbler}}
+\doxysubsubsection{\texorpdfstring{getBackground()}{getBackground()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} arcade\+::game\+::\+Nibbler\+::get\+Background (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+It returns a game\+\_\+object\+\_\+t struct with the path to the background image, the position of the image, the color of the image, and the orientation of the image. 
+
+\begin{DoxyReturn}{Returns}
+The background of the game 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classarcade_1_1game_1_1_i_game}{arcade\+::game\+::\+IGame}}.
+
+\mbox{\Hypertarget{classarcade_1_1game_1_1_nibbler_aba77e353a162d51ead4a213ab7d7a9fb}\label{classarcade_1_1game_1_1_nibbler_aba77e353a162d51ead4a213ab7d7a9fb}} 
+\index{arcade::game::Nibbler@{arcade::game::Nibbler}!getDirection@{getDirection}}
+\index{getDirection@{getDirection}!arcade::game::Nibbler@{arcade::game::Nibbler}}
+\doxysubsubsection{\texorpdfstring{getDirection()}{getDirection()}}
+{\footnotesize\ttfamily arcade\+::event\+\_\+t arcade\+::game\+::\+Nibbler\+::get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+It returns the direction of the snake. 
+
+\begin{DoxyReturn}{Returns}
+The direction of the snake. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classarcade_1_1game_1_1_nibbler_a5d7065b359a61e6da8ee7ad513c91d51}\label{classarcade_1_1game_1_1_nibbler_a5d7065b359a61e6da8ee7ad513c91d51}} 
+\index{arcade::game::Nibbler@{arcade::game::Nibbler}!getGameStatus@{getGameStatus}}
+\index{getGameStatus@{getGameStatus}!arcade::game::Nibbler@{arcade::game::Nibbler}}
+\doxysubsubsection{\texorpdfstring{getGameStatus()}{getGameStatus()}}
+{\footnotesize\ttfamily arcade\+::game\+\_\+status\+\_\+t arcade\+::game\+::\+Nibbler\+::get\+Game\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+It returns the game status. 
+
+\begin{DoxyReturn}{Returns}
+The game status. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classarcade_1_1game_1_1_i_game}{arcade\+::game\+::\+IGame}}.
+
+\mbox{\Hypertarget{classarcade_1_1game_1_1_nibbler_ad371f551bab7d7c5bcc647449e44b343}\label{classarcade_1_1game_1_1_nibbler_ad371f551bab7d7c5bcc647449e44b343}} 
+\index{arcade::game::Nibbler@{arcade::game::Nibbler}!getPendingItems@{getPendingItems}}
+\index{getPendingItems@{getPendingItems}!arcade::game::Nibbler@{arcade::game::Nibbler}}
+\doxysubsubsection{\texorpdfstring{getPendingItems()}{getPendingItems()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} $>$ arcade\+::game\+::\+Nibbler\+::get\+Pending\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+It returns a vector of game\+\_\+object\+\_\+t, which is a struct containing the color, path, position, size and orientation of the object. 
+
+\begin{DoxyReturn}{Returns}
+A vector of game\+\_\+object\+\_\+t 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classarcade_1_1game_1_1_i_game}{arcade\+::game\+::\+IGame}}.
+
+\mbox{\Hypertarget{classarcade_1_1game_1_1_nibbler_ae9df39042af39a717cb9251d5bfc59cb}\label{classarcade_1_1game_1_1_nibbler_ae9df39042af39a717cb9251d5bfc59cb}} 
+\index{arcade::game::Nibbler@{arcade::game::Nibbler}!getPendingTexts@{getPendingTexts}}
+\index{getPendingTexts@{getPendingTexts}!arcade::game::Nibbler@{arcade::game::Nibbler}}
+\doxysubsubsection{\texorpdfstring{getPendingTexts()}{getPendingTexts()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1text__object__s}{arcade\+::text\+\_\+object\+\_\+t}} $>$ arcade\+::game\+::\+Nibbler\+::get\+Pending\+Texts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+It returns a vector of text\+\_\+object\+\_\+t, which contains the score of the player. 
+
+\begin{DoxyReturn}{Returns}
+A vector of text\+\_\+object\+\_\+t 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classarcade_1_1game_1_1_i_game}{arcade\+::game\+::\+IGame}}.
+
+\mbox{\Hypertarget{classarcade_1_1game_1_1_nibbler_a617677fa5d50180e06034a53db8e4e6b}\label{classarcade_1_1game_1_1_nibbler_a617677fa5d50180e06034a53db8e4e6b}} 
+\index{arcade::game::Nibbler@{arcade::game::Nibbler}!initGame@{initGame}}
+\index{initGame@{initGame}!arcade::game::Nibbler@{arcade::game::Nibbler}}
+\doxysubsubsection{\texorpdfstring{initGame()}{initGame()}}
+{\footnotesize\ttfamily void arcade\+::game\+::\+Nibbler\+::init\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+It initializes the game. 
+
+
+
+Implements \mbox{\hyperlink{classarcade_1_1game_1_1_i_game}{arcade\+::game\+::\+IGame}}.
+
+\mbox{\Hypertarget{classarcade_1_1game_1_1_nibbler_a60a509983453c206fdd22504edc50180}\label{classarcade_1_1game_1_1_nibbler_a60a509983453c206fdd22504edc50180}} 
+\index{arcade::game::Nibbler@{arcade::game::Nibbler}!reset@{reset}}
+\index{reset@{reset}!arcade::game::Nibbler@{arcade::game::Nibbler}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void arcade\+::game\+::\+Nibbler\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+It clears the map, clears the snake, and then initializes the game. 
+
+
+
+Implements \mbox{\hyperlink{classarcade_1_1game_1_1_i_game}{arcade\+::game\+::\+IGame}}.
+
+\mbox{\Hypertarget{classarcade_1_1game_1_1_nibbler_aa64b57f2306b5e45d7d2267a806b64bd}\label{classarcade_1_1game_1_1_nibbler_aa64b57f2306b5e45d7d2267a806b64bd}} 
+\index{arcade::game::Nibbler@{arcade::game::Nibbler}!setApple@{setApple}}
+\index{setApple@{setApple}!arcade::game::Nibbler@{arcade::game::Nibbler}}
+\doxysubsubsection{\texorpdfstring{setApple()}{setApple()}}
+{\footnotesize\ttfamily void arcade\+::game\+::\+Nibbler\+::set\+Apple (\begin{DoxyParamCaption}\item[{std\+::pair$<$ int, int $>$}]{apple }\end{DoxyParamCaption})}
+
+
+
+It sets the apple\textquotesingle{}s position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em apple} & The position of the apple \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classarcade_1_1game_1_1_nibbler_a66f580ef09fc3b467dd2ea6b576f956e}\label{classarcade_1_1game_1_1_nibbler_a66f580ef09fc3b467dd2ea6b576f956e}} 
+\index{arcade::game::Nibbler@{arcade::game::Nibbler}!simulate@{simulate}}
+\index{simulate@{simulate}!arcade::game::Nibbler@{arcade::game::Nibbler}}
+\doxysubsubsection{\texorpdfstring{simulate()}{simulate()}}
+{\footnotesize\ttfamily void arcade\+::game\+::\+Nibbler\+::simulate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+It moves the snake, checks if it\textquotesingle{}s eaten an apple, checks if it\textquotesingle{}s lost, checks if it\textquotesingle{}s won, and updates the map. 
+
+
+
+Implements \mbox{\hyperlink{classarcade_1_1game_1_1_i_game}{arcade\+::game\+::\+IGame}}.
+
+\mbox{\Hypertarget{classarcade_1_1game_1_1_nibbler_a454ccf98292d1f16dac5592fef2d1006}\label{classarcade_1_1game_1_1_nibbler_a454ccf98292d1f16dac5592fef2d1006}} 
+\index{arcade::game::Nibbler@{arcade::game::Nibbler}!updateSnakeApple@{updateSnakeApple}}
+\index{updateSnakeApple@{updateSnakeApple}!arcade::game::Nibbler@{arcade::game::Nibbler}}
+\doxysubsubsection{\texorpdfstring{updateSnakeApple()}{updateSnakeApple()}}
+{\footnotesize\ttfamily void arcade\+::game\+::\+Nibbler\+::update\+Snake\+Apple (\begin{DoxyParamCaption}\item[{bool}]{force\+\_\+update }\end{DoxyParamCaption})}
+
+
+
+It generates a random position for the apple, and if the position is not occupied by the snake, it sets the apple to that position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em force\+\_\+update} & if true, the apple will be updated even if it hasn\textquotesingle{}t been eaten. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classarcade_1_1game_1_1_nibbler_ac5ac81f4370c15b2bfb430d3e0ee977f}\label{classarcade_1_1game_1_1_nibbler_ac5ac81f4370c15b2bfb430d3e0ee977f}} 
+\index{arcade::game::Nibbler@{arcade::game::Nibbler}!updateSnakeHead@{updateSnakeHead}}
+\index{updateSnakeHead@{updateSnakeHead}!arcade::game::Nibbler@{arcade::game::Nibbler}}
+\doxysubsubsection{\texorpdfstring{updateSnakeHead()}{updateSnakeHead()}}
+{\footnotesize\ttfamily void arcade\+::game\+::\+Nibbler\+::update\+Snake\+Head (\begin{DoxyParamCaption}\item[{char}]{map\+\_\+array\mbox{[}\+MAP\+\_\+\+HEIGHT\mbox{]}\mbox{[}\+MAP\+\_\+\+WIDTH\mbox{]},  }\item[{\mbox{\hyperlink{classarcade_1_1game_1_1_nibbler}{arcade\+::game\+::\+Nibbler}} $\ast$}]{snake }\end{DoxyParamCaption})}
+
+
+
+It updates the snake head\textquotesingle{}s character in the map array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map\+\_\+array} & The map array that will be displayed on the screen. \\
+\hline
+{\em snake} & The snake object \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Game/\+Nibbler/Nibbler.\+hpp\item 
+src/\+Game/\+Nibbler/Nibbler.\+cpp\end{DoxyCompactItemize}

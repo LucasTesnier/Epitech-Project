@@ -1,0 +1,130 @@
+\hypertarget{classarcade_1_1graphic_1_1_i_graphic}{}\doxysection{arcade\+::graphic\+::IGraphic Class Reference}
+\label{classarcade_1_1graphic_1_1_i_graphic}\index{arcade::graphic::IGraphic@{arcade::graphic::IGraphic}}
+Inheritance diagram for arcade\+::graphic\+::IGraphic\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classarcade_1_1graphic_1_1_i_graphic}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphic_af3111aefe989bb2388bfddaec482cbee}{clear\+Screen}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphic_aeea783ad61d660068d8fe647ec009760}{display\+Screen}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphic_a37771f67bb5107b4dd249940007f06e5}{draw\+Pending\+Texts}} (const std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1text__object__s}{arcade\+::text\+\_\+object\+\_\+t}} $>$ \&)=0
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphic_a610fe685583a1257115395373d21dcad}{draw\+Pending\+Game\+Objects}} (const std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} $>$ \&)=0
+\item 
+virtual std\+::vector$<$ arcade\+::event\+\_\+t $>$ \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphic_a0a1baacdc4618bf6b69ea70eddbbe267}{get\+Pending\+Event}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphic_a236c5e3df51917c90be9d762adab0672}{display\+Background}} (const \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} \&)=0
+\item 
+virtual bool \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphic_af60fb076486dd158117e37ff3ddb65e1}{get\+Status}} () const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphic_a44688f7e747a2bfa7e0e92bc56abc214}{init\+Window}} (std\+::string const \&name)=0
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1graphic_1_1_i_graphic_af9b6a0d00bfed773c419cc821e8b951b}{close\+Window}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_graphic_af3111aefe989bb2388bfddaec482cbee}\label{classarcade_1_1graphic_1_1_i_graphic_af3111aefe989bb2388bfddaec482cbee}} 
+\index{arcade::graphic::IGraphic@{arcade::graphic::IGraphic}!clearScreen@{clearScreen}}
+\index{clearScreen@{clearScreen}!arcade::graphic::IGraphic@{arcade::graphic::IGraphic}}
+\doxysubsubsection{\texorpdfstring{clearScreen()}{clearScreen()}}
+{\footnotesize\ttfamily virtual void arcade\+::graphic\+::\+IGraphic\+::clear\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_ab7a75694fd7b71b902f6f736e65c4f5c}{arcade\+::graphic\+::\+Ncurse}}, \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_a3fc3f1922eabc21c2108aeabe38665a8}{arcade\+::graphic\+::\+Sdl}}, and \mbox{\hyperlink{classarcade_1_1graphic_1_1_sfml_a626f9846cc1c07a47ef1ebb7dd09dbb2}{arcade\+::graphic\+::\+Sfml}}.
+
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_graphic_af9b6a0d00bfed773c419cc821e8b951b}\label{classarcade_1_1graphic_1_1_i_graphic_af9b6a0d00bfed773c419cc821e8b951b}} 
+\index{arcade::graphic::IGraphic@{arcade::graphic::IGraphic}!closeWindow@{closeWindow}}
+\index{closeWindow@{closeWindow}!arcade::graphic::IGraphic@{arcade::graphic::IGraphic}}
+\doxysubsubsection{\texorpdfstring{closeWindow()}{closeWindow()}}
+{\footnotesize\ttfamily virtual void arcade\+::graphic\+::\+IGraphic\+::close\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_a44a75f133c0ee2b20f339a9802a4f52b}{arcade\+::graphic\+::\+Ncurse}}, \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_adf2bb43e847a34e0ba97e21f24e1d5dd}{arcade\+::graphic\+::\+Sdl}}, and \mbox{\hyperlink{classarcade_1_1graphic_1_1_sfml_a1f49520411c35dc4c11e10cbbd2414f1}{arcade\+::graphic\+::\+Sfml}}.
+
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_graphic_a236c5e3df51917c90be9d762adab0672}\label{classarcade_1_1graphic_1_1_i_graphic_a236c5e3df51917c90be9d762adab0672}} 
+\index{arcade::graphic::IGraphic@{arcade::graphic::IGraphic}!displayBackground@{displayBackground}}
+\index{displayBackground@{displayBackground}!arcade::graphic::IGraphic@{arcade::graphic::IGraphic}}
+\doxysubsubsection{\texorpdfstring{displayBackground()}{displayBackground()}}
+{\footnotesize\ttfamily virtual void arcade\+::graphic\+::\+IGraphic\+::display\+Background (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_a5043f280d326ede8e3dff6fb8506b604}{arcade\+::graphic\+::\+Ncurse}}, and \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_afc12c493cd443ecd86e4364c510eebb5}{arcade\+::graphic\+::\+Sdl}}.
+
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_graphic_aeea783ad61d660068d8fe647ec009760}\label{classarcade_1_1graphic_1_1_i_graphic_aeea783ad61d660068d8fe647ec009760}} 
+\index{arcade::graphic::IGraphic@{arcade::graphic::IGraphic}!displayScreen@{displayScreen}}
+\index{displayScreen@{displayScreen}!arcade::graphic::IGraphic@{arcade::graphic::IGraphic}}
+\doxysubsubsection{\texorpdfstring{displayScreen()}{displayScreen()}}
+{\footnotesize\ttfamily virtual void arcade\+::graphic\+::\+IGraphic\+::display\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_a46e71c33fbebbcb63bf5e81aceee650a}{arcade\+::graphic\+::\+Ncurse}}, and \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_ac2adb830258cc4fbf50b1b9e71849276}{arcade\+::graphic\+::\+Sdl}}.
+
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_graphic_a610fe685583a1257115395373d21dcad}\label{classarcade_1_1graphic_1_1_i_graphic_a610fe685583a1257115395373d21dcad}} 
+\index{arcade::graphic::IGraphic@{arcade::graphic::IGraphic}!drawPendingGameObjects@{drawPendingGameObjects}}
+\index{drawPendingGameObjects@{drawPendingGameObjects}!arcade::graphic::IGraphic@{arcade::graphic::IGraphic}}
+\doxysubsubsection{\texorpdfstring{drawPendingGameObjects()}{drawPendingGameObjects()}}
+{\footnotesize\ttfamily virtual void arcade\+::graphic\+::\+IGraphic\+::draw\+Pending\+Game\+Objects (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade\+::game\+\_\+object\+\_\+t}} $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_ae885a2cd0d109b1db2f99ac90c350f5a}{arcade\+::graphic\+::\+Ncurse}}, \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_a765ede62d212e4f8fa777677c65d3d8c}{arcade\+::graphic\+::\+Sdl}}, and \mbox{\hyperlink{classarcade_1_1graphic_1_1_sfml_addd630a2ab1cf938e1ca71d609906d12}{arcade\+::graphic\+::\+Sfml}}.
+
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_graphic_a37771f67bb5107b4dd249940007f06e5}\label{classarcade_1_1graphic_1_1_i_graphic_a37771f67bb5107b4dd249940007f06e5}} 
+\index{arcade::graphic::IGraphic@{arcade::graphic::IGraphic}!drawPendingTexts@{drawPendingTexts}}
+\index{drawPendingTexts@{drawPendingTexts}!arcade::graphic::IGraphic@{arcade::graphic::IGraphic}}
+\doxysubsubsection{\texorpdfstring{drawPendingTexts()}{drawPendingTexts()}}
+{\footnotesize\ttfamily virtual void arcade\+::graphic\+::\+IGraphic\+::draw\+Pending\+Texts (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structarcade_1_1text__object__s}{arcade\+::text\+\_\+object\+\_\+t}} $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_a8526ce8128588fa3b06b9fece0354193}{arcade\+::graphic\+::\+Sdl}}, and \mbox{\hyperlink{classarcade_1_1graphic_1_1_sfml_af2a554a6838ac73e31ce42977422a4b7}{arcade\+::graphic\+::\+Sfml}}.
+
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_graphic_a0a1baacdc4618bf6b69ea70eddbbe267}\label{classarcade_1_1graphic_1_1_i_graphic_a0a1baacdc4618bf6b69ea70eddbbe267}} 
+\index{arcade::graphic::IGraphic@{arcade::graphic::IGraphic}!getPendingEvent@{getPendingEvent}}
+\index{getPendingEvent@{getPendingEvent}!arcade::graphic::IGraphic@{arcade::graphic::IGraphic}}
+\doxysubsubsection{\texorpdfstring{getPendingEvent()}{getPendingEvent()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$ arcade\+::event\+\_\+t $>$ arcade\+::graphic\+::\+IGraphic\+::get\+Pending\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_a341529f6769d48c209c5b586ab5dde0b}{arcade\+::graphic\+::\+Ncurse}}, \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_acc7084d3b9de404318c142099a478321}{arcade\+::graphic\+::\+Sdl}}, and \mbox{\hyperlink{classarcade_1_1graphic_1_1_sfml_a436b667c470064e378b40dec9508d926}{arcade\+::graphic\+::\+Sfml}}.
+
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_graphic_af60fb076486dd158117e37ff3ddb65e1}\label{classarcade_1_1graphic_1_1_i_graphic_af60fb076486dd158117e37ff3ddb65e1}} 
+\index{arcade::graphic::IGraphic@{arcade::graphic::IGraphic}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!arcade::graphic::IGraphic@{arcade::graphic::IGraphic}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily virtual bool arcade\+::graphic\+::\+IGraphic\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_a4cd9bba8ea5e66b3011e3a47534387b0}{arcade\+::graphic\+::\+Ncurse}}, \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_a5c58ec3fb3d5bed4baa2828aa339f525}{arcade\+::graphic\+::\+Sdl}}, and \mbox{\hyperlink{classarcade_1_1graphic_1_1_sfml_aa15238555fd9931cd04a5ab5d456b643}{arcade\+::graphic\+::\+Sfml}}.
+
+\mbox{\Hypertarget{classarcade_1_1graphic_1_1_i_graphic_a44688f7e747a2bfa7e0e92bc56abc214}\label{classarcade_1_1graphic_1_1_i_graphic_a44688f7e747a2bfa7e0e92bc56abc214}} 
+\index{arcade::graphic::IGraphic@{arcade::graphic::IGraphic}!initWindow@{initWindow}}
+\index{initWindow@{initWindow}!arcade::graphic::IGraphic@{arcade::graphic::IGraphic}}
+\doxysubsubsection{\texorpdfstring{initWindow()}{initWindow()}}
+{\footnotesize\ttfamily virtual void arcade\+::graphic\+::\+IGraphic\+::init\+Window (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classarcade_1_1graphic_1_1_ncurse_a171555755c88fd747c9700cd1be9a154}{arcade\+::graphic\+::\+Ncurse}}, \mbox{\hyperlink{classarcade_1_1graphic_1_1_sdl_a664c2f2714dff312f96c9dc89192107e}{arcade\+::graphic\+::\+Sdl}}, and \mbox{\hyperlink{classarcade_1_1graphic_1_1_sfml_adb7d80a277e35a6e6d8819fe6dbbfd3f}{arcade\+::graphic\+::\+Sfml}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graphic/IGraphic.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,71 @@
+\hypertarget{_nibbler_8hpp_source}{}\doxysection{Nibbler.\+hpp}
+\label{_nibbler_8hpp_source}\index{src/Game/Nibbler/Nibbler.hpp@{src/Game/Nibbler/Nibbler.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{** EPITECH PROJECT, 2022}}
+\DoxyCodeLine{3 \textcolor{comment}{** Project}}
+\DoxyCodeLine{4 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{5 \textcolor{comment}{** Nibbler}}
+\DoxyCodeLine{6 \textcolor{comment}{*/}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef NIBBLER\_HPP\_}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define NIBBLER\_HPP\_}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}AGame.hpp"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define MAP\_WIDTH 50}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#define MAP\_HEIGHT 50}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define MAP\_CHAR '.'}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define SNAKE\_CHAR 'O'}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#define SNAKE\_HEAD\_LEFT '>'}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#define SNAKE\_HEAD\_UP 'v'}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define SNAKE\_HEAD\_RIGHT '<'}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define SNAKE\_HEAD\_DOWN '\string^'}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define SNAKE\_APPLE\_CHAR '*'}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define INITIAL\_SNAKE\_LENGTH 4}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#define DELAY 100000}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{namespace }arcade \{}
+\DoxyCodeLine{28     \textcolor{keyword}{namespace }game \{}
+\DoxyCodeLine{29         \textcolor{keyword}{class }\mbox{\hyperlink{classarcade_1_1game_1_1_nibbler}{Nibbler}} : \textcolor{keyword}{public} \mbox{\hyperlink{classarcade_1_1game_1_1_a_game}{AGame}} \{}
+\DoxyCodeLine{30             \textcolor{keyword}{public}:}
+\DoxyCodeLine{31                 \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_a788c08d42f7cbbd585f409120ee29b8b}{Nibbler}}();}
+\DoxyCodeLine{32                 \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_add994ad5bee6051a866185b29b93cbfb}{\string~Nibbler}}();}
+\DoxyCodeLine{33                 \textcolor{keyword}{const} std::vector<arcade::game\_object\_t> \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_ad371f551bab7d7c5bcc647449e44b343}{getPendingItems}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{34                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_a66f580ef09fc3b467dd2ea6b576f956e}{simulate}}();}
+\DoxyCodeLine{35                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_a64a792522dc2d2be1708df0c8e1a0cbf}{doPendingEvent}}(std::vector<arcade::event\_t> \&);}
+\DoxyCodeLine{36                 \textcolor{keyword}{const} \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade::game\_object\_t}} \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_a68dd6196051a52dd39c5048bd7a386bf}{getBackground}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{37                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_a60a509983453c206fdd22504edc50180}{reset}}();}
+\DoxyCodeLine{38                 arcade::game\_status\_t \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_a5d7065b359a61e6da8ee7ad513c91d51}{getGameStatus}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{39                 \textcolor{keyword}{const} std::vector<arcade::text\_object\_t> \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_ae9df39042af39a717cb9251d5bfc59cb}{getPendingTexts}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{40                 arcade::event\_t \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_aba77e353a162d51ead4a213ab7d7a9fb}{getDirection}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{41                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_aa64b57f2306b5e45d7d2267a806b64bd}{setApple}}(std::pair<int, int>);}
+\DoxyCodeLine{42                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_ae5f5a1270d18b4b5cf8f8bf9cd04b91f}{updateMap}}();}
+\DoxyCodeLine{43                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_a454ccf98292d1f16dac5592fef2d1006}{updateSnakeApple}}(\textcolor{keywordtype}{bool} force\_update);}
+\DoxyCodeLine{44                 std::pair<int, int> \_snake\_apple;}
+\DoxyCodeLine{45                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_ac5ac81f4370c15b2bfb430d3e0ee977f}{updateSnakeHead}}(\textcolor{keywordtype}{char} map\_array[MAP\_HEIGHT][MAP\_WIDTH], \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler}{arcade::game::Nibbler}} *snake);}
+\DoxyCodeLine{46                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_ae3dcd38dc25a0e4164e52d8188a2d51b}{clearMap}}(\textcolor{keywordtype}{char} map\_array[MAP\_HEIGHT][MAP\_WIDTH]);}
+\DoxyCodeLine{47             \textcolor{keyword}{protected}:}
+\DoxyCodeLine{48                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_a617677fa5d50180e06034a53db8e4e6b}{initGame}}();}
+\DoxyCodeLine{49                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_nibbler_ad1f9f449a3053ed01c1bf4dcbcd1d132}{destroyGame}}();}
+\DoxyCodeLine{50             \textcolor{keyword}{private}:}
+\DoxyCodeLine{51                 \textcolor{keywordtype}{bool} \_apple\_eaten;}
+\DoxyCodeLine{52                 std::pair<int, int> \_snake\_head;}
+\DoxyCodeLine{53                 std::vector<std::pair<int, int>> \_snake\_parts;}
+\DoxyCodeLine{54                 arcade::event\_t \_direction;}
+\DoxyCodeLine{55                 std::pair<int, int> \_apple;}
+\DoxyCodeLine{56                 arcade::game\_status\_t \_game\_status;}
+\DoxyCodeLine{57                 \textcolor{keywordtype}{int} \_length\_snake;}
+\DoxyCodeLine{58                 \textcolor{keywordtype}{int} \_snake\_world\_array[MAP\_HEIGHT][MAP\_WIDTH];}
+\DoxyCodeLine{59                 \textcolor{keywordtype}{char} \_map\_array[MAP\_HEIGHT][MAP\_WIDTH];}
+\DoxyCodeLine{60                 \textcolor{keywordtype}{int} \_head\_value;}
+\DoxyCodeLine{61         \};}
+\DoxyCodeLine{62     \};}
+\DoxyCodeLine{63 \};}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !NIBBLER\_HPP\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

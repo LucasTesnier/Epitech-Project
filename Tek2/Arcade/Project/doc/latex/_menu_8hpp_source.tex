@@ -1,0 +1,59 @@
+\hypertarget{_menu_8hpp_source}{}\doxysection{Menu.\+hpp}
+\label{_menu_8hpp_source}\index{src/Core/Menu/Menu.hpp@{src/Core/Menu/Menu.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{** EPITECH PROJECT, 2022}}
+\DoxyCodeLine{3 \textcolor{comment}{** Project}}
+\DoxyCodeLine{4 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{5 \textcolor{comment}{** Menu}}
+\DoxyCodeLine{6 \textcolor{comment}{*/}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef MENU\_HPP\_}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define MENU\_HPP\_}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}AGame.hpp"{}}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{const} std::vector<std::string> getLibContent();}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{namespace }arcade \{}
+\DoxyCodeLine{16     \textcolor{keyword}{namespace }game \{}
+\DoxyCodeLine{17         \textcolor{keyword}{class }\mbox{\hyperlink{classarcade_1_1game_1_1_menu}{Menu}} : \textcolor{keyword}{public} \mbox{\hyperlink{classarcade_1_1game_1_1_a_game}{AGame}} \{}
+\DoxyCodeLine{18             \textcolor{keyword}{public}:}
+\DoxyCodeLine{19                 \mbox{\hyperlink{classarcade_1_1game_1_1_menu_a91f390463bd1ede77f6318b920bf6685}{Menu}}(std::vector<std::string> \&, std::vector<std::string> \&, std::vector<arcade::score\_object\_t> \&, std::string \&);}
+\DoxyCodeLine{20                 \mbox{\hyperlink{classarcade_1_1game_1_1_menu_a59535f9e5175d7b210abfea6751c1f61}{\string~Menu}}();}
+\DoxyCodeLine{21                 \textcolor{keyword}{const} std::vector<arcade::game\_object\_t> \mbox{\hyperlink{classarcade_1_1game_1_1_menu_a6e6f55f3d6093fc2279ecec421953a79}{getPendingItems}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{22                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_menu_af5ba627dadbe90637f23ed23eaa92c37}{simulate}}();}
+\DoxyCodeLine{23                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_menu_aeca7ed36bbc161a479b6b8a33dcd59ea}{doPendingEvent}}(std::vector<arcade::event\_t> \&);}
+\DoxyCodeLine{24                 \textcolor{keyword}{const} \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade::game\_object\_t}} \mbox{\hyperlink{classarcade_1_1game_1_1_menu_aeeef7ca288ad89bfa5ac9f69164bf98c}{getBackground}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{25                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_menu_a30fd9abf4d0a1e19692f803062421048}{reset}}();}
+\DoxyCodeLine{26                 arcade::game\_status\_t \mbox{\hyperlink{classarcade_1_1game_1_1_menu_a3ff3f85edb2e87219cc724391db6b868}{getGameStatus}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{27                 \textcolor{keyword}{const} std::vector<arcade::text\_object\_t> \mbox{\hyperlink{classarcade_1_1game_1_1_menu_ae201fe52b375efd3b7a77dd91ded1344}{getPendingTexts}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{28                 \mbox{\hyperlink{structarcade_1_1game__object__s}{arcade::game\_object\_t}} \mbox{\hyperlink{classarcade_1_1game_1_1_menu_adab42d130bcc7b705df67f63df946ad9}{drawABox}}(\mbox{\hyperlink{structarcade_1_1vector2i__s}{arcade::vector2i\_t}} pos) \textcolor{keyword}{const};}
+\DoxyCodeLine{29                 \mbox{\hyperlink{structarcade_1_1text__object__s}{arcade::text\_object\_t}} \mbox{\hyperlink{classarcade_1_1game_1_1_menu_ab8bed61c26ffdb4aa6565da6db3ceda8}{drawAText}}(\textcolor{keyword}{const} std::string \&message, std::size\_t size, \textcolor{keyword}{const} std::string \&back, \mbox{\hyperlink{structarcade_1_1vector2i__s}{arcade::vector2i\_t}} pos) \textcolor{keyword}{const};}
+\DoxyCodeLine{30                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_menu_ab926fa3bf03bf288525d2e6a7e5ecbc7}{drawAvailableGame}}(std::vector<arcade::text\_object\_t> \&text\_object) \textcolor{keyword}{const};}
+\DoxyCodeLine{31                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_menu_a0e820343049227dd608beb5b252a1a1a}{drawAvailableGraphic}}(std::vector<arcade::text\_object\_t> \&text\_object) \textcolor{keyword}{const};}
+\DoxyCodeLine{32                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_menu_a5df9a62d456582fc97601df7e87e0f9d}{drawSavedScore}}(std::vector<arcade::text\_object\_t> \&text\_object) \textcolor{keyword}{const};}
+\DoxyCodeLine{33                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_menu_a4c54ee080357beb58d7f343b2d06aef7}{drawPseudo}}(std::vector<arcade::text\_object\_t> \&text\_object) \textcolor{keyword}{const};}
+\DoxyCodeLine{34                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_menu_a8d70c4c705e18a276793d2ee2e247d1f}{doCursorAction}}();}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36             \textcolor{keyword}{protected}:}
+\DoxyCodeLine{37                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_menu_a5c3d878aaf6406e31ab8269f45512e65}{initGame}}();}
+\DoxyCodeLine{38                 \textcolor{keywordtype}{void} \mbox{\hyperlink{classarcade_1_1game_1_1_menu_a217c76fa1def9e6298752c1865142970}{destroyGame}}();}
+\DoxyCodeLine{39                 std::vector<std::string> \&\_v\_gameLib;}
+\DoxyCodeLine{40                 std::size\_t \_s\_gameLib;}
+\DoxyCodeLine{41                 std::vector<std::string> \&\_v\_graphicLib;}
+\DoxyCodeLine{42                 std::size\_t \_s\_graphicLib;}
+\DoxyCodeLine{43                 std::vector<arcade::score\_object\_t> \&\_savedScore;}
+\DoxyCodeLine{44                 std::size\_t cursor;}
+\DoxyCodeLine{45                 std::vector<char> \_v\_pseudo;}
+\DoxyCodeLine{46                 std::string \_pendingGame;}
+\DoxyCodeLine{47                 std::string \_pendingGraphic;}
+\DoxyCodeLine{48             \textcolor{keyword}{private}:}
+\DoxyCodeLine{49         \};}
+\DoxyCodeLine{50     \};}
+\DoxyCodeLine{51 \};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !MENU\_HPP\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}
