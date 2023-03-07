@@ -1,0 +1,32 @@
+/home/Lucas/delivery/Tek2/Wolf/ChangeLog.md:
+  hash: dc354fcc844ac8a4ee5bd1dedbb5c8fcef780350ecddd7cff441a7dfc2a8f0df
+  size: 48
+  modtime: 1646061880
+/home/Lucas/delivery/Tek2/Wolf/README.md:
+  hash: c4ca8feebc13c55270b4243f3d1e6d2638155d7aec10c44e39542c9d23a773b2
+  size: 11
+  modtime: 1646061880
+/home/Lucas/delivery/Tek2/Wolf/Wolframe.cabal:
+  hash: 3b5180c789da180ccfac0b42de1c6757985b462c3c56980f89a6e1950ca6e4ca
+  size: 1543
+  modtime: 1646062493
+/home/Lucas/delivery/Tek2/Wolf/src/ArgsGestion.hs:
+  hash: 5b773ecde9ef3d063f246eecd1b336d87d0057e64533c3ca5bbe43bb3deb0194
+  size: 1532
+  modtime: 1655207878
+/home/Lucas/delivery/Tek2/Wolf/package.yaml:
+  hash: 578e1f3f2dfdb4c96ba216955a1345ae84f82040a5eaf4b4782c2ded0e848357
+  size: 1177
+  modtime: 1646062012
+/home/Lucas/delivery/Tek2/Wolf/src/DoOp.hs:
+  hash: ec65c397a0c9e56619ecef907f24ff99e4f5699f2857f2c2ceb3c719f7b7f2ad
+  size: 3529
+  modtime: 1646061694
+/home/Lucas/delivery/Tek2/Wolf/src/My.hs:
+  hash: a74a8b9134a5f9e80480f4ba0a7137b3ecb5f9c6f2c4a2ab8060b368ba28e3a6
+  size: 3253
+  modtime: 1646061694
+/home/Lucas/delivery/Tek2/Wolf/src/Wolframe.hs:
+  hash: 06e9cf2cac7b90fd4cfc7345057c0b9985b980dc1f14576e9871dfbf87dbb15d
+  size: 5767
+  modtime: 1655217867

@@ -1,0 +1,7 @@
+.chipsets:
+input a
+4069 or
+output s
+.links:
+a:1 or:1
+or:2 s:1
