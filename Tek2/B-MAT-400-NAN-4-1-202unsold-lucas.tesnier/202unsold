@@ -1,0 +1,81 @@
+#!/usr/bin/python3
+from ast import Not
+import sys
+import math
+import csv
+import re
+
+def conjoint (a, b, x, y):
+    return ((a - x) * (b - y)) / ((5 * a - 150) * (5 * b - 150))
+
+def first (a, b, tab):
+    print("\tX=10\tX=20\tX=30\tX=40\tX=50\tY law")
+    for i in range(0, 5):
+        print("Y=%d\t" % ((i + 1) * 10), end = "")
+        for j in range(0, 5):
+            print("%.3f\t" % round(conjoint(a, b, (j + 1) * 10, (i + 1) * 10), 3), end = "")
+            tab.append(conjoint(a, b, (j + 1) * 10, (i + 1) * 10))
+        tab.append(tab[i * 6] + tab[i * 6 + 1] + tab[i * 6 + 2] + tab[i * 6 + 3] + tab[i * 6 + 4])
+        print("%.3f" % round(tab[i * 6 + 5], 3))
+    print("X law\t", end = "")
+    for i in range(0, 5):
+        tab.append(tab[0 + i] + tab[6 + i] + tab[12 + i] + tab[18 + i] + tab[24 + i])
+        print("%.3f\t" % round(tab[0 + i] + tab[6 + i] + tab[12 + i] + tab[18 + i] + tab[24 + i], 3), end = "")
+    print("1.000")
+
+def second(a, b, tab):
+    print("z\t20\t30\t40\t50\t60\t70\t80\t90\t100")
+    print("p(Z=z)\t", end="")
+    print("%.3f\t" % round(tab[0], 3), end = "")
+    print("%.3f\t" % round(tab[1] + tab[6], 3), end = "")
+    print("%.3f\t" % round(tab[7] + tab[12] + tab[2], 3), end = "")
+    print("%.3f\t" % round(tab[3] + tab[8] + tab[13] + tab[18], 3), end = "")
+    print("%.3f\t" % round(tab[4] + tab[9] + tab[14] + tab[19] + tab[24], 3), end = "")
+    print("%.3f\t" % round(tab[10] + tab[15] + tab[20] + tab[25], 3), end = "")
+    print("%.3f\t" % round(tab[16] + tab[21] + tab[26], 3), end = "")
+    print("%.3f\t" % round(tab[22] + tab[27], 3), end = "")
+    print("%.3f" % round(tab[28], 3))
+
+def third(a, b, tab):
+    tab.append(10 * tab[30] + 20 * tab[31] + 30 * tab[32] + 40 * tab[33] + 50 * tab[34])
+    print("expected value of X:\t%.1f" % round(tab[35], 1))
+
+    tab.append(10 * 10 * tab[30] + 20 * 20 * tab[31] + 30 * 30 * tab[32] + 40 * 40 * tab[33] + 50 * 50 * tab[34] - tab[35] * tab[35])
+    print("variance of X:\t\t%.1f" % round(tab[36], 1))
+
+    tab.append(10 * tab[5] + 20 * tab[11] + 30 * tab[17] + 40 * tab[23] + 50 * tab[29])
+    print("expected value of Y:\t%.1f" % round(tab[37], 1))
+
+    tab.append(10 * 10 * tab[5] + 20 * 20 * tab[11] + 30 * 30 * tab[17] + 40 * 40 * tab[23] + 50 * 50 * tab[29] - tab[37] * tab[37])
+
+    print("variance of Y:\t\t%.1f" % round(tab[38], 1))
+
+    print("expected value of Z:\t%.1f" % round(tab[37] + tab[35], 1))
+    print("variance of Z:\t\t%.1f" % round(tab[36] + tab[38], 1))
+
+
+def main():
+    if (len(sys.argv) == 2 and sys.argv[1] == "-h"):
+        exit (0)
+    if (len(sys.argv) != 3):
+        exit (84)
+    a = 0
+    b = 0
+    try:
+        a = int(sys.argv[1])
+        b = int(sys.argv[2])
+    except:
+        exit (84)
+    if a <= 50 or b <= 50:
+        exit (84)
+    tab = []
+    print("--------------------------------------------------------------------------------")
+    first(a, b, tab)
+    print("--------------------------------------------------------------------------------")
+    second(a, b, tab)
+    print("--------------------------------------------------------------------------------")
+    third(a, b, tab)
+    print("--------------------------------------------------------------------------------")
+
+
+main()

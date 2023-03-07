@@ -1,0 +1,88 @@
+#!/usr/bin/python3
+from ast import Not
+import sys
+import math
+import csv
+import re
+import time
+
+def semiBino(x, y):
+    return (math.factorial(x) / (math.factorial(y) * math.factorial(x - y)))
+
+def form(a, t):
+    return a * math.exp(-t) + (4 - 3 * a) * math.exp(-2 * t) + (2 * a - 4) * math.exp(-4 * t)  
+
+def first(a):
+    res = 0.00
+    t = 0.00
+    while t < 100:
+        res += form(a, t) * t * 0.0001
+        t += 0.0001
+    minutes, seconds = divmod((res + 0.0001) * 60, 60)
+    print("Average return time: %im %.2is" % (minutes, round(seconds)))
+    temp = (res + 0.0001)
+    res = 0.000
+    t = 0.000
+    while t <= 20:
+        res += pow(t - temp, 2) * form(a, t) * 0.0001
+        t += 0.0001
+    print("Standard deviation: %.3f" % (round(math.sqrt(res), 3)))
+
+
+def third(a):
+    res = 0.00
+    t = 0.00
+    while t < 10:
+        res += form(a, t + 0.0001) * 0.0001
+        if res >= 0.5:
+            break
+        t += 0.0001
+    minutes, seconds = divmod((t + 0.0001) * 60, 60)
+    print("Time after which 50%% of the ducks are back: %im %.2is" % (minutes, round(seconds)))
+    while t < 10:
+        res += form(a, t + 0.0001) * 0.0001
+        if res >= 0.99:
+            break
+        t += 0.0001
+    minutes, seconds = divmod((t + 0.0001) * 60, 60)
+    print("Time after which 99%% of the ducks are back: %im %.2is" % (minutes, round(seconds)))
+
+
+def four(a):
+    res = 0.00
+    t = 0.00
+    while t < 10:
+        res += form(a, t + 0.0001) * 0.0001
+        if t + 0.0001 >= 1.0:
+            break
+        t += 0.0001
+    print("Percentage of ducks back after 1 minute: %.1f%%" % (round(res * 100, 1)))
+    while t < 10:
+        res += form(a, t + 0.0001) * 0.0001
+        if t + 0.0001 >= 2.0:
+            break
+        t += 0.0001
+    print("Percentage of ducks back after 2 minutes: %.1f%%" % (round(res * 100, 1)))
+
+def run(a):
+    first(a)
+    third(a)
+    four(a)
+    
+def main():
+    if (len(sys.argv) == 2 and sys.argv[1] == "-h"):
+        exit (0)
+    if (len(sys.argv) != 2):
+        exit (84)
+    a = 0
+    try:
+        a = float(sys.argv[1])
+        if (a < 0 or a > 2.5):
+            exit (84)
+    except:
+        exit (84)
+    run(a)
+    
+
+
+main()

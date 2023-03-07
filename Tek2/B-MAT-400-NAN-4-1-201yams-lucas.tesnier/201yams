@@ -1,0 +1,254 @@
+#!/usr/bin/python3
+from ast import Not
+import sys
+import math
+import csv
+import re
+
+def printRes(hope, res):
+    print("Chances to get a", hope[1], end="")
+    if hope[0] == 0:
+        print(" straight: ", end="")
+    if hope[0] == 1:
+        print(" full of %d: " % hope[2], end="")
+    if hope[0] == 2:
+        print(" pair: ", end="")
+    if hope[0] == 3:
+        print(" three-of-a-kind: ", end="")
+    if hope[0] == 4:
+        print(" four-of-a-kind: ", end="")
+    if hope[0] == 5:
+        print(" yams: ", end="")
+    print("%.2f%%" % round(res * 100, 2))
+
+def printDice(dice):
+    for i in range(len(dice)):
+        print("Dice number : ", i, " : ", dice[i])
+
+def verif(dice, hope):
+    try:
+        for i in range(len(sys.argv) - 2) :
+            dice.append(int(sys.argv[i + 1]))
+    except:
+        exit (84)
+    for i in range(len(sys.argv) - 2) :
+        if dice[i] < 0 or dice[i] > 6:
+            exit (84)
+    temp = re.findall("straight_[0-9]|full_[0-9]_[0-9]|pair_[0-9]|three_[0-9]|four_[0-9]|yams_[0-9]", sys.argv[6])
+    a = sys.argv[6].split("_")
+    try:
+        if (int(a[1]) < 1 or int(a[1]) > 6):
+            exit (84)
+    except:
+        exit (84)
+    if temp == []:
+        exit (84)
+    temp = temp[0].split("_")
+    if (len(a) != 2 and temp[0] != "full"):
+        exit(84)
+    if (len(a) != 3 and temp[0] == "full"):
+        exit(84)
+    if temp[0] == "pair" :
+        hope.append(2)
+        hope.append(int(temp[1]))
+    if temp[0] == "three" :
+        hope.append(3)
+        hope.append(int(temp[1]))
+    if temp[0] == "four" :
+        hope.append(4)
+        hope.append(int(temp[1]))
+    if temp[0] == "full" :
+        hope.append(1)
+        hope.append(int(temp[1]))
+        hope.append(int(temp[2]))
+    if temp[0] == "straight" :
+        hope.append(0)
+        hope.append(int(temp[1]))
+    if temp[0] == "yams" :
+        hope.append(5)
+        hope.append(int(temp[1]))
+
+def semiBino(x, y):
+    return (math.factorial(x) / (math.factorial(y) * math.factorial(x - y)))
+
+def bino(x, y):
+    return (math.factorial(x) / (math.factorial(y) * math.factorial(x - y))) * pow(1/6, y) * pow(5/6, x-y)
+
+def calculYams(dice, hope):
+    notExpect = 0
+    for i in range(0, 5):
+        if dice[i] != hope[1]:
+            notExpect += 1
+    return (1/pow(6, notExpect))
+
+def calculSquare(dice, hope):
+    notExpect = 0
+    for i in range(0, 5):
+        if dice[i] != hope[1]:
+            notExpect += 1
+    if (notExpect <= 1):
+        return 1
+    return ((math.comb(notExpect, notExpect - 1)) * 5) / pow(6, notExpect) + calculYams(dice, hope)
+
+
+def calculThree(dice, hope):
+    notExpect = 0
+    for i in range(0, 5):
+        if dice[i] != hope[1]:
+            notExpect += 1
+    if (notExpect <= 2):
+        return 1
+    return ((math.comb(notExpect, notExpect - 2)) * 5) / pow(6, notExpect) + calculSquare(dice, hope)
+
+def calculThreeBis(dice, hope):
+    notExpect = 0
+    for i in range(0, 5):
+        if dice[i] != hope[1]:
+            notExpect += 1
+    if (notExpect <= 2):
+        return 1
+    return ((math.comb(notExpect, notExpect - 2)) * 5) / pow(6, notExpect)
+
+def calculTwo(dice, hope):
+    notExpect = 0
+    for i in range(0, 5):
+        if dice[i] != hope[1]:
+            notExpect += 1
+    if (notExpect <= 3):
+        return 1
+    return bino(((math.comb(notExpect, notExpect - 3)) * 5) / pow(6, notExpect), calculThree(dice, hope))
+
+def calculProba(dice, hope):
+    notExpect = 0
+    for i in range(0, 5):
+        if dice[i] == hope[1]:
+            notExpect += 1
+    if (notExpect >= hope[0]):
+        return 1
+    res = 0
+    for i in range(hope[0] - notExpect, 5 - notExpect + 1):
+        res += bino(5 - notExpect, i)
+    return res
+    
+
+def calculFull(dice, hope):
+    if (hope[1] == hope[2]):
+        exit (84)
+    if (hope[2] <= 0 or hope[2] >= 7):
+        exit (84)
+    Expect1 = 0
+    Expect2 = 0
+    for i in range(0, 5):
+        if dice[i] == hope[1]:
+            Expect1 += 1
+        if dice[i] == hope[2]:
+            Expect2 += 1
+    if Expect1 == 3 and Expect2 == 2:
+        return 1.00
+    if (Expect1 > 3):
+        Expect1 = 3
+    if (Expect2 > 2):
+        Expect2 = 2
+    #Calcul occurence
+    return ((semiBino(5 - Expect1 - Expect2, 3 - Expect1) * semiBino(2 - Expect2, 2 - Expect2) / pow(6, 5 - Expect1 - Expect2)))
+
+def toFind(dice, find):
+    for i in range(len(dice)):
+        if dice[i] == find:
+            return 1
+    return 0
+
+def little(dice, hope):
+    notExpect = 5
+    for i in range(1, 6):
+        notExpect -= toFind(dice, i)
+    if (notExpect == 0):
+        return 1.00
+    if (notExpect == 1):
+        return 1/6
+    return math.factorial(notExpect) / pow(6, notExpect)
+
+def big(dice, hope):
+    notExpect = 5
+    for i in range(2, 7):
+        notExpect -= toFind(dice, i)
+    if (notExpect == 1) :
+        return 1/6
+    if (notExpect == 0):
+        return 1.00
+    return math.factorial(notExpect) / pow(6, notExpect)
+
+def calculSuite(dice, hope):
+    if (hope[1] < 5):
+        exit (84)
+    if (hope[1] == 5):
+        return little(dice, hope)
+    return big(dice, hope)
+
+def calcul(dice, hope):
+    if hope[0] == 5:
+        return calculProba(dice, hope)
+    if hope[0] == 0:
+        return calculSuite(dice, hope)
+    if hope[0] == 1:
+        return calculFull(dice, hope)
+    if hope[0] == 4:
+        return calculProba(dice, hope)
+    if hope[0] == 3:
+        return calculProba(dice, hope)
+    if hope[0] == 2:
+        return calculProba(dice, hope)
+    return 0
+
+def printOne():
+    print("\033[94m #\n##\n #\n #\033[0m")
+
+def printTwo():
+    print("\033[96m##\n  #\n #\n###\033[0m")
+
+def printThree():
+    print("\033[92m###\n  #\n###\n  #\n###\033[0m")
+
+def printFour():
+    print("\033[93m ##\n# #\n###\n  #\033[0m")
+
+def printFive():
+    print("\033[91m###\n#\n###\n  #\n###\033[0m")
+
+def printSix():
+    print("\033[95m#\n#\n###\n# #\n###\033[0m")
+
+def printUnknow():
+    print("\033[1m## \n  #\n #\n #\n\n #\033[0m")
+
+def printDice(dice):
+    for i in range(0, len(dice)):
+        if dice[i] == 0:
+            printUnknow()
+        if dice[i] == 1:
+            printOne()
+        if dice[i] == 2:
+            printTwo()
+        if dice[i] == 3:
+            printThree()
+        if dice[i] == 4:
+            printFour()
+        if dice[i] == 5:
+            printFive()
+        if dice[i] == 6:
+            printSix()
+        print("\n")
+
+def main():
+    if (len(sys.argv) == 2 and sys.argv[1] == "-h"):
+        exit (0)
+    if (len(sys.argv) != 7):
+        exit (84)
+    dice = []
+    hope = []
+    verif(dice, hope)
+    res = calcul(dice, hope)
+    printDice(dice)
+    printRes(hope, res)
+
+main()

@@ -1,0 +1,258 @@
+#!/usr/bin/python3
+from ast import Not
+import sys
+import math
+import csv
+import re
+import time
+import csv
+
+def verif_name(name):
+    with open('data.csv') as csv_file:
+        csv_reader = csv.DictReader(csv_file, delimiter=';')
+        for row in csv_reader:
+            if row["Country Code"] == name:
+                return 1
+    return 0
+
+def get_name(code):
+    with open('data.csv') as csv_file:
+        csv_reader = csv.DictReader(csv_file, delimiter=';')
+        for row in csv_reader:
+            if row["Country Code"] == code:
+                return row["Country Name"]
+    return "UNKNOWN"
+
+def get_all_pop(code):
+    temp = 0
+    with open('data.csv') as csv_file:
+        csv_reader = csv.DictReader(csv_file, delimiter=';')
+        for row in csv_reader:
+            if row["Country Code"] == code:
+                for i in range(0, 58):
+                    try:
+                        temp += float(row[str(1960 + i)]) * 0.000001
+                    except:
+                        temp += 0
+    return temp
+
+def get_all_annee_c(code):
+    temp = 0
+    with open('data.csv') as csv_file:
+        csv_reader = csv.DictReader(csv_file, delimiter=';')
+        for row in csv_reader:
+            if row["Country Code"] == code:
+                for i in range(0, 58):
+                    try:
+                       float(row[str(1960 + i)])
+                       temp += pow((1960 + i), 2)
+                    except:
+                        temp += 0
+    return temp
+
+def get_all_annee(code):
+    temp = 0
+    with open('data.csv') as csv_file:
+        csv_reader = csv.DictReader(csv_file, delimiter=';')
+        for row in csv_reader:
+            if row["Country Code"] == code:
+                for i in range(0, 58):
+                    try:
+                       float(row[str(1960 + i)])
+                       temp += (1960 + i)
+                    except:
+                        temp += 0
+    return temp
+
+def get_pop(code, annee):
+     with open('data.csv') as csv_file:
+        csv_reader = csv.DictReader(csv_file, delimiter=';')
+        for row in csv_reader:
+            if row["Country Code"] == code:
+                return row[annee]
+
+def get_alls_pop(all, annee):
+    res = 0
+    with open('data.csv') as csv_file:
+        csv_reader = csv.DictReader(csv_file, delimiter=';')
+        for row in csv_reader:
+            if (row["Country Code"] in all):
+                try:
+                    res += float(row[annee]) * 0.000001
+                except:
+                    res += 0
+    return res
+
+def get_allss_pop(all):
+    res = 0
+    for i in range(0, 58):
+        res += get_alls_pop(all, str(1960 + i))
+    return res
+
+def get_all_comb(all):
+    temp = 0
+    for i in range(0, 58):
+        a = 0
+        for j in range(0, len(all)):
+            try:
+                a += (float(get_pop(all[j], str(1960 + i))) * 0.000001)
+            except:
+                a += 0
+        temp += a * (1960 + i)
+    return temp
+
+def compute_a_y(all):
+    somme_pop = 0
+    for i in range(0, len(all)):
+        somme_pop += get_all_pop(all[i])
+    somme_annee_c = 0
+    for i in range(0,len(all)):
+        somme_annee_c = get_all_annee_c(all[i])
+    res = somme_pop * somme_annee_c
+    somme_annee = 0
+    for i in range(0,len(all)):
+        somme_annee = get_all_annee(all[i])
+    somme_c = get_all_comb(all)
+    res -= (somme_annee * somme_c)
+    n = (2017 - 1960 + 1)
+    temp = n * somme_annee_c - pow(somme_annee, 2)
+    res /= temp
+    return res
+
+def compute_b_y(all):
+    n = (2017 - 1960 + 1)
+    somme_c = get_all_comb(all)
+    res = somme_c * n
+    somme_annee = get_all_annee(all[0])
+    somme_pop = 0
+    for i in range(0, len(all)):
+        somme_pop += get_all_pop(all[i])
+    temp = somme_annee * somme_pop
+    res -= temp
+    somme_annee_c = get_all_annee_c(all[0])
+    temp = n * somme_annee_c - pow(somme_annee, 2)
+    res /= temp
+    return res
+
+def get_all_pop_c(all):
+    res = 0
+    for i in range(0, 58):
+        temp = 0
+        for j in range(0, len(all)):
+            try:
+                temp += (float(get_pop(all[j], str(1960 + i))) * 0.000001)
+            except:
+                temp += 0
+        res += pow(temp, 2)
+    return res
+
+def compute_a_x(all):
+    somme_annee = get_all_annee(all[0])
+    somme_pop_c = get_all_pop_c(all)
+    res = somme_annee * somme_pop_c
+    somme_pop = 0
+    for i in range(0, len(all)):
+        somme_pop += get_all_pop(all[i])
+    somme_c = get_all_comb(all)
+    res -= somme_pop * somme_c
+    n = (2017 - 1960 + 1)
+    temp = n * somme_pop_c - pow(somme_pop, 2)
+    res /= temp
+    return res
+
+def compute_b_x(all):
+    somme_c = get_all_comb(all)
+    somme_annee = get_all_annee(all[0])
+    somme_pop = 0
+    for i in range(0, len(all)):
+        somme_pop += get_all_pop(all[i])
+    somme_pop_c = get_all_pop_c(all)
+    n = (2017 - 1960 + 1)
+    res = n * somme_c - somme_annee * somme_pop
+    res /= n * somme_pop_c - pow(somme_pop, 2)
+    return res
+
+def root_x(all, b_x, a_x):
+    res = 0
+    #print(f'b_x : {b_x}   ay: {a_x}')
+    for i in range(0, 58):
+        pop = 0
+        for j in range(0, len(all)):
+            try:
+                pop += float(get_pop(all[j], str(1960 + i))) * pow(10, -6)
+            except:
+                pop += 0
+        if (pop == 0):
+            continue
+        fo = (((1960 + i) - a_x) / b_x )
+        res += pow(fo - pop, 2) / (2017 - 1960 + 1)
+    return math.sqrt(res)
+
+def form(a, b, x):
+    return b * x + a
+
+def root_y(all, b_y, a_y):
+    temp = 0
+    for i in range(0, 58):
+        pop = 0
+        for j in range(0, len(all)):
+            try:
+                pop += float(get_pop(all[j], str(1960 + i))) * 0.000001
+            except:
+                pop += 0
+        fo = form(a_y, b_y, 1960 + i)
+        temp += pow(pop - fo, 2)
+    temp /= (2017 - 1960 + 1)
+    return math.sqrt(temp)
+
+def correlation(all, a_y, b_y):
+    moyenne = get_allss_pop(all)
+    moyenne /= (2017 - 1960 + 1)
+    up = 0
+    down = 0
+    for i in range(0, 58):
+        up += pow(form(a_y, b_y, 1960 + i) - moyenne, 2)
+        down += pow(get_alls_pop(all, str(1960 + i)) - moyenne, 2)
+    return math.sqrt(up / down)
+
+
+def main():
+    if (len(sys.argv) == 2 and sys.argv[1] == "-h"):
+        exit (0)
+    if (len(sys.argv) < 2):
+        exit (84)
+    all = []
+    try:
+        for i in range(1, len(sys.argv)):
+            if verif_name(sys.argv[i]) == 0:
+                exit (84)
+            all.append(sys.argv[i])
+    except:
+        exit (84)
+    all.sort()
+    print("Country: ", end='')
+    for i in range(0, len(all) - 1):
+        print(f'{get_name(all[i])}, ', end = '')
+    print(f'{get_name(all[-1])}')
+    print("Fit1")
+    b_y = compute_b_y(all)
+    a_y = compute_a_y(all)
+    if a_y < 0:
+        print("   Y = %.2f X - %.2f" % (round(b_y, 2), round(-a_y, 2)))
+    else :
+        print("   Y = %.2f X + %.2f" % (round(b_y, 2), round(-a_y, 2)))
+    print("   Root-mean-square deviation: %.2f" % (round(root_y(all, b_y, a_y), 2)))
+    print("   Population in 2050: %.2f" % (round(form(a_y, b_y, 2050), 2)))
+    print("Fit2")
+    b_x = compute_b_x(all)
+    a_x = compute_a_x(all)
+    if a_x > 0:
+        print("   X = %.2f Y + %.2f" % (round(b_x, 2), round(a_x, 2)))
+    else :
+        print("   X = %.2f Y - %.2f" % (round(b_x, 2), round(-a_x, 2)))
+    print("   Root-mean-square deviation: %.2f" % (round(root_x(all, b_x, a_x), 2)))
+    print("   Population in 2050: %.2f" % (round((2050 - a_x) / b_x, 2)))
+    print("Correlation: %.4f" % (round(correlation(all, a_y, b_y), 4)))
+
+
+main()

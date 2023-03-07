@@ -1,0 +1,82 @@
+#!/usr/bin/python3
+from ast import Not
+import sys
+import math
+import csv
+import re
+import time
+
+def semiBino(x, y):
+    return (math.factorial(x) / (math.factorial(y) * math.factorial(x - y)))
+
+def calcul(n, a, h, sd):
+    while 1:
+        user = 0
+        try:
+            user = input("Enter next value: ")
+        except:
+            exit(84)
+        if user == "END":
+            exit (0)
+        try:
+            user = int(user)
+        except:
+            exit (84)
+        n += 1
+        print("    Number of values:    %i" % (n))
+        temp = pow(sd, 2) * (n - 2) + pow((user - a), 2)
+        if n - 1 <= 0:
+            exit (0)
+        temp /= n - 1
+        temp = math.sqrt(temp)
+        sd = temp
+        print("    Standard deviation:  %.2f" % (round(sd, 2)))
+        temp = a * (n - 1)
+        temp += user
+        if n <= 0:
+            exit (0)
+        temp /= n
+        a = temp
+        print("    Arithmetic mean:     %.2f" % (round(a, 2)))
+        temp = (pow(sd, 2) + pow(a, 2))
+        temp = math.sqrt(temp)
+        print("    Root mean square:    %.2f" % (round(temp, 2)))
+        temp = pow(h, -1) * (n - 1)
+        temp += pow(user, -1)
+        if n <= 0:
+            exit (0)
+        temp /= n
+        h = pow(temp, -1)
+        print("    Harmonic mean:       %.2f" % (round(h, 2)))
+        print("")
+
+# res[2] = sqrt(((sd^2+am^2)/value + pow(value, 2)) / tab[0])
+
+def main():
+    if (len(sys.argv) == 2 and sys.argv[1] == "-h"):
+        exit (0)
+    if (len(sys.argv) != 5):
+        exit (84)
+    n = 0
+    a = 0
+    h = 0
+    sd = 0
+    try:
+        n = int(sys.argv[1])
+        a = int(sys.argv[2])
+        h = int(sys.argv[3])
+        sd = int(sys.argv[4])
+        if (h < 0):
+            exit (84)
+        if (sd < 0):
+            exit (84)
+        if (n < 0):
+            exit (84)
+        if (a < 0):
+            exit (84)
+    except:
+        exit (84)
+    calcul(n, a, h, sd)
+
+
+main()

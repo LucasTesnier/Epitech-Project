@@ -1,0 +1,78 @@
+#!/usr/bin/python3
+from ast import Not
+import sys
+import math
+import csv
+import re
+import time
+
+def semiBino(x, y):
+    return (math.factorial(x) / (math.factorial(y) * math.factorial(x - y)))
+
+def first(a, b):
+    if (a < b):
+        exit (84)
+    print("%i-combinations of a set of size %i:" % (b, a))
+    print("%i\n" % (math.comb(a, b)))
+
+def second(a):
+    if (a > 55000):
+        exit (84)
+    p = a / (60 * 60 * 8)
+    print("Binomial distribution:")
+    startTime = time.time()
+    overload = 0
+    for i in range(0, 51):
+        temp = semiBino(3500, i) * (p ** i) * ((1 - p) ** (3500 - i))
+        if (i < 26):
+            overload += temp
+        print("%i -> %.3f" % (i, round(temp, 3)), end ="")
+        if (i != 50 and (i + 1) % 5 != 0):
+            print("\t", end = "")
+        if ((i + 1) % 5 == 0):
+            print("")
+    endTime = time.time()
+    print("\nOverload: %.1f%%" % (round((1 - overload) * 100, 1)))
+    print("Computation time: %.2f ms" % (round((endTime - startTime) * 1000, 2)))
+    print("\nPoisson distribution:")
+    p = 3500 * (a / (60 * 60 * 8))
+    startTime = time.time()
+    overload = 0
+    for i in range(0, 51):
+        temp = math.exp(-p) * (p ** i) / math.factorial(i)
+        if (i < 26):
+            overload += temp
+        print("%i -> %.3f" % (i, round(temp, 3)), end ="")
+        if (i != 50 and (i + 1) % 5 != 0):
+            print("\t", end = "")
+        if ((i + 1) % 5 == 0):
+            print("")
+    endTime = time.time()
+    print("\nOverload: %.1f%%" % (round((1 - overload) * 100, 1)))
+    print("Computation time: %.2f ms" % (round((endTime - startTime) * 1000, 2)))
+
+def main():
+    if (len(sys.argv) == 2 and sys.argv[1] == "-h"):
+        exit (0)
+    if (len(sys.argv) != 3 and len(sys.argv) != 2):
+        exit (84)
+    a = 0
+    b = 0
+    try:
+        a = int(sys.argv[1])
+        if (a < 0):
+            exit (84)
+        if (len(sys.argv) == 3):
+            b = int(sys.argv[2])
+            if (b < 0):
+                exit (84)
+    except:
+        exit (84)
+    if (len(sys.argv) == 3):
+        first(a, b)
+    else:
+        second(a)
+    
+
+
+main()

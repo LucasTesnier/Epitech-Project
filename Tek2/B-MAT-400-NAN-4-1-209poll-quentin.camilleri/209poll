@@ -1,0 +1,62 @@
+#!/usr/bin/python3
+from ast import Not
+import sys
+import math
+import csv
+import re
+import time
+import csv
+
+def main():
+    if (len(sys.argv) == 2 and sys.argv[1] == "-h"):
+        exit (0)
+    if (len(sys.argv) != 4):
+        exit (84)
+    pop = 0
+    sample = 0
+    vote = 0
+    try:
+        pop = int(sys.argv[1])
+        sample = int(sys.argv[2])
+        vote = float(sys.argv[3])
+        if (pop < 0 or sample < 0 or vote < 0 or vote > 100):
+            exit (84)
+        if (sample > pop):
+            exit (84)
+    except:
+        exit (84)
+
+    print("Population size:\t %i" % (pop))
+    print("Sample size:\t\t %i" % (sample))
+    print("Voting intentions:\t %.2f%%" % (round(vote, 2)))
+
+    variance = (vote / 100) * (1 - (vote / 100))
+
+    variance = (variance / sample) * ((pop - sample) / (pop - 1))
+
+    print("Variance:\t\t %.6f" % (round(variance, 6)))
+
+    first = ((vote / 100) - 1.96 * math.sqrt(variance)) * 100
+    second = ((vote / 100) + 1.96 * math.sqrt(variance)) * 100
+
+    if (first < 0):
+        first = 0
+    if (second > 100):
+        second = 100
+
+    print("95%% confidence interval: [%.2f%%; %.2f%%]" % (round(first, 2), round(second, 2)))
+
+    first = ((vote / 100) - 2.58 * math.sqrt(variance)) * 100
+    second = ((vote / 100) + 2.58 * math.sqrt(variance)) * 100
+
+    if (first < 0):
+        first = 0
+    if (second > 100):
+        second = 100
+
+    print("99%% confidence interval: [%.2f%%; %.2f%%]" % (round(first, 2), round(second, 2)))
+    
+try:
+    main()
+except:
+    exit(84)

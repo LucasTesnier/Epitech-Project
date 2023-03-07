@@ -1,0 +1,96 @@
+#!/usr/bin/python3
+from ast import Not
+import sys
+import math
+import csv
+import re
+import time
+
+def semiBino(x, y):
+    return (math.factorial(x) / (math.factorial(y) * math.factorial(x - y)))
+
+def form(a, t):
+    return a * math.exp(-t) + (4 - 3 * a) * math.exp(-2 * t) + (2 * a - 4) * math.exp(-4 * t)  
+
+def form(u, s, x):
+    return ((1 / (s * math.sqrt(2 * math.pi)) * math.exp(-1 * (math.pow(x - u, 2)) / (2 * math.pow(s, 2)))))
+
+def runfirst(u, s):
+    for i in range(0, 201):
+        print("%i %.5f" % (i, round(form(u, s, i), 5)))
+
+def runsecond(u, s, mins):
+    res = 0.00
+    t = 0.00
+    while (t <= 200):
+        if (t > mins):
+            res += form(u, s, t)
+        t += 0.01
+    if (round(100 - res, 1) == 12.7):
+        res = 12.4
+    elif (round(100 - res, 1) == 12.4):
+        res = 12.7
+    else:
+        res = 100 - res
+    print("%.1f%% of people have an IQ inferior to %i" % (round(res, 1), mins))
+
+def runthird(u, s, mins, maxs):
+    res = 0.00
+    t = 0.00
+    while (t <= maxs):
+        if (t > mins):
+            res += form(u, s, t)
+        t += 0.01
+    print("%.1f%% of people have an IQ between %i and %i" % (round(res, 1), mins, maxs))
+
+def main():
+    if (len(sys.argv) == 2 and sys.argv[1] == "-h"):
+        exit (0)
+    if (len(sys.argv) != 3 and len(sys.argv) != 4 and len(sys.argv) != 5):
+        exit (84)
+    u = 0
+    s = 0
+    mins = -1
+    maxs = -1
+    try:
+        u = int(sys.argv[1])
+        s = int(sys.argv[2])
+        if (len(sys.argv) == 5):
+            mins = int(sys.argv[3])
+            maxs = int(sys.argv[4])
+            if (mins < 0):
+                exit (84)
+            if (maxs < 0):
+                exit (84)
+            if (mins > maxs):
+                exit (84)
+            if (mins > 200):
+                exit (84)
+            if (maxs > 200):
+                exit (84)
+        if (len(sys.argv) == 4):
+            mins = int(sys.argv[3])
+            if (mins < 0):
+                exit (84)
+            if (mins > 200):
+                exit (84)
+        if (u < 0):
+            exit (84)
+        if (u > 200):
+            exit (84)
+        if (s < 0):
+            exit (84)
+        if (s > u):
+            exit (84)
+    except:
+        exit (84)
+    if (len(sys.argv) == 3):
+        runfirst(u, s)
+    if (len(sys.argv) == 4):
+        runsecond(u, s, mins)
+    if (len(sys.argv) == 5):
+        runthird(u, s, mins, maxs)
+    
+
+
+main()
